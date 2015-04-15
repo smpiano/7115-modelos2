@@ -89,7 +89,7 @@
 \clearpage
 
 \part{Resolución de ejercicios}
-\section*{\textbf{Ejercicio 1}}
+\section{\textbf{Ejercicio 1}}
 
 \baselineskip=13pt
 En una sastrería hay una sección de arreglo y reforma de la ropa vendida a sus
@@ -116,13 +116,13 @@ siendo exponencial la distribución de los tiempos de servicio. Calcular:
 \vspace{13pt}
 \leftskip=0pt
 \parindent=0pt
-\subsection*{\textbf{Resolución}}
+\subsection{\textbf{Resolución}}
 
 Como sistema se entiende toda la sección de arreglo y
 reforma.
 
 \vspace{5pt}
-\subsubsection*{Hipotesis:}
+\subsubsection*{Hipótesis:}
 
 Se verifican las hipótesis de un P/P/1. El enunciado dice explícitamente que
 todos los clientes están dispuestos a esperar el tiempo que sea necesario, lo
@@ -179,7 +179,7 @@ $T_s = 2 [minutos/cliente] \times \frac{1[hora]}{60[minutos]} = 0.033
 
 \end{enumerate}
 \vspace{35pt}
-\section*{\textbf{Ejercicio 2}}
+\section{\textbf{Ejercicio 2}}
 
 Un establecimiento de reparaciones, atendido por un solo operario, recibe un
 promedio de cuatro clientes por hora, los cuales traen pequeños aparatos para
@@ -204,7 +204,7 @@ exponencial. Calcular:
 \vspace{13pt}
 \leftskip=0pt
 \parindent=0pt
-\subsection*{\textbf{Resolución}}
+\subsection{\textbf{Resolución}}
 
 Consideramos el sistema como el taller, con el operario incluido. El enunciado
 no dice nada con respecto a la capacidad de la cola, por lo que entendemos que
@@ -212,7 +212,7 @@ hay suficiente lugar como para albergar a toda la gente que arribe. Responde al
 modelo P/P/1
 
 \vspace{5pt}
-\subsubsection*{Hipotesis:}
+\subsubsection*{Hipótesis:}
 
 \begin{enumerate}[1.]
   \item Tipo de proceso de arribo de clientes responde a distribución Poisson.
@@ -281,7 +281,7 @@ $T_s = 6 [minutos/cliente] \times \frac{1[hora]}{60[minutos]} = 0,1
 \end{enumerate}
 
 \vspace{35pt}
-\section*{\textbf{Ejercicio 3}}
+\section{\textbf{Ejercicio 3}}
 
 Un banco está desarrollando la prestación de un nuevo servicio, para lo cual ha
 habilitado una ventanilla. Como el desarrollo del mismo está basado en una
@@ -315,14 +315,14 @@ Determinar:
 \vspace{13pt}
 \leftskip=0pt
 \parindent=0pt
-\subsection*{\textbf{Resolución}}
+\subsection{\textbf{Resolución}}
 
 Consideramos el sistema como la ventanilla más la cola. El enunciado no dice
 nada con respecto a la capacidad de la cola, por lo que entendemos que hay
 suficiente lugar como para albergar a toda la gente que arribe.
 
 \vspace{5pt}
-\subsubsection*{Hipotesis:}
+\subsubsection*{Hipótesis:}
 
 Se verifican las hipótesis de un P/P/1.
 
@@ -374,7 +374,7 @@ $Ts = 2 [minutos/cliente]$ → $\mu = 0,5 [clientes/minuto]$.
 \end{enumerate}
 
 \vspace{35pt}
-\section*{\textbf{Ejercicio 4}}
+\section{\textbf{Ejercicio 4}}
 
 Teniendo en cuenta el ejercicio 2, considerar todas las suposiciones
 anteriores, excepto que si hay tres clientes en el taller, cualquier otro
@@ -398,7 +398,7 @@ Determinar entonces:
 \vspace{13pt}
 \leftskip=0pt
 \parindent=0pt
-\subsection*{\textbf{Resolución}}
+\subsection{\textbf{Resolución}}
 
 \vspace{5pt}
 \leftskip=0pt
@@ -424,7 +424,7 @@ Determinar entonces:
 \parindent=0pt
 \textit{Sistema}
 
-El sistema se modela como un sistema PP1 con impaciencia:
+El sistema se modela como un sistema $P/P/1$ con impaciencia:
 
 \vspace{13pt}
 \includegraphics[width=359pt, height=99pt, keepaspectratio=true]{TP1-Colas-fig002.png}
@@ -500,9 +500,11 @@ $n$ & $P(n)$ & $\lambda$ & $\mu$ & $L$ & $Lc$ & $H$ & $R$\tabularnewline
     0,069[horas/cliente] \times \frac{60[minutos]}{1[hora]} =
     4,18[minutos/cliente]$
 
+  \vspace{13pt}
   \item
     $L_c = 0,27$
 
+  \vspace{13pt}
   \item
     $\overline{\lambda} = \lambda(P(0) + P(1) + P(2)) = \lambda(1-P(3)) =
     \lambda(1-0,012) = 7,41[clientes/hora]$
@@ -511,1388 +513,890 @@ $n$ & $P(n)$ & $\lambda$ & $\mu$ & $L$ & $Lc$ & $H$ & $R$\tabularnewline
     0,036[horas/cliente] \times \frac{60[minutos]}{1[hora]} =
     2,18[minutos/cliente]$
 
+  \vspace{13pt}
   \item
     $R = \lambda P(3) = 0,09[clientes/hora]$
 \end{enumerate}
 
-%\vspace{21pt}
-%\subsubsection*{{\color{color01} \textbf{Ejercicio 5}}}
-%
-%\leftskip=0pt
-%\parindent=0pt
-%Una empresa tiene cuatro máquinas cortadoras de césped. Las mismas se rompen 
-%o necesitan
-%
-%mantenimiento cada 15 días (distribución exponencial). Para su atención y mantenimiento 
-%tiene
-%
-%un empleado que en promedio tarda 7 días con cada máquina. En promedio, por cada 
-%día de
-%
-%trabajo, las máquinas reportan un ingreso de \$50. Se desea saber:
-%
-%a) El número promedio de máquinas funcionando.
-%
-%b) El porcentaje de tiempo que el empleado se encuentra inactivo.
-%
-%c) Cuánto tiempo, en promedio, estarÁ en funcionamiento una mÁquina.
-%
-%d) Existe la posibilidad de contratar una persona más, que cobra 700\$ por mes 
-%y que tarda lo
-%
-%mismo que el empleado. Considerando 1 mes = 24 días, ¿conviene contratar al nuevo
-%
-%empleado?\label{h.xt2hsxra9i77}
-%
-%\vspace{21pt}
-%{\color{color01} \emph{Hipótesis}}
-%
-%\leftskip=36pt
-%\parindent=-18pt
-%●\tab El proceso de llegada de los clientes responde a un proceso Poisson.
-%
-%●\tab El proceso de atención de los clientes responde a un proceso Poisson.
-%
-%●\tab La población es infinita
-%
-%●\tab Se forma una única cola frente al canal de atención.
-%
-%●\tab Existe un único canal de atención.
-%
-%●\tab La capacidad del sistema es \emph{finita}
-%
-%●\tab La atención de los clientes de la cola es FIFO
-%
-%●\tab El sistema se encuentra en condiciones estables.
-%
-%●\tab La población no presenta el fenómeno de impaciencia.\label{h.btwxbvuxsggy}
-%
-%\vspace{21pt}
-%\leftskip=0pt
-%\parindent=0pt
-%{\color{color01} \emph{Modelo}}
-%
-%Este problema es un modelo de población finita:  PP1(N') con N'=4
-%
-%%%\begin{figure}[htbp]
-%\includegraphics[width=262pt, height=67pt, keepaspectratio=true]{TP1-Colas-fig048.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig048.png}.}
-%%%\end{figure}
-%
-%\vspace{13pt}
-%%%\begin{figure}[htbp]
-%\includegraphics[width=91pt, height=14pt, keepaspectratio=true]{TP1-Colas-fig049.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig049.png}.}
-%%%\end{figure}
-%
-%\vspace{27pt}
-%\begin{tabular}{|>{\raggedright}p{28pt}|>{\raggedright}p{26pt}|>{\raggedright}p{26pt}|>{\raggedright}p{26pt}|>{\raggedright}p{26pt}|>{\raggedright}p{26pt}|>{\raggedright}p{26pt}|>{\raggedright}p{26pt}|>{\raggedright}p{26pt}|}
-%\hline
-%n & P(n)
-%\includegraphics[width=8pt, height=11pt, keepaspectratio=true]{TP1-Colas-fig050.png}
-% & 
-%\includegraphics[width=8pt, height=11pt, keepaspectratio=true]{TP1-Colas-fig051.png}
-% &  & L & Lc & J & N' & H\tabularnewline
-%\hline
-%0 & P(0)
-%\includegraphics[width=24pt, height=14pt, keepaspectratio=true]{TP1-Colas-fig052.png}
-% &  & 0 & 0 & 0 & 4 & 4 & 0\tabularnewline
-%\hline
-%1 & P(1)
-%\includegraphics[width=24pt, height=14pt, keepaspectratio=true]{TP1-Colas-fig053.png}
-% & 
-%\includegraphics[width=8pt, height=11pt, keepaspectratio=true]{TP1-Colas-fig054.png}
-% &  & 1 & 0 & 3 & 4 & 1\tabularnewline
-%\hline
-%2 & P(2)
-%\includegraphics[width=24pt, height=14pt, keepaspectratio=true]{TP1-Colas-fig055.png}
-% & 
-%\includegraphics[width=8pt, height=11pt, keepaspectratio=true]{TP1-Colas-fig056.png}
-% &  & 2 & 1 & 2 & 4 & 1\tabularnewline
-%\hline
-%3 & P(3)
-%\includegraphics[width=17pt, height=14pt, keepaspectratio=true]{TP1-Colas-fig057.png}
-% & 
-%\includegraphics[width=8pt, height=11pt, keepaspectratio=true]{TP1-Colas-fig058.png}
-% &  & 3 & 2 & 1 & 4 & 1\tabularnewline
-%\hline
-%4 & P(4) & 0
-%\includegraphics[width=8pt, height=11pt, keepaspectratio=true]{TP1-Colas-fig059.png}
-% &  & 4 & 3 & 0 & 4 & 1\tabularnewline
-%\hline
-%.. & 0 & .. & .. & .. & .. & .. & .. & ..\tabularnewline
-%\hline
-%\end{tabular}
-%
-%\vspace{13pt}
-%\leftskip=36pt
-%\parindent=-18pt
-%a.\tab 
-%\includegraphics[width=199pt, height=14pt, keepaspectratio=true]{TP1-Colas-fig060.png}
-%
-%%%\begin{figure}[htbp]
-%\includegraphics[width=158pt, height=29pt, keepaspectratio=true]{TP1-Colas-fig061.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig061.png}.}
-%%%\end{figure}
-%
-%\vspace{13pt}
-%%%\begin{figure}[htbp]
-%\includegraphics[width=167pt, height=29pt, keepaspectratio=true]{TP1-Colas-fig062.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig062.png}.}
-%%%\end{figure}
-%
-%\vspace{13pt}
-%%%\begin{figure}[htbp]
-%\includegraphics[width=170pt, height=29pt, keepaspectratio=true]{TP1-Colas-fig063.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig063.png}.}
-%%%\end{figure}
-%
-%\vspace{13pt}
-%%%\begin{figure}[htbp]
-%\includegraphics[width=164pt, height=29pt, keepaspectratio=true]{TP1-Colas-fig064.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig064.png}.}
-%%%\end{figure}
-%
-%\vspace{13pt}
-%%%\begin{figure}[htbp]
-%\includegraphics[width=155pt, height=32pt, keepaspectratio=true]{TP1-Colas-fig065.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig065.png}.}
-%%%\end{figure}
-%
-%\vspace{13pt}
-%%%\begin{figure}[htbp]
-%\includegraphics[width=461pt, height=29pt, keepaspectratio=true]{TP1-Colas-fig066.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig066.png}.}
-%%%\end{figure}
-%
-%\vspace{13pt}
-%%%\begin{figure}[htbp]
-%\includegraphics[width=59pt, height=11pt, keepaspectratio=true]{TP1-Colas-fig067.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig067.png}.}
-%%%\end{figure}
-%
-%\vspace{13pt}
-%b.\tab 
-%\includegraphics[width=77pt, height=14pt, keepaspectratio=true]{TP1-Colas-fig068.png}
-%
-%c.\tab 
-%\includegraphics[width=518pt, height=14pt, keepaspectratio=true]{TP1-Colas-fig069.png}
-%
-%\includegraphics[width=156pt, height=19pt, keepaspectratio=true]{TP1-Colas-fig070.png}
-%
-%d.\tab Para saber si conviene contratar un nuevo empleado a \$700 por mes, se plantea 
-%un nuevo sistema con 2 canales: PPMN:\label{h.we0rz647mwgh}
-%
-%\vspace{21pt}
-%\leftskip=0pt
-%\parindent=0pt
-%{\color{color01} \emph{Hipótesis}}
-%
-%\leftskip=36pt
-%\parindent=-18pt
-%●\tab El proceso de llegada de los clientes responde a un proceso Poisson.
-%
-%●\tab El proceso de atención de los clientes responde a un proceso Poisson.
-%
-%●\tab La población es infinita
-%
-%●\tab Se forma una única cola frente al canal de atención.
-%
-%●\tab \emph{Hay dos canales de atención}
-%
-%●\tab La capacidad del sistema es \emph{finita}
-%
-%●\tab La atención de los clientes de la cola es FIFO
-%
-%●\tab El sistema se encuentra en condiciones estables.
-%
-%●\tab La población no presenta el fenómeno de impaciencia.\label{h.oy764fhdy6s9}
-%
-%\vspace{21pt}
-%\leftskip=0pt
-%\parindent=0pt
-%{\color{color01} \emph{Modelo}}
-%
-%Este problema es un modelo de población finita:  PP1(N') con N'=4
-%
-%%%\begin{figure}[htbp]
-%\includegraphics[width=262pt, height=67pt, keepaspectratio=true]{TP1-Colas-fig071.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig071.png}.}
-%%%\end{figure}
-%
-%\vspace{13pt}
-%%%\begin{figure}[htbp]
-%\includegraphics[width=91pt, height=14pt, keepaspectratio=true]{TP1-Colas-fig072.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig072.png}.}
-%%%\end{figure}
-%
-%\vspace{55pt}
-%\begin{tabular}{|>{\raggedright}p{28pt}|>{\raggedright}p{26pt}|>{\raggedright}p{26pt}|>{\raggedright}p{26pt}|>{\raggedright}p{26pt}|>{\raggedright}p{26pt}|>{\raggedright}p{26pt}|>{\raggedright}p{26pt}|>{\raggedright}p{26pt}|}
-%\hline
-%n & P(n)
-%\includegraphics[width=8pt, height=11pt, keepaspectratio=true]{TP1-Colas-fig073.png}
-% & 
-%\includegraphics[width=8pt, height=11pt, keepaspectratio=true]{TP1-Colas-fig074.png}
-% &  & L & Lc & J & N' & H\tabularnewline
-%\hline
-%0 & P(0)
-%\includegraphics[width=24pt, height=14pt, keepaspectratio=true]{TP1-Colas-fig075.png}
-% & 8
-%\includegraphics[width=24pt, height=14pt, keepaspectratio=true]{TP1-Colas-fig076.wmf}
-% & 0 & 0 & 0 & 4 & 4 & 0\tabularnewline
-%\hline
-%1 & P(1)
-%\includegraphics[width=24pt, height=14pt, keepaspectratio=true]{TP1-Colas-fig077.png}
-% & 8
-%\includegraphics[width=24pt, height=14pt, keepaspectratio=true]{TP1-Colas-fig078.wmf}
-%
-%\includegraphics[width=8pt, height=11pt, keepaspectratio=true]{TP1-Colas-fig079.png}
-% &  & 1 & 0 & 3 & 4 & 1\tabularnewline
-%\hline
-%2 & P(2)
-%\includegraphics[width=24pt, height=14pt, keepaspectratio=true]{TP1-Colas-fig080.png}
-% & 8
-%\includegraphics[width=24pt, height=14pt, keepaspectratio=true]{TP1-Colas-fig081.wmf}
-%
-%\includegraphics[width=15pt, height=14pt, keepaspectratio=true]{TP1-Colas-fig082.png}
-% &  & 2 & 1 & 2 & 4 & 1\tabularnewline
-%\hline
-%3 & P(3)
-%\includegraphics[width=17pt, height=14pt, keepaspectratio=true]{TP1-Colas-fig083.png}
-% & 8
-%\includegraphics[width=17pt, height=14pt, keepaspectratio=true]{TP1-Colas-fig084.wmf}
-%
-%\includegraphics[width=15pt, height=14pt, keepaspectratio=true]{TP1-Colas-fig085.png}
-% &  & 3 & 2 & 1 & 4 & 1\tabularnewline
-%\hline
-%4 & P(4) & 0
-%\includegraphics[width=15pt, height=14pt, keepaspectratio=true]{TP1-Colas-fig086.png}
-% &  & 4 & 3 & 0 & 4 & 1\tabularnewline
-%\hline
-%.. & 0 & .. & .. & .. & .. & .. & .. & ..\tabularnewline
-%\hline
-%\end{tabular}
-%
-%\vspace{27pt}
-%%%\begin{figure}[htbp]
-%\includegraphics[width=199pt, height=14pt, keepaspectratio=true]{TP1-Colas-fig087.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig087.png}.}
-%%%\end{figure}
-%
-%\vspace{13pt}
-%%%\begin{figure}[htbp]
-%\includegraphics[width=158pt, height=29pt, keepaspectratio=true]{TP1-Colas-fig088.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig088.png}.}
-%%%\end{figure}
-%
-%\vspace{13pt}
-%%%\begin{figure}[htbp]
-%\includegraphics[width=161pt, height=31pt, keepaspectratio=true]{TP1-Colas-fig089.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig089.png}.}
-%%%\end{figure}
-%
-%\vspace{13pt}
-%%%\begin{figure}[htbp]
-%\includegraphics[width=162pt, height=31pt, keepaspectratio=true]{TP1-Colas-fig090.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig090.png}.}
-%%%\end{figure}
-%
-%\vspace{13pt}
-%%%\begin{figure}[htbp]
-%\includegraphics[width=156pt, height=31pt, keepaspectratio=true]{TP1-Colas-fig091.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig091.png}.}
-%%%\end{figure}
-%
-%\vspace{13pt}
-%%%\begin{figure}[htbp]
-%\includegraphics[width=155pt, height=32pt, keepaspectratio=true]{TP1-Colas-fig092.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig092.png}.}
-%%%\end{figure}
-%
-%\vspace{13pt}
-%%%\begin{figure}[htbp]
-%\includegraphics[width=446pt, height=29pt, keepaspectratio=true]{TP1-Colas-fig093.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig093.png}.}
-%%%\end{figure}
-%
-%\vspace{13pt}
-%%%\begin{figure}[htbp]
-%\includegraphics[width=60pt, height=14pt, keepaspectratio=true]{TP1-Colas-fig094.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig094.png}.}
-%%%\end{figure}
-%
-%\vspace{27pt}
-%%%\begin{figure}[htbp]
-%\includegraphics[width=140pt, height=14pt, keepaspectratio=true]{TP1-Colas-fig095.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig095.png}.}
-%%%\end{figure}
-%
-%8
-%\includegraphics[width=140pt, height=14pt, keepaspectratio=true]{TP1-Colas-fig096.wmf}
-%
-%Antes:
-%
-%%%\begin{figure}[htbp]
-%\includegraphics[width=458pt, height=15pt, keepaspectratio=true]{TP1-Colas-fig097.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig097.png}.}
-%%%\end{figure}
-%
-%\vspace{13pt}
-%Ahora:
-%
-%%%\begin{figure}[htbp]
-%\includegraphics[width=461pt, height=15pt, keepaspectratio=true]{TP1-Colas-fig098.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig098.png}.}
-%%%\end{figure}
-%
-%\vspace{27pt}
-%%%\begin{figure}[htbp]
-%\includegraphics[width=344pt, height=14pt, keepaspectratio=true]{TP1-Colas-fig099.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig099.png}.}
-%%%\end{figure}
-%
-%8
-%\includegraphics[width=344pt, height=14pt, keepaspectratio=true]{TP1-Colas-fig100.wmf}
-%
-%{\color{color01} \textbf{Ejercicio 6}}
-%
-%Una peluquería tiene un peluquero que realiza un corte de pelo especial a los 
-%clientes. Recientemente se ha contratado un aprendiz para que lo ayude, decidiendo 
-%que solo realice el corte cuando llega el segundo cliente a la cola de espera. 
-%Tanto el peluquero como el aprendiz demoran en promedio media hora cada uno para 
-%atender a cada cliente. Al local llegan en promedio 5 clientes por hora (distribución 
-%Poisson). Los clientes son impacientes. Si hay un cliente esperando, solamente 
-%el 50\% de los clientes que llegan deciden entrar a la peluquería. Si hay más 
-%de un cliente esperando, no entra ningún cliente más ya que no estÁn dispuestos 
-%a esperar. Se pide calcular: 
-%
-%a) La probabilidad de que no haya clientes en la peluquería. 
-%
-%b) La probabilidad de que haya clientes esperando para recibir el servicio. 
-%
-%c) El porcentaje de ocupación del peluquero y del aprendiz. 
-%
-%d) La cantidad promedio de clientes esperando para recibir el servicio. 
-%
-%e) La cantidad promedio de clientes que no ingresan a la peluquería. 
-%
-%f) Si cada corte de pelo cuesta 30\$, calcular el ingreso económico promedio de 
-%la peluquería, por hora.
-%
-%\vspace{13pt}
-%{\color{color01} \emph{Modelo}}
-%
-%\vspace{13pt}
-%Este problema es un modelo P/P/2 con impaciencia 
-%
-%\vspace{13pt}
-%%%\begin{figure}[htbp]
-%\includegraphics[width=343pt, height=102pt, keepaspectratio=true]{TP1-Colas-fig101.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig101.png}.}
-%%%\end{figure}
-%
-%\label{h.dot8ji50046r}
-%
-%\vspace{21pt}
-%{\color{color01} \emph{Hipótesis}}
-%
-%\leftskip=36pt
-%\parindent=-18pt
-%●\tab El proceso de llegada de los clientes responde a un proceso Poisson.
-%
-%●\tab El proceso de atención de los clientes responde a un proceso Poisson.
-%
-%●\tab La población es infinita
-%
-%●\tab Existen 2 canales de atención.
-%
-%●\tab Se forma una única cola frente a los canales de atención.
-%
-%●\tab La capacidad del sistema es in\emph{finita}
-%
-%●\tab La atención de los clientes de la cola es FIFO
-%
-%●\tab El sistema se encuentra en condiciones estables.
-%
-%●\tab La población presenta el fenómeno de impaciencia.
-%
-%\vspace{13pt}
-%\leftskip=0pt
-%\parindent=0pt
-%{\color{color01} \emph{Datos}}
-%
-%\leftskip=36pt
-%\parindent=-18pt
-%●\tab 
-%\includegraphics[width=109pt, height=15pt, keepaspectratio=true]{TP1-Colas-fig102.png}
-%
-%●\tab 
-%\includegraphics[width=108pt, height=15pt, keepaspectratio=true]{TP1-Colas-fig103.png}
-%
-%●\tab Probabilidad de ingreso
-%
-%\leftskip=72pt
-%○\tab n = 0 -\texttt{>} PI = 1
-%
-%○\tab n = 1 -\texttt{>} PI = 1
-%
-%○\tab n = 2 -\texttt{>} PI = 0.5
-%
-%○\tab n = 3 -\texttt{>} PI = 0.5
-%
-%○\tab n = 4 -\texttt{>} PI = 1
-%
-%\vspace{13pt}
-%\leftskip=0pt
-%\parindent=0pt
-%{\color{color01} \emph{Resolucion}}
-%
-%\vspace{13pt}
-%\begin{tabular}{|>{\raggedright}p{21pt}|>{\raggedright}p{24pt}|>{\raggedright}p{28pt}|>{\raggedright}p{28pt}|>{\raggedright}p{28pt}|>{\raggedright}p{19pt}|>{\raggedright}p{21pt}|>{\raggedright}p{21pt}|>{\raggedright}p{19pt}|>{\raggedright}p{19pt}|}
-%\hline
-%\centering n & \centering P(n) & \centering $\lambda$ & \centering $\mu$ & \centering L & \centering Lc & \centering H & \centering R & \centering H1 & \centering H2\tabularnewline
-%\hline
-%\centering 0 & \centering P(0) & \centering $\lambda$ & \centering 0 & \centering 0 & \centering 0 & \centering 0 & \centering 0 & \centering 0 & \centering 0\tabularnewline
-%\hline
-%\centering 1 & \centering P(1) & \centering $\lambda$ & \centering $\mu$ & \centering 1 & \centering 0 & \centering 1 & \centering 0 & \centering 1 & \centering 0\tabularnewline
-%\hline
-%\centering 2 & \centering P(2) & \centering 0.5$\lambda$ & \centering $\mu$ & \centering 2 & \centering 1 & \centering 1 & \centering 0.5$\lambda$ & \centering 1 & \centering 0\tabularnewline
-%\hline
-%\centering 3 & \centering P(3) & \centering 0.5$\lambda$ & \centering 2$\mu$ & \centering 3 & \centering 1 & \centering 2 & \centering 0.5$\lambda$ & \centering 1 & \centering 1\tabularnewline
-%\hline
-%\centering 4 & \centering P(4) & \centering 0 & \centering 2$\mu$ & \centering 4 & \centering 2 & \centering 2 & \centering $\lambda$ & \centering 1 & \centering 1\tabularnewline
-%\hline
-%\end{tabular}
-%
-%\vspace{27pt}
-%%%\begin{figure}[htbp]
-%\includegraphics[width=264pt, height=31pt, keepaspectratio=true]{TP1-Colas-fig104.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig104.png}.}
-%%%\end{figure}
-%
-%\vspace{27pt}
-%%%\begin{figure}[htbp]
-%\includegraphics[width=272pt, height=31pt, keepaspectratio=true]{TP1-Colas-fig105.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig105.png}.}
-%%%\end{figure}
-%
-%8
-%\includegraphics[width=272pt, height=31pt, keepaspectratio=true]{TP1-Colas-fig106.wmf}
-%
-%\vspace{27pt}
-%%%\begin{figure}[htbp]
-%\includegraphics[width=294pt, height=31pt, keepaspectratio=true]{TP1-Colas-fig107.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig107.png}.}
-%%%\end{figure}
-%
-%\vspace{27pt}
-%%%\begin{figure}[htbp]
-%\includegraphics[width=297pt, height=31pt, keepaspectratio=true]{TP1-Colas-fig108.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig108.png}.}
-%%%\end{figure}
-%
-%8
-%\includegraphics[width=297pt, height=31pt, keepaspectratio=true]{TP1-Colas-fig109.wmf}
-%
-%\vspace{13pt}
-%%%\begin{figure}[htbp]
-%\includegraphics[width=572pt, height=24pt, keepaspectratio=true]{TP1-Colas-fig110.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig110.png}.}
-%%%\end{figure}
-%
-%8
-%\includegraphics[width=572pt, height=24pt, keepaspectratio=true]{TP1-Colas-fig111.wmf}
-%
-%\vspace{13pt}
-%%%\begin{figure}[htbp]
-%\includegraphics[width=251pt, height=37pt, keepaspectratio=true]{TP1-Colas-fig112.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig112.png}.}
-%%%\end{figure}
-%
-%\vspace{27pt}
-%a) probabilidad de que no haya clientes en la peluquería
-%
-%P(0) = 0.0621
-%
-%b) probabilidad de que haya clientes esperando para recibir el servicio
-%
-%P(2\texttt{<}n\texttt{<}4) = 0,7826
-%
-%c) porcentaje de ocupación del peluquero y del aprendiz
-%
-%\parindent=36pt
-%%%\begin{figure}[htbp]
-%\includegraphics[width=257pt, height=35pt, keepaspectratio=true]{TP1-Colas-fig113.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig113.png}.}
-%%%\end{figure}
-%
-%\vspace{13pt}
-%%%\begin{figure}[htbp]
-%\includegraphics[width=261pt, height=35pt, keepaspectratio=true]{TP1-Colas-fig114.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig114.png}.}
-%%%\end{figure}
-%
-%\vspace{27pt}
-%\parindent=0pt
-%d) cantidad promedio de clientes esperando para recibir el servicio
-%
-%%%\begin{figure}[htbp]
-%\includegraphics[width=0pt, height=0pt, keepaspectratio=true]{TP1-Colas-fig115.???}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig115.???}.}
-%%%\end{figure}
-%
-%\includegraphics[width=227pt, height=35pt, keepaspectratio=true]{TP1-Colas-fig116.wmf}
-%
-%\vspace{13pt}
-%e) cantidad promedio de clientes que no ingresan a la peluquería
-%
-%%%\begin{figure}[htbp]
-%\includegraphics[width=224pt, height=35pt, keepaspectratio=true]{TP1-Colas-fig117.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig117.png}.}
-%%%\end{figure}
-%
-%\vspace{27pt}
-%f) Si cada corte de pelo cuesta 30\$, calcular el ingreso económico promedio de 
-%la peluquería
-%
-%%%\begin{figure}[htbp]
-%\includegraphics[width=298pt, height=35pt, keepaspectratio=true]{TP1-Colas-fig118.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig118.png}.}
-%%%\end{figure}
-%
-%\label{h.7ydn9uhtojep}
-%
-%\vspace{49pt}
-%\subsubsection*{{\color{color01} \textbf{Ejercicio 7}}}
-%
-%Dado el siguiente sistema:
-%
-%%%\begin{figure}[htbp]
-%\includegraphics[width=316pt, height=141pt, keepaspectratio=true]{TP1-Colas-fig119.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig119.png}.}
-%%%\end{figure}
-%
-%\vspace{13pt}
-%Datos:
-%
-%- Arribos de clientes al sistema: 10 clientes/minuto
-%
-%- Atención en cada canal: A: 0,2 minutos/clientes        
-%
-%B: 1/3 minutos/clientes                   
-%
-%C: 1/2 minutos/clientes
-%
-%- Valor de cada servicio: A: 0 \$/cliente     
-%
-%B: 5000 \$/cliente     
-%
-%C: 600 \$/cliente
-%
-%- La población en el sector A es impaciente, según la siguiente ley:
-%
-%\vspace{13pt}
-%\begin{tabular}{|>{\raggedright}p{18pt}|>{\raggedright}p{12pt}|>{\raggedright}p{18pt}|>{\raggedright}p{15pt}|>{\raggedright}p{9pt}|}
-%\hline
-%n & 0 & 1 & 2 & 3\tabularnewline
-%\hline
-%P(I) & 1 & 0.2 & 0.8 & 0\tabularnewline
-%\hline
-%\end{tabular}\label{h.p6o6fkl3x9ar}
-%
-%\vspace{21pt}
-%{\color{color01} \emph{Resolución}}
-%
-%\parindent=36pt
-%Como el sistema admite rechazo para el caso de la terminal C, se puede plantear 
-%el problema como 3 subsistemas independientes y plantear que:
-%
-%\vspace{13pt}
-%\parindent=0pt
-%%%\begin{figure}[htbp]
-%\includegraphics[width=193pt, height=15pt, keepaspectratio=true]{TP1-Colas-fig120.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig120.png}.}
-%%%\end{figure}
-%
-%\vspace{13pt}
-%%%\begin{figure}[htbp]
-%\includegraphics[width=116pt, height=17pt, keepaspectratio=true]{TP1-Colas-fig121.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig121.png}.}
-%%%\end{figure}
-%
-%\vspace{13pt}
-%%%\begin{figure}[htbp]
-%\includegraphics[width=118pt, height=17pt, keepaspectratio=true]{TP1-Colas-fig122.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig122.png}.}
-%%%\end{figure}
-%
-%\vspace{13pt}
-%%%\begin{figure}[htbp]
-%\includegraphics[width=64pt, height=17pt, keepaspectratio=true]{TP1-Colas-fig123.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig123.png}.}
-%%%\end{figure}
-%
-%\vspace{13pt}
-%%%\begin{figure}[htbp]
-%\includegraphics[width=63pt, height=17pt, keepaspectratio=true]{TP1-Colas-fig124.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig124.png}.}
-%%%\end{figure}
-%
-%\vspace{13pt}
-%%%\begin{figure}[htbp]
-%\includegraphics[width=213pt, height=17pt, keepaspectratio=true]{TP1-Colas-fig125.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig125.png}.}
-%%%\end{figure}
-%
-%\vspace{13pt}
-%%%\begin{figure}[htbp]
-%\includegraphics[width=218pt, height=17pt, keepaspectratio=true]{TP1-Colas-fig126.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig126.png}.}
-%%%\end{figure}
-%
-%\vspace{13pt}
-%%%\begin{figure}[htbp]
-%\includegraphics[width=218pt, height=17pt, keepaspectratio=true]{TP1-Colas-fig127.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig127.png}.}
-%%%\end{figure}
-%
-%\vspace{69pt}
-%\emph{Sistema A: }
-%
-%\parindent=36pt
-%El sistema presenta las características de un modelo PP1 con impaciencia\label{h.czc72qkn3rsf}
-%
-%\vspace{8pt}
-%\parindent=0pt
-%{\color{color01} \emph{Hipótesis}}
-%
-%\leftskip=36pt
-%\parindent=-18pt
-%●\tab El proceso de llegada de los clientes responde a un proceso Poisson.
-%
-%●\tab El proceso de atención de los clientes responde a un proceso Poisson.
-%
-%●\tab La población es infinita
-%
-%●\tab Se forma una única cola frente al canal de atención.
-%
-%●\tab Existe un único canal de atención.
-%
-%●\tab La capacidad del sistema es infinita
-%
-%●\tab La atención de los clientes de la cola es FIFO
-%
-%●\tab El sistema se encuentra en condiciones estables.
-%
-%●\tab \emph{La población presenta el fenómeno de impaciencia.}
-%
-%\vspace{13pt}
-%\leftskip=0pt
-%\parindent=0pt
-%\begin{tabular}{|>{\raggedright}p{34pt}|>{\raggedright}p{33pt}|>{\raggedright}p{33pt}|>{\raggedright}p{33pt}|>{\raggedright}p{33pt}|>{\raggedright}p{33pt}|>{\raggedright}p{26pt}|>{\raggedright}p{27pt}|}
-%\hline
-%n & P(n)
-%\includegraphics[width=8pt, height=11pt, keepaspectratio=true]{TP1-Colas-fig128.png}
-% & 
-%\includegraphics[width=8pt, height=11pt, keepaspectratio=true]{TP1-Colas-fig129.png}
-% &  & L & Lc & H & R\tabularnewline
-%\hline
-%0 & P(0)
-%\includegraphics[width=14pt, height=14pt, keepaspectratio=true]{TP1-Colas-fig130.png}
-% & 8
-%\includegraphics[width=14pt, height=14pt, keepaspectratio=true]{TP1-Colas-fig131.wmf}
-% & 0 & 0 & 0 & 0 & 0\tabularnewline
-%\hline
-%1 & P(1)
-%\includegraphics[width=31pt, height=16pt, keepaspectratio=true]{TP1-Colas-fig132.png}
-% & 8
-%\includegraphics[width=31pt, height=16pt, keepaspectratio=true]{TP1-Colas-fig133.wmf}
-%
-%\includegraphics[width=16pt, height=11pt, keepaspectratio=true]{TP1-Colas-fig134.png}
-% &  & 1 & 0 & 1
-%\includegraphics[width=31pt, height=16pt, keepaspectratio=true]{TP1-Colas-fig135.png}
-% & \tabularnewline
-%\hline
-%2 & P(2)
-%\includegraphics[width=31pt, height=16pt, keepaspectratio=true]{TP1-Colas-fig136.png}
-% & 8
-%\includegraphics[width=31pt, height=16pt, keepaspectratio=true]{TP1-Colas-fig137.wmf}
-%
-%\includegraphics[width=16pt, height=11pt, keepaspectratio=true]{TP1-Colas-fig138.png}
-% &  & 2 & 1 & 1
-%\includegraphics[width=31pt, height=16pt, keepaspectratio=true]{TP1-Colas-fig139.png}
-% & \tabularnewline
-%\hline
-%3 & P(3) & 0
-%\includegraphics[width=16pt, height=11pt, keepaspectratio=true]{TP1-Colas-fig140.png}
-% &  & 3 & 2 & 1
-%\includegraphics[width=14pt, height=14pt, keepaspectratio=true]{TP1-Colas-fig141.png}
-% & \tabularnewline
-%\hline
-%\end{tabular}
-%
-%\vspace{13pt}
-%%%\begin{figure}[htbp]
-%\includegraphics[width=199pt, height=30pt, keepaspectratio=true]{TP1-Colas-fig142.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig142.png}.}
-%%%\end{figure}
-%
-%\vspace{13pt}
-%%%\begin{figure}[htbp]
-%\includegraphics[width=234pt, height=30pt, keepaspectratio=true]{TP1-Colas-fig143.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig143.png}.}
-%%%\end{figure}
-%
-%\vspace{13pt}
-%%%\begin{figure}[htbp]
-%\includegraphics[width=239pt, height=30pt, keepaspectratio=true]{TP1-Colas-fig144.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig144.png}.}
-%%%\end{figure}
-%
-%\vspace{27pt}
-%%%\begin{figure}[htbp]
-%\includegraphics[width=139pt, height=32pt, keepaspectratio=true]{TP1-Colas-fig145.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig145.png}.}
-%%%\end{figure}
-%
-%\vspace{13pt}
-%%%\begin{figure}[htbp]
-%\includegraphics[width=421pt, height=29pt, keepaspectratio=true]{TP1-Colas-fig146.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig146.png}.}
-%%%\end{figure}
-%
-%\vspace{27pt}
-%%%\begin{figure}[htbp]
-%\includegraphics[width=275pt, height=14pt, keepaspectratio=true]{TP1-Colas-fig147.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig147.png}.}
-%%%\end{figure}
-%
-%8
-%\includegraphics[width=275pt, height=14pt, keepaspectratio=true]{TP1-Colas-fig148.wmf}
-%
-%%%\begin{figure}[htbp]
-%\includegraphics[width=292pt, height=17pt, keepaspectratio=true]{TP1-Colas-fig149.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig149.png}.}
-%%%\end{figure}
-%
-%\vspace{13pt}
-%%%\begin{figure}[htbp]
-%\includegraphics[width=476pt, height=17pt, keepaspectratio=true]{TP1-Colas-fig150.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig150.png}.}
-%%%\end{figure}
-%
-%\vspace{27pt}
-%\emph{Sistema B}
-%
-%\parindent=36pt
-%El sistema presenta las características de un modelo PP1\label{h.d1eiei73nl4e}
-%
-%\vspace{8pt}
-%\parindent=0pt
-%{\color{color01} \emph{Hipótesis}}
-%
-%\leftskip=36pt
-%\parindent=-18pt
-%●\tab El proceso de llegada de los clientes responde a un proceso Poisson.
-%
-%●\tab El proceso de atención de los clientes responde a un proceso Poisson.
-%
-%●\tab La población es infinita
-%
-%●\tab Se forma una única cola frente al canal de atención.
-%
-%●\tab Existe un único canal de atención.
-%
-%●\tab La capacidad del sistema es infinita
-%
-%●\tab La atención de los clientes de la cola es FIFO
-%
-%●\tab El sistema se encuentra en condiciones estables.
-%
-%●\tab La población no presenta el fenómeno de impaciencia.
-%
-%\vspace{27pt}
-%\leftskip=0pt
-%\parindent=0pt
-%\begin{tabular}{|>{\raggedright}p{39pt}|>{\raggedright}p{39pt}|>{\raggedright}p{38pt}|>{\raggedright}p{39pt}|>{\raggedright}p{38pt}|>{\raggedright}p{38pt}|>{\raggedright}p{31pt}|}
-%\hline
-%n & P(n)
-%\includegraphics[width=8pt, height=11pt, keepaspectratio=true]{TP1-Colas-fig151.png}
-% & 
-%\includegraphics[width=8pt, height=11pt, keepaspectratio=true]{TP1-Colas-fig152.png}
-% &  & L & Lc & H\tabularnewline
-%\hline
-%0 & P(0)
-%\includegraphics[width=14pt, height=14pt, keepaspectratio=true]{TP1-Colas-fig153.png}
-% & 8
-%\includegraphics[width=14pt, height=14pt, keepaspectratio=true]{TP1-Colas-fig154.wmf}
-% & 0 & 0 & 0 & 0\tabularnewline
-%\hline
-%1 & P(1)
-%\includegraphics[width=14pt, height=14pt, keepaspectratio=true]{TP1-Colas-fig155.png}
-% & 8
-%\includegraphics[width=14pt, height=14pt, keepaspectratio=true]{TP1-Colas-fig156.wmf}
-%
-%\includegraphics[width=14pt, height=14pt, keepaspectratio=true]{TP1-Colas-fig157.png}
-% &  & 1 & 0 & 1\tabularnewline
-%\hline
-%2 & P(2)
-%\includegraphics[width=14pt, height=14pt, keepaspectratio=true]{TP1-Colas-fig158.png}
-% & 8
-%\includegraphics[width=14pt, height=14pt, keepaspectratio=true]{TP1-Colas-fig159.wmf}
-%
-%\includegraphics[width=14pt, height=14pt, keepaspectratio=true]{TP1-Colas-fig160.png}
-% &  & 2 & 1 & 1\tabularnewline
-%\hline
-%3 & P(3)
-%\includegraphics[width=14pt, height=14pt, keepaspectratio=true]{TP1-Colas-fig161.png}
-% & 8
-%\includegraphics[width=14pt, height=14pt, keepaspectratio=true]{TP1-Colas-fig162.wmf}
-%
-%\includegraphics[width=14pt, height=14pt, keepaspectratio=true]{TP1-Colas-fig163.png}
-% &  & 3 & 2 & 1\tabularnewline
-%\hline
-%.... & .. & .. & .. & .. & .. & ..\tabularnewline
-%\hline
-%n & P(n)
-%\includegraphics[width=14pt, height=14pt, keepaspectratio=true]{TP1-Colas-fig164.png}
-% & 
-%\includegraphics[width=14pt, height=14pt, keepaspectratio=true]{TP1-Colas-fig165.png}
-% &  & n & n-1 & 1\tabularnewline
-%\hline
-%\end{tabular}
-%
-%\vspace{13pt}
-%%%\begin{figure}[htbp]
-%\includegraphics[width=274pt, height=17pt, keepaspectratio=true]{TP1-Colas-fig166.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig166.png}.}
-%%%\end{figure}
-%
-%8
-%\includegraphics[width=274pt, height=17pt, keepaspectratio=true]{TP1-Colas-fig167.wmf}
-%
-%%%\begin{figure}[htbp]
-%\includegraphics[width=254pt, height=31pt, keepaspectratio=true]{TP1-Colas-fig168.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig168.png}.}
-%%%\end{figure}
-%
-%\vspace{13pt}
-%%%\begin{figure}[htbp]
-%\includegraphics[width=143pt, height=20pt, keepaspectratio=true]{TP1-Colas-fig169.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig169.png}.}
-%%%\end{figure}
-%
-%\vspace{13pt}
-%%%\begin{figure}[htbp]
-%\includegraphics[width=260pt, height=32pt, keepaspectratio=true]{TP1-Colas-fig170.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig170.png}.}
-%%%\end{figure}
-%
-%\vspace{13pt}
-%I = 5000 \$/cliente * 
-%\includegraphics[width=18pt, height=17pt, keepaspectratio=true]{TP1-Colas-fig171.png}
-%=5000 \$/cliente * 1.6552 cl/min = \textbf{8276 \$/minuto}
-%
-%\vspace{13pt}
-%\emph{Sistema C}
-%
-%Se trata de un sistema de capacidad limitada PP1N con N=2\label{h.nxlbgp70776p}
-%
-%\vspace{8pt}
-%{\color{color01} \emph{Hipótesis}}
-%
-%\leftskip=36pt
-%\parindent=-18pt
-%●\tab El proceso de llegada de los clientes responde a un proceso Poisson.
-%
-%●\tab El proceso de atención de los clientes responde a un proceso Poisson.
-%
-%●\tab La población es infinita
-%
-%●\tab Se forma una única cola frente al canal de atención.
-%
-%●\tab Existe un único canal de atención.
-%
-%●\tab \emph{La capacidad del sistema es finita}
-%
-%●\tab La atención de los clientes de la cola es FIFO
-%
-%●\tab El sistema se encuentra en condiciones estables.
-%
-%●\tab La población no presenta el fenómeno de impaciencia.
-%
-%\vspace{27pt}
-%\leftskip=0pt
-%\parindent=0pt
-%\begin{tabular}{|>{\raggedright}p{34pt}|>{\raggedright}p{33pt}|>{\raggedright}p{33pt}|>{\raggedright}p{33pt}|>{\raggedright}p{33pt}|>{\raggedright}p{33pt}|>{\raggedright}p{26pt}|>{\raggedright}p{27pt}|}
-%\hline
-%n & P(n)
-%\includegraphics[width=8pt, height=11pt, keepaspectratio=true]{TP1-Colas-fig172.png}
-% & 
-%\includegraphics[width=8pt, height=11pt, keepaspectratio=true]{TP1-Colas-fig173.png}
-% &  & L & Lc & H & R\tabularnewline
-%\hline
-%0 & P(0)
-%\includegraphics[width=14pt, height=14pt, keepaspectratio=true]{TP1-Colas-fig174.png}
-% & 8
-%\includegraphics[width=14pt, height=14pt, keepaspectratio=true]{TP1-Colas-fig175.wmf}
-% & 0 & 0 & 0 & 0 & 0\tabularnewline
-%\hline
-%1 & P(1)
-%\includegraphics[width=14pt, height=14pt, keepaspectratio=true]{TP1-Colas-fig176.png}
-% & 8
-%\includegraphics[width=14pt, height=14pt, keepaspectratio=true]{TP1-Colas-fig177.wmf}
-%
-%\includegraphics[width=14pt, height=11pt, keepaspectratio=true]{TP1-Colas-fig178.png}
-% &  & 1 & 0 & 1 & 0\tabularnewline
-%\hline
-%2 & P(2)
-%\includegraphics[width=7pt, height=11pt, keepaspectratio=true]{TP1-Colas-fig179.png}
-% & 8
-%\includegraphics[width=7pt, height=11pt, keepaspectratio=true]{TP1-Colas-fig180.wmf}
-%
-%\includegraphics[width=14pt, height=11pt, keepaspectratio=true]{TP1-Colas-fig181.png}
-% &  & 2 & 1 & 1
-%\includegraphics[width=14pt, height=14pt, keepaspectratio=true]{TP1-Colas-fig182.png}
-% & \tabularnewline
-%\hline
-%\end{tabular}
-%
-%\vspace{13pt}
-%%%\begin{figure}[htbp]
-%\includegraphics[width=276pt, height=17pt, keepaspectratio=true]{TP1-Colas-fig183.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig183.png}.}
-%%%\end{figure}
-%
-%\vspace{13pt}
-%%%\begin{figure}[htbp]
-%\includegraphics[width=189pt, height=30pt, keepaspectratio=true]{TP1-Colas-fig184.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig184.png}.}
-%%%\end{figure}
-%
-%\vspace{13pt}
-%%%\begin{figure}[htbp]
-%\includegraphics[width=196pt, height=30pt, keepaspectratio=true]{TP1-Colas-fig185.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig185.png}.}
-%%%\end{figure}
-%
-%\vspace{13pt}
-%%%\begin{figure}[htbp]
-%\includegraphics[width=256pt, height=26pt, keepaspectratio=true]{TP1-Colas-fig186.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig186.png}.}
-%%%\end{figure}
-%
-%\vspace{13pt}
-%%%\begin{figure}[htbp]
-%\includegraphics[width=318pt, height=29pt, keepaspectratio=true]{TP1-Colas-fig187.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig187.png}.}
-%%%\end{figure}
-%
-%\vspace{13pt}
-%%%\begin{figure}[htbp]
-%\includegraphics[width=428pt, height=15pt, keepaspectratio=true]{TP1-Colas-fig188.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig188.png}.}
-%%%\end{figure}
-%
-%\vspace{13pt}
-%%%\begin{figure}[htbp]
-%\includegraphics[width=111pt, height=14pt, keepaspectratio=true]{TP1-Colas-fig189.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig189.png}.}
-%%%\end{figure}
-%
-%\vspace{13pt}
-%%%\begin{figure}[htbp]
-%\includegraphics[width=328pt, height=15pt, keepaspectratio=true]{TP1-Colas-fig190.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig190.png}.}
-%%%\end{figure}
-%
-%\vspace{13pt}
-%I = 600 \$/cl * 
-%\includegraphics[width=16pt, height=14pt, keepaspectratio=true]{TP1-Colas-fig191.png}
-% = 600 \$/cl * 1.4712cl/min = \textbf{882.72 \$/min}
-%
-%\vspace{13pt}
-%Conclusion:
-%
-%\leftskip=36pt
-%\parindent=-18pt
-%1.\tab La cantidad promedio de clientes esperando en cada sector.
-%
-%\leftskip=0pt
-%\parindent=36pt
-%%%\begin{figure}[htbp]
-%\includegraphics[width=71pt, height=14pt, keepaspectratio=true]{TP1-Colas-fig192.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig192.png}.}
-%%%\end{figure}
-%
-%8
-%\includegraphics[width=71pt, height=14pt, keepaspectratio=true]{TP1-Colas-fig193.wmf}
-%
-%%%\begin{figure}[htbp]
-%\includegraphics[width=74pt, height=14pt, keepaspectratio=true]{TP1-Colas-fig194.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig194.png}.}
-%%%\end{figure}
-%
-%\vspace{13pt}
-%%%\begin{figure}[htbp]
-%\includegraphics[width=74pt, height=14pt, keepaspectratio=true]{TP1-Colas-fig195.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig195.png}.}
-%%%\end{figure}
-%
-%\vspace{13pt}
-%\leftskip=36pt
-%\parindent=-18pt
-%2.\tab El ingreso económico promedio del sistema (\$/minuto). 
-%
-%\leftskip=0pt
-%\parindent=0pt
-%%%\begin{figure}[htbp]
-%\includegraphics[width=0pt, height=0pt, keepaspectratio=true]{TP1-Colas-fig196.???}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig196.???}.}
-%%%\end{figure}
-%
-%\includegraphics[width=458pt, height=15pt, keepaspectratio=true]{TP1-Colas-fig197.wmf}
-%
-%\leftskip=36pt
-%\parindent=-18pt
-%3.\tab La cantidad promedio de clientes que no ingresan al sistema por minuto.
-%
-%\parindent=0pt
-%%%\begin{figure}[htbp]
-%\includegraphics[width=408pt, height=15pt, keepaspectratio=true]{TP1-Colas-fig198.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig198.png}.}
-%%%\end{figure}
-%
-%\vspace{13pt}
-%\parindent=-18pt
-%4.\tab La probabilidad de que el sistema esté vacío.
-%
-%\leftskip=0pt
-%\parindent=0pt
-%%%\begin{figure}[htbp]
-%\includegraphics[width=182pt, height=14pt, keepaspectratio=true]{TP1-Colas-fig199.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig199.png}.}
-%%%\end{figure}
-%
-%%%\begin{figure}[htbp]
-%\includegraphics[width=35pt, height=11pt, keepaspectratio=true]{TP1-Colas-fig200.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig200.png}.}
-%%%\end{figure}
-%
-%*
-%\includegraphics[width=37pt, height=11pt, keepaspectratio=true]{TP1-Colas-fig201.png}
-%*
-%\includegraphics[width=37pt, height=11pt, keepaspectratio=true]{TP1-Colas-fig202.png}
-%=0.021\label{h.5m2srg983sye}
-%
-%\vspace{35pt}
-%\subsubsection*{{\color{color01} \textbf{Ejercicio 8}}}
-%
-%\vspace{13pt}
-%Dado el siguiente sistema con reciclaje:
-%
-%%%\begin{figure}[htbp]
-%\includegraphics[width=338pt, height=141pt, keepaspectratio=true]{TP1-Colas-fig203.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig203.png}.}
-%%%\end{figure}
-%
-%\vspace{27pt}
-%Sabiendo que los clientes arriban a una velocidad promedio de 8 clientes por minuto 
-%y el canal atiende a una velocidad promedio de 10 clientes por minuto (distribución 
-%Poisson), se pide calcular:
-%
-%a) La cantidad promedio de clientes en la cola.
-%
-%b) El tiempo promedio de permanencia de un cliente en la cola.
-%
-%c) La probabilidad de que el canal no esté ocioso.
-%
-%d) La cantidad promedio de clientes en el sistema.
-%
-%\vspace{13pt}
-%Hipótesis:
-%
-%\vspace{13pt}
-%1) El proceso de arribo de los clientes al sistema es Poisson.
-%
-%2) El proceso de servicio del canal es Poisson.
-%
-%3) El sistema se encuentra en régimen permanente.
-%
-%4) Los clientes que llegan al sistema forman una cola simple.
-%
-%5) La disciplina de atención es FIFO.
-%
-%6) Hay un solo canal de atención.
-%
-%7) La capacidad del sistema es infinita.
-%
-%8) Los clientes que llegan al sistema no presentan impaciencia.
-%
-%9) La población de potenciales clientes del sistema es infinita.
-%
-%\vspace{13pt}
-%Resolución: {\color{color03} (se usan fórmulas de P/P/1 pero con $\lambda$ esperado 
-%en vez de $\lambda$, por ser con reciclaje)}
-%
-%\vspace{13pt}
-%a) Cantidad promedio de clientes en la cola  
-%
-%\vspace{13pt}
-%%%\begin{figure}[htbp]
-%\includegraphics[width=140pt, height=20pt, keepaspectratio=true]{TP1-Colas-fig204.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig204.png}.}
-%%%\end{figure}
-%
-%\vspace{13pt}
-%Y siendo: 
-%
-%%%\begin{figure}[htbp]
-%\includegraphics[width=92pt, height=20pt, keepaspectratio=true]{TP1-Colas-fig205.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig205.png}.}
-%%%\end{figure}
-%
-%   
-%
-%\parindent=10pt
-%=\texttt{>}   
-%\includegraphics[width=125pt, height=20pt, keepaspectratio=true]{TP1-Colas-fig206.png}
-%
-%\parindent=0pt
-%Por lo que  
-%
-%%%\begin{figure}[htbp]
-%\includegraphics[width=233pt, height=26pt, keepaspectratio=true]{TP1-Colas-fig207.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig207.png}.}
-%%%\end{figure}
-%
-%\vspace{27pt}
-%Siendo 
-%\includegraphics[width=149pt, height=47pt, keepaspectratio=true]{TP1-Colas-fig208.png}
-%
-%b) Tiempo promedio de permanencia de un cliente en la cola.
-%
-%\vspace{13pt}
-%%%\begin{figure}[htbp]
-%\includegraphics[width=0pt, height=0pt, keepaspectratio=true]{TP1-Colas-fig209.???}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig209.???}.}
-%%%\end{figure}
-%
-%\includegraphics[width=205pt, height=47pt, keepaspectratio=true]{TP1-Colas-fig210.wmf}
-%
-%\vspace{13pt}
-%c) Probabilidad de que el canal no esté ocioso.
-%
-%\vspace{13pt}
-%%%\begin{figure}[htbp]
-%\includegraphics[width=253pt, height=14pt, keepaspectratio=true]{TP1-Colas-fig211.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig211.png}.}
-%%%\end{figure}
-%
-%\vspace{13pt}
-%Dado que:
-%
-%%%\begin{figure}[htbp]
-%\includegraphics[width=134pt, height=35pt, keepaspectratio=true]{TP1-Colas-fig212.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig212.png}.}
-%%%\end{figure}
-%
-%\vspace{27pt}
-%d) Cantidad promedio de clientes en el sistema.\label{h.8dp3y8yzivhk}
-%
-%\vspace{49pt}
-%\subsubsection*{{\color{color01} \textbf{Ejercicio 9}}}
-%
-%\vspace{13pt}
-%Dado el siguiente sistema, los clientes que ingresan al mismo deben pasar por dos 
-%sectores para
-%
-%realizar su trámite. En el primer sector se realiza la primera parte del trÁmite. 
-%Allí hay dos
-%
-%ventanillas, la 1 y la 2, que brindan el mismo servicio, a una velocidad $\mu$1 
-%y $\mu$2 respectivamente. La
-%
-%segunda parte del trámite se lleva a cabo en el segundo sector, el cual cuenta 
-%con otras dos
-%
-%ventanillas (la 3 y la 4), que atienden a una velocidad $\mu$3 y $\mu$4 respectivamente. 
-%Ambas brindan el
-%
-%mismo servicio. Dado que no hay mucho espacio, no se admite formación de cola 
-%ni antes del
-%
-%primer sector ni antes del segundo. Los clientes que ingresan al sistema no pueden 
-%retirarse sin
-%
-%haber realizado el trámite completo.
-%
-%\vspace{13pt}
-%%%\begin{figure}[htbp]
-%\includegraphics[width=266pt, height=155pt, keepaspectratio=true]{TP1-Colas-fig213.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig213.png}.}
-%%%\end{figure}
-%
-%\vspace{13pt}
-%Se pide:
-%
-%\vspace{13pt}
-%a) Definir todos los estados posibles.
-%
-%b) Expresar P(b,0,1,1)
-%
-%c) Expresar P(0,0,1,1)  
-%
-%\vspace{27pt}
-%Hipótesis:
-%
-%\vspace{13pt}
-%1) El proceso de arribo de los clientes al sistema es Poisson.
-%
-%2) El proceso de servicio del canal es Poisson.
-%
-%3) El sistema se encuentra en régimen permanente. 
-%
-%4) Los clientes que llegan al sistema forman una cola simple. 
-%
-%5) La disciplina de atención es FIFO. 
-%
-%6) La capacidad del sistema es infinita. 
-%
-%7) Los clientes que llegan al sistema no presentan impaciencia.
-%
-%8) La población es infinita.
-%
-%9) En ambas instancias los canales son indistintos para el cliente (no hay preferencia).\tab 
-%
-%10) El cliente no conoce la velocidad de cada canal.
-%
-%\vspace{13pt}
-%Resolución:
-%
-%a) Definir todos los estados posibles
-%
-%\vspace{27pt}
-%\begin{tabular}{|>{\raggedright}p{22pt}|>{\raggedright}p{16pt}|>{\raggedright}p{15pt}|>{\raggedright}p{16pt}|>{\raggedright}p{15pt}|}
-%\hline
-%\centering n
-%\includegraphics[width=17pt, height=18pt, keepaspectratio=true]{TP1-Colas-fig214.png}
-% & \centering 8
-%\includegraphics[width=17pt, height=18pt, keepaspectratio=true]{TP1-Colas-fig215.wmf}
-%
-%\includegraphics[width=18pt, height=18pt, keepaspectratio=true]{TP1-Colas-fig216.png}
-% & \centering 
-%\includegraphics[width=18pt, height=18pt, keepaspectratio=true]{TP1-Colas-fig217.png}
-% & \centering 
-%\includegraphics[width=18pt, height=18pt, keepaspectratio=true]{TP1-Colas-fig218.png}
-% & \centering \tabularnewline
-%\hline
-%\centering 0 & \centering 0 & \centering 0 & \centering 0 & \centering 0\tabularnewline
-%\hline
-%\centering 1 & \centering 1\linebreak{}
-%0\linebreak{}
-%0\linebreak{}
-%0 & \centering 0\linebreak{}
-%1\linebreak{}
-%0\linebreak{}
-%0 & \centering 0\linebreak{}
-%0\linebreak{}
-%1\linebreak{}
-%0 & \centering 0\linebreak{}
-%0\linebreak{}
-%0\linebreak{}
-%1\tabularnewline
-%\hline
-%\centering 2 & \centering 1\linebreak{}
-%1\linebreak{}
-%1\linebreak{}
-%0\linebreak{}
-%0\linebreak{}
-%0 & \centering 1\linebreak{}
-%0\linebreak{}
-%0\linebreak{}
-%1\linebreak{}
-%1\linebreak{}
-%0 & \centering 0\linebreak{}
-%1\linebreak{}
-%0\linebreak{}
-%1\linebreak{}
-%0\linebreak{}
-%1 & \centering 0\linebreak{}
-%0\linebreak{}
-%1\linebreak{}
-%0\linebreak{}
-%1\linebreak{}
-%1\tabularnewline
-%\hline
-%\centering 3 & \centering 1\linebreak{}
-%1\linebreak{}
-%1\linebreak{}
-%0\linebreak{}
-%b\linebreak{}
-%0 & \centering 1\linebreak{}
-%1\linebreak{}
-%0\linebreak{}
-%1\linebreak{}
-%0\linebreak{}
-%b & \centering 1\linebreak{}
-%0\linebreak{}
-%1\linebreak{}
-%1\linebreak{}
-%1\linebreak{}
-%1 & \centering 0\linebreak{}
-%1\linebreak{}
-%1\linebreak{}
-%1\linebreak{}
-%1\linebreak{}
-%1\tabularnewline
-%\hline
-%\centering 4 & \centering 1\linebreak{}
-%b\linebreak{}
-%b\linebreak{}
-%1 & \centering 1\linebreak{}
-%b\linebreak{}
-%1\linebreak{}
-%b & \centering 1\linebreak{}
-%1\linebreak{}
-%1\linebreak{}
-%1 & \centering 1\linebreak{}
-%1\linebreak{}
-%1\linebreak{}
-%1\tabularnewline
-%\hline
-%\end{tabular}
-%
-%\vspace{13pt}
-%b) Expresar P(b,0,1,1)
-%
-%\vspace{13pt}
-%%%\begin{figure}[htbp]
-%\includegraphics[width=389pt, height=18pt, keepaspectratio=true]{TP1-Colas-fig219.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig219.png}.}
-%%%\end{figure}
-%
-%\vspace{13pt}
-%\leftskip=55pt
-%%%\begin{figure}[htbp]
-%\includegraphics[width=312pt, height=18pt, keepaspectratio=true]{TP1-Colas-fig220.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig220.png}.}
-%%%\end{figure}
-%
-%\vspace{13pt}
-%%%\begin{figure}[htbp]
-%\includegraphics[width=213pt, height=18pt, keepaspectratio=true]{TP1-Colas-fig221.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig221.png}.}
-%%%\end{figure}
-%
-%\vspace{13pt}
-%%%\begin{figure}[htbp]
-%\includegraphics[width=202pt, height=18pt, keepaspectratio=true]{TP1-Colas-fig222.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig222.png}.}
-%%%\end{figure}
-%
-%\vspace{27pt}
-%\leftskip=-1pt
+\vspace{35pt}
+\leftskip=0pt
+\parindent=0pt
+\section{\textbf{Ejercicio 5}}
+
+Una empresa tiene cuatro máquinas cortadoras de césped. Las mismas se rompen o
+necesitan mantenimiento cada 15 días (distribución exponencial). Para su
+atención y mantenimiento tiene un empleado que en promedio tarda 7 días con
+cada máquina. En promedio, por cada día de trabajo, las máquinas reportan un
+ingreso de \$50. Se desea saber:
+\begin{enumerate}[a)]
+  \item El número promedio de máquinas funcionando.
+  \item El porcentaje de tiempo que el empleado se encuentra inactivo.
+  \item Cuánto tiempo, en promedio, estará en funcionamiento una máquina.
+  \item Existe la posibilidad de contratar una persona más, que cobra 700\$ por
+    mes y que tarda lo mismo que el empleado. Considerando 1 mes = 24 días,
+    ¿conviene contratar al nuevo empleado?
+\end{enumerate}
+
+
+\vspace{13pt}
+\leftskip=0pt
+\parindent=0pt
+\subsection{\textbf{Resolución}}
+
+\vspace{21pt}
+\subsubsection*{Hipótesis}
+
+\leftskip=36pt
+\parindent=-18pt
+\begin{enumerate}[1.]
+  \item El proceso de llegada de los clientes responde a un proceso Poisson.
+  \item El proceso de atención de los clientes responde a un proceso Poisson.
+  \item La población es infinita
+  \item Se forma una única cola frente al canal de atención.
+  \item Existe un único canal de atención.
+  \item La capacidad del sistema es \textit{finita}
+  \item La atención de los clientes de la cola es FIFO
+  \item El sistema se encuentra en condiciones estables.
+  \item La población no presenta el fenómeno de impaciencia.
+\end{enumerate}
+
+\vspace{21pt}
+\leftskip=0pt
+\parindent=0pt
+\textit{Sistema}
+
+El problema es un modelo de población finita:  $P/P/1/(N')$ con $N'=4$
+
+\includegraphics[width=262pt, height=67pt, keepaspectratio=true]{TP1-Colas-fig003.png}
+
+$T_r = 15[dias]$
+
+\vspace{27pt}
+\begin{tabular}{|>{\centering}p{28pt}|>{\centering}p{26pt}|>{\centering}p{26pt}|>{\centering}p{26pt}|>{\centering}p{26pt}|>{\centering}p{26pt}|>{\centering}p{26pt}|>{\centering}p{26pt}|>{\centering}p{26pt}|}
+\hline
+$n$ & $P(n)$ & $\lambda$ & $\mu$ & $L$ & $Lc$ & $J$ & $N'$ & $H$\tabularnewline
+\hline
+0 & $P(0)$ & $4\lambda_R$ & 0 & 0 & 0 & 4 & 4 & 0\tabularnewline
+\hline
+1 & $P(1)$ & $3\lambda_R$ & $\mu$  & 1 & 0 & 3 & 4 & 1\tabularnewline
+\hline
+2 & $P(2)$ & $2\lambda_R$ & $\mu$  & 2 & 1 & 2 & 4 & 1\tabularnewline
+\hline
+3 & $P(3)$ & $\lambda_R$ & $\mu$  & 3 & 2 & 1 & 4 & 1\tabularnewline
+\hline
+4 & $P(4)$ & 0 &  & 4 & 3 & 0 & 4 & 1\tabularnewline
+\hline
+.. & 0 & .. & .. & .. & .. & .. & .. & ..\tabularnewline
+\hline
+\end{tabular}
+
+\vspace{13pt}
+\leftskip=36pt
+\parindent=-18pt
+\begin{enumerate}[a)]
+  \item
+    $J = 4P(0) + 3P(1) + 2P(2) + 1P(3)$
+
+    $P(1) = \frac{4\lambda_R P(0)}{\mu} = 4\rho_R P(0)$
+
+    $P(2) = \frac{3\lambda_R P(1)}{\mu} = 12\rho_R^2 P(0)$
+
+    $P(3) = \frac{2\lambda_R P(2)}{\mu} = 24\rho_R^3 P(0)$
+
+    $P(4) = \frac{\lambda_R P(3)}{\mu} = 24\rho_R^4 P(0)$
+
+    $\rho_R = \frac{\lambda_R}{\mu} = \frac{\frac{1}{15}[clientes/dia]}{\frac{1}{7}[clientes/dia]} = \frac{7}{15}$
+
+    $P(0) + P(1) + P(2) +P(3) = 1 \implies P(0) =
+    \frac{1}{1+4\rho_R+12\rho_R^2+24\rho_R^3+24\rho_R^4} = 0,1241$
+
+    $J = 2,1427$
+
+  \vspace{13pt}
+  \item
+    $P(0) = 0,1241$
+
+  \vspace{13pt}
+  \item \textit{Estará en funcionamiento una sóla máquina cuando en el sistema haya 3 máquinas.}
+
+    $P(3) = 24\rho_R^3 P(0) = 0,3027$
+
+  \vspace{13pt}
+  \item Para saber si conviene contratar un nuevo empleado a \$700 por mes, se
+    plantea un nuevo sistema con 2 canales: $P/P/M/N$:
+
+    \vspace{21pt}
+    \leftskip=0pt
+    \parindent=0pt
+    \textit{Hipótesis}
+
+    \leftskip=36pt
+    \parindent=-18pt
+    \begin{enumerate}[1.]
+      \item El proceso de llegada de los clientes responde a un proceso Poisson.
+      \item El proceso de atención de los clientes responde a un proceso Poisson.
+      \item La población es infinita
+      \item Se forma una única cola frente al canal de atención.
+      \item \textit{Hay dos canales de atención}
+      \item La capacidad del sistema es \textit{finita}
+      \item La atención de los clientes de la cola es FIFO
+      \item El sistema se encuentra en condiciones estables.
+      \item La población no presenta el fenómeno de impaciencia.
+    \end{enumerate}
+
+    \vspace{21pt}
+    \leftskip=0pt
+    \parindent=0pt
+    \textit{Modelo}
+
+    Este problema es un modelo de población finita:  $P/P/1/(N')$ con $N'=4$
+
+    \includegraphics[width=262pt, height=67pt, keepaspectratio=true]{TP1-Colas-fig004.png}
+
+    \vspace{55pt}
+    \begin{tabular}{|>{\raggedright}p{28pt}|>{\raggedright}p{26pt}|>{\raggedright}p{26pt}|>{\raggedright}p{26pt}|>{\raggedright}p{26pt}|>{\raggedright}p{26pt}|>{\raggedright}p{26pt}|>{\raggedright}p{26pt}|>{\raggedright}p{26pt}|}
+    \hline
+    $n$ & $P(n)$ & $\lambda$ & $\mu$ & $L$ & $Lc$ & $J$ & $N'$ & $H$\tabularnewline
+    \hline
+    0 & $P(0)$ & $4\lambda_R$ & 0 & 0 & 0 & 4 & 4 & 0\tabularnewline
+    \hline
+    1 & $P(1)$ & $3\lambda_R$ & $\mu$ & 1 & 0 & 3 & 4 & 1\tabularnewline
+    \hline
+    2 & $P(2)$ & $2\lambda_R$ & 2$\mu$ & 2 & 1 & 2 & 4 & 1\tabularnewline
+    \hline
+    3 & $P(3)$ & $\lambda_R$ & 2$\mu$ & 3 & 2 & 1 & 4 & 1\tabularnewline
+    \hline
+    4 & $P(4)$ & 0 & 2$\mu$ & 4 & 3 & 0 & 4 & 1\tabularnewline
+    \hline
+    .. & 0 & .. & .. & .. & .. & .. & .. & ..\tabularnewline
+    \hline
+    \end{tabular}
+
+    \vspace{13pt}
+    $J = 4P(0) + 3P(1) + 2P(2) + 1P(3)$
+
+    $P(1) = \frac{4\lambda_R P(0)}{\mu} = 4\rho_R P(0)$
+
+    $P(2) = \frac{3\lambda_R P(1)}{2\mu} = 6\rho_R^2 P(0)$
+
+    $P(3) = \frac{2\lambda_R P(2)}{2\mu} = 6\rho_R^3 P(0)$
+
+    $P(4) = \frac{\lambda_R P(3)}{2\mu} = 3\rho_R^4 P(0)$
+
+    $\rho_R = \frac{\lambda_R}{\mu} = \frac{\frac{1}{15}[clientes/dia]}{\frac{1}{7}[clientes/dia]} = \frac{7}{15}$
+
+    $P(0) + P(1) + P(2) +P(3) = 1 \implies P(0) =
+    \frac{1}{1+4\rho_R+12\rho_R^2+24\rho_R^3+24\rho_R^4} = 0,2548$
+
+    $J = 3,2673$
+
+    $I = \$50 \times 24[dias] \times J$
+
+    Antes:
+
+    $I = \$50 \times 24[dias] \times J = \$50[maquinas/dia] \times 24[dias] \times 2,1427 = \$2571,24[maquina]$
+
+    Ahora:
+
+    $I = \$50 \times 24[dias] \times J = \$50[maquinas/dia] \times 24[dias] \times 3,2673 = \$3920,76[maquina]$
+
+    $Ganancia = \$3920,76[maquina] - \$2571,24[maquina] = \$1349,52[maquina] \implies Conviene $
+\end{enumerate}
+
+\vspace{35pt}
+\leftskip=0pt
+\parindent=0pt
+\section{\textbf{Ejercicio 6}}
+
+Una peluquería tiene un peluquero que realiza un corte de pelo especial a los
+clientes. Recientemente se ha contratado un aprendiz para que lo ayude,
+decidiendo que solo realice el corte cuando llega el segundo cliente a la cola
+de espera.  Tanto el peluquero como el aprendiz demoran en promedio media hora
+cada uno para atender a cada cliente. Al local llegan en promedio 5 clientes
+por hora (distribución Poisson). Los clientes son impacientes. Si hay un
+cliente esperando, solamente el 50\% de los clientes que llegan deciden entrar
+a la peluquería. Si hay más de un cliente esperando, no entra ningún cliente
+más ya que no están dispuestos a esperar. Se pide calcular: 
+
+\begin{enumerate}[a)]
+  \item La probabilidad de que no haya clientes en la peluquería. 
+  \item La probabilidad de que haya clientes esperando para recibir el
+    servicio. 
+  \item El porcentaje de ocupación del peluquero y del aprendiz. 
+  \item La cantidad promedio de clientes esperando para recibir el servicio. 
+  \item La cantidad promedio de clientes que no ingresan a la peluquería. 
+  \item Si cada corte de pelo cuesta 30\$, calcular el ingreso económico
+    promedio de la peluquería, por hora.
+\end{enumerate}
+
+
+\vspace{13pt}
+\leftskip=0pt
+\parindent=0pt
+\subsection{\textbf{Resolución}}
+
+
+\vspace{13pt}
+\textit{Modelo}
+
+\vspace{13pt}
+Este problema es un modelo $P/P/2$ con \textit{impaciencia}.
+
+\vspace{13pt}
+\includegraphics[width=343pt, height=102pt, keepaspectratio=true]{TP1-Colas-fig005.png}
+
+\vspace{21pt}
+\subsubsection*{Hipótesis}
+
+\leftskip=36pt
+\parindent=-18pt
+\begin{enumerate}[1.]
+  \item El proceso de llegada de los clientes responde a un proceso Poisson.
+  \item El proceso de atención de los clientes responde a un proceso Poisson.
+  \item La población es infinita
+  \item Existen 2 canales de atención.
+  \item Se forma una única cola frente a los canales de atención.
+  \item La capacidad del sistema es in\textit{finita}
+  \item La atención de los clientes de la cola es FIFO
+  \item El sistema se encuentra en condiciones estables.
+  \item La población presenta el fenómeno de impaciencia.
+\end{enumerate}
+
+\vspace{13pt}
+\leftskip=0pt
+\parindent=0pt
+\textit{Datos}
+
+\leftskip=36pt
+\parindent=-18pt
+\begin{enumerate}[a)]
+  \item
+    $\lambda = \frac{5[clientes]}{60[minuto]}$
+
+  \item
+    $\mu = \frac{1[cliente]}{60[minutos]}$
+
+  \item Probabilidad de ingreso
+
+    \leftskip=72pt
+    \begin{enumerate}[1)]
+      \item $n = 0 -> PI = 1$
+      \item $n = 1 -> PI = 1$
+      \item $n = 2 -> PI = 0.5$
+      \item $n = 3 -> PI = 0.5$
+      \item $n = 4 -> PI = 1$
+    \end{enumerate}
+\end{enumerate}
+
+\vspace{13pt}
+\begin{tabular}{|>{\centering}p{21pt}|>{\centering}p{24pt}|>{\centering}p{28pt}|>{\centering}p{28pt}|>{\centering}p{28pt}|>{\centering}p{19pt}|>{\centering}p{21pt}|>{\centering}p{21pt}|>{\centering}p{19pt}|>{\centering}p{19pt}|}
+\hline
+\centering $n$ & \centering $P(n)$ & \centering $\lambda$ & \centering $\mu$ & \centering $L$ & \centering $L_c$ & \centering $H$ & \centering $R$ & \centering $H1$ & \centering $H2$\tabularnewline
+\hline
+\centering 0 & $P(0)$ & $\lambda$ & \centering 0 & \centering 0 & \centering 0 & \centering 0 & \centering 0 & \centering 0 & \centering 0\tabularnewline
+\hline
+\centering 1 & $P(1)$ & $\lambda$ & \centering $\mu$ & \centering 1 & \centering 0 & \centering 1 & \centering 0 & \centering 1 & \centering 0\tabularnewline
+\hline
+\centering 2 & $P(2)$ & 0.5$\lambda$ & \centering $\mu$ & \centering 2 & \centering 1 & \centering 1 & \centering 0.5$\lambda$ & \centering 1 & \centering 0\tabularnewline
+\hline
+\centering 3 & $P(3)$ & 0.5$\lambda$ & \centering 2$\mu$ & \centering 3 & \centering 1 & \centering 2 & \centering 0.5$\lambda$ & \centering 1 & \centering 1\tabularnewline
+\hline
+\centering 4 & $P(4)$ & 0 & 2$\mu$ & \centering 4 & \centering 2 & \centering 2 & \centering $\lambda$ & \centering 1 & \centering 1\tabularnewline
+\hline
+\end{tabular}
+
+\vspace{23pt}
+
+$P(1) = \frac{\lambda P(0)}{\mu} \implies P(1) = \rho P(0) = 0,1553$
+
+$P(2) = \frac{\lambda P(1)}{\mu} \implies P(2) = \rho^2 P(0) = 0,3882$
+
+$P(3) = \frac{0,5\lambda P(2)}{2\mu} \implies P(3)= \frac{1}{4}\rho^3 P(0) = 0,2427$
+
+$P(4) = \frac{0,5\lambda P(3)}{2\mu} \implies P(4) = \frac{1}{16}\rho^4 P(0) = 01517$
+
+$P(0) + P(1) + P(2) + P(3) + P(4) = 1 \implies P(0) + \rho P(0) +  \rho^2 P(0) + \frac{1}{4}\rho^3 P(0) + \frac{1}{16}\rho^4 P(0) = 1$
+
+$P(0) = \frac{1}{1 + \rho + \rho^2 + \frac{1}{4}\rho^3 + \frac{1}{16}\rho^4 } = 0,0621$
+
+\vspace{27pt}
+\begin{enumerate}[a)]
+  \item Probabilidad de que no haya clientes en la peluquería.
+
+  $P(0) = 0.0621$
+
+  \vspace{13pt}
+  \item Probabilidad de que haya clientes esperando para recibir el servicio.
+
+  $P(2<n<4) = 0,7826$
+
+  \vspace{13pt}
+  \item Porcentaje de ocupación del peluquero y del aprendiz.
+
+  $\overline{H_1} = \displaystyle\sum_{i=0}^{4} P(i) \times H_{1n} = 0,9379 \implies 93,97\% $
+
+  $\overline{H_2} = \displaystyle\sum_{i=0}^{4} P(i) \times H_{2n} = 0,3944 \implies 39,44\% $
+
+  \vspace{13pt}
+  \parindent=0pt
+  \item Cantidad promedio de clientes esperando para recibir el servicio.
+
+  $\overline{L_c} = \displaystyle\sum_{i=0}^{4} P(i) \times L_{c_n} = 0,9343$
+
+  \vspace{13pt}
+  \item Cantidad promedio de clientes que no ingresan a la peluquería.
+
+  $\overline{R} = \displaystyle\sum_{i=0}^{4} P(i) \times R_n = 2,3357[clientes/minuto]$
+
+  \vspace{13pt}
+  \item Si cada corte de pelo cuesta 30\$, calcular el ingreso económico promedio
+    de la peluquería
+
+  $\overline{I} = \left[ \displaystyle\sum_{i=0}^{4} P(i) \times \mu_n \right] \times 60[minutos] \times \$30 = \$79,93[minutos]$
+
+\end{enumerate}
+
+\vspace{35pt}
+\section{\textbf{Ejercicio 7}}
+
+Dado el siguiente sistema:
+
+\includegraphics[width=316pt, height=141pt, keepaspectratio=true]{TP1-Colas-fig006.png}
+
+\vspace{13pt}
+Datos:
+\begin{itemize}
+  \item Arribos de clientes al sistema: 10 clientes/minuto
+  \item Atención en cada canal:
+    \begin{enumerate}[A:]
+      \item 0,2 minutos/clientes
+      \item 1/3 minutos/clientes                   
+      \item 1/2 minutos/clientes
+    \end{enumerate}
+
+  \item Valor de cada servicio:
+    \begin{enumerate}[A:]
+      \item 0 \$/cliente     
+      \item 5000 \$/cliente     
+      \item 600 \$/cliente
+    \end{enumerate}
+
+  \item La población en el sector A es impaciente, según la siguiente ley:
+
+  \vspace{13pt}
+  \begin{tabular}{|>{\centering}p{28pt}|>{\centering}p{12pt}|>{\centering}p{18pt}|>{\centering}p{15pt}|>{\centering}p{9pt}|}
+  \hline
+  $n$ & 0 & 1 & 2 & 3\tabularnewline
+  \hline
+  $PI(n)$ & 1 & 0.5 & 0.2 & 0\tabularnewline
+  \hline
+  \end{tabular}
+\end{itemize}
+
+Se pide calcular:
+\begin{enumerate}[a)]
+  \item La cantidad promedio de clientes esperando en cada sector.
+  \item El ingreso económico promedio del sistema (\$/minuto).
+  \item La cantidad promedio de clientes que no ingresan al sistema por minuto.
+  \item La probabilidad de que el sistema esté vacío.
+\end{enumerate}
+
+\vspace{13pt}
+\leftskip=0pt
+\parindent=0pt
+\subsection{\textbf{Resolución}}
+
+Como el sistema admite rechazo al ingreso del sistema y también para el caso de
+la terminal C, se puede plantear el problema como 3 subsistemas independientes
+y plantear que:
+
+\vspace{13pt}
+\parindent=0pt
+
+$\lambda_{sistema} = \lambda_A = 10 [clientes/minuto]$
+
+$\overline{\mu_{sistema}} = \overline{\mu_B} + \overline{\mu_C}$
+
+$\overline{R_{sistema}} = \overline{R_A} + \overline{R_C}$
+
+$\lambda_B = 0,4\overline{\mu_A}$
+
+$\lambda_C = 0,6\overline{\mu_B}$
+
+$T_{s_A} = 0,2 [minutos/cliente] \implies \mu_A = 5 [clientes/minuto]$
+
+$T_{s_B} = \frac{1}{3} [minutos/cliente] \implies \mu_B = 3 [clientes/minuto]$
+
+$T_{s_C} = \frac{1}{2} [minutos/cliente] \implies \mu_C = 2 [clientes/minuto]$
+
+
+\vspace{69pt}
+\subsubsection{Sistema A:}
+
+\parindent=26pt
+El sistema presenta las características de un modelo $P/P/1$ con impaciencia.
+
+\vspace{5pt}
+\parindent=26pt
+\textit{Hipótesis}
+
+\leftskip=36pt
+\begin{itemize}
+  \item El proceso de llegada de los clientes responde a un proceso Poisson.
+  \item El proceso de atención de los clientes responde a un proceso Poisson.
+  \item La población es infinita
+  \item Se forma una única cola frente al canal de atención.
+  \item Existe un único canal de atención.
+  \item La capacidad del sistema es infinita
+  \item La atención de los clientes de la cola es FIFO
+  \item El sistema se encuentra en condiciones estables.
+  \item \textit{La población presenta el fenómeno de impaciencia.}
+\end{itemize}
+
+\vspace{13pt}
+\leftskip=0pt
+\parindent=26pt
+\begin{tabular}{|>{\centering}p{34pt}|>{\centering}p{33pt}|>{\centering}p{33pt}|>{\centering}p{33pt}|>{\centering}p{33pt}|>{\centering}p{33pt}|>{\centering}p{26pt}|>{\centering}p{27pt}|}
+\hline
+$n$ & $P(n)$ & $\lambda$ & $\mu$ & $L$ & $L_c$ & $H$ & $R$\tabularnewline
+\hline
+0 & $P(0)$ & $\lambda_A$ & 0 & 0 & 0 & 0 & 0\tabularnewline
+\hline
+1 & $P(1)$ & $0,5\lambda_A$ & $\mu_A$ & 1 & 0 & 1 & $0,5\lambda_A$\tabularnewline
+\hline
+2 & $P(2)$ & $0,2\lambda_A$ & $\mu_A$ & 2 & 1 & 1 & $0,8\lambda_A$\tabularnewline
+\hline
+3 & $P(3)$ & 0 & $\mu_A$ & 3 & 2 & 1 & $\mu_A$\tabularnewline
+\hline
+\end{tabular}
+
+\vspace{13pt}
+$P(1) = \frac{\lambda_A P(0)}{\mu_A} \implies P(1) = \rho_A P(0) = 0,3448$
+
+$P(2) = \frac{0,5\lambda_A P(1)}{\mu_A} \implies P(2) = 0,5\rho_A^2 P(0) = 0,3448$
+
+$P(3) = \frac{0,2\lambda_A P(2)}{\mu_A} \implies P(3) = 0,1\rho_A^3 P(0) = 0,13792$
+
+$\rho_A = \frac{\lambda_A}{\mu_A} = \frac{10[clientes/minuto]}{5[clientes/minuto]} = 2$
+
+$P(0) + P(1) + P(2) + P(3) = 1 \implies$
+
+$P(0) + \rho_A P(0) +  0,5\rho_A^2 P(0) + 0,1\rho_A^3 P(0) = 1$
+
+$P(0) = \frac{1}{1 + \rho_A + 0,5\rho_A^2 + 0,1\rho_A^3} = 0,1724$
+
+$L_c = P(2) + 2P(3) = 0,3448 + 2 \times 0,13792 = 1,708$
+
+$\overline{R_A} = 0,5\lambda_A P(1) + 0,8\lambda_A P(2) + \lambda_A P(3) = 2,9308$
+
+$\overline{\mu_A} = \mu_A (P(1) + P(2) + P(3)) = \mu_A (1-P(0)) =$
+
+$= 5[clientes/minuto]\times(1-0,1724) = 4,138[clientes/minuto]$
+
+
+\vspace{27pt}
+\subsubsection{Sistema B:}
+
+\parindent=26pt
+El sistema presenta las características de un modelo $P/P/1$.
+
+\vspace{8pt}
+\parindent=26pt
+\textit{Hipótesis}
+
+\leftskip=36pt
+\parindent=-18pt
+\begin{itemize}
+  \item El proceso de llegada de los clientes responde a un proceso Poisson.
+  \item El proceso de atención de los clientes responde a un proceso Poisson.
+  \item La población es infinita
+  \item Se forma una única cola frente al canal de atención.
+  \item Existe un único canal de atención.
+  \item La capacidad del sistema es infinita
+  \item La atención de los clientes de la cola es FIFO
+  \item El sistema se encuentra en condiciones estables.
+  \item La población no presenta el fenómeno de impaciencia.
+\end{itemize}
+
+\vspace{27pt}
+\leftskip=0pt
+\parindent=26pt
+\begin{tabular}{|>{\raggedright}p{39pt}|>{\raggedright}p{39pt}|>{\raggedright}p{38pt}|>{\raggedright}p{39pt}|>{\raggedright}p{38pt}|>{\raggedright}p{38pt}|>{\raggedright}p{31pt}|}
+\hline
+$n$ & $P(n)$ & $\lambda$ & $\mu$ & $L$ & $L_c$ & $H$\tabularnewline
+\hline
+0 & $P(0)$ & $\lambda_B$ & 0 & 0 & 0 & 0\tabularnewline
+\hline
+1 & $P(1)$ & $\lambda_B$ & $\mu_B$ & 1 & 0 & 1\tabularnewline
+\hline
+2 & $P(2)$ & $\lambda_B$ & $\mu_B$ & 2 & 1 & 1\tabularnewline
+\hline
+3 & $P(3)$ & $\lambda_B$ & $\mu_B$ & 3 & 2 & 1\tabularnewline
+\hline
+.... & .. & .. & .. & .. & .. & ..\tabularnewline
+\hline
+$n$ & $P(n)$ & $\lambda_B$ & $\mu_B$ & $n$ & $n-1$ & 1\tabularnewline
+\hline       
+\end{tabular}
+
+\vspace{13pt}
+$\lambda_B = 0,4\overline{\mu_B} = 0,4 \times 4,138[clientes/minuto] = 1,6552[clientes/minuto]$
+
+$P(0) = 1-\rho_B = 1-\frac{\lambda_B}{\mu_B} = 1-0,5517 = 0,4483$
+
+$\overline{\mu_B} = \overline{\lambda_B} = 1,6552[clientes/minuto]$
+
+$L_c = \frac{\lambda_B}{\mu_B-\lambda_B} = \frac{1,6552[clientes/minuto]}{3[clientes/minuto]-1,6552[clientes/minuto]} = 1,2308$
+
+$I = 5000[\$/cliente] \times \overline{\mu_B} = 5000[\$/cliente] \times 1,6552[clientes/minuto] =$
+
+$= 8276[\$/minuto]$
+
+\vspace{27pt}
+\subsubsection{Sistema C:}
+
+\parindent=26pt
+Se trata de un sistema de capacidad limitada $P/P/1/N$ con $N=2$.
+
+\vspace{8pt}
+\parindent=26pt
+\textit{Hipótesis}
+
+\leftskip=36pt
+\parindent=-18pt
+\begin{itemize}
+  \item El proceso de llegada de los clientes responde a un proceso Poisson.
+  \item El proceso de atención de los clientes responde a un proceso Poisson.
+  \item La población es infinita
+  \item Se forma una única cola frente al canal de atención.
+  \item Existe un único canal de atención.
+  \item \textit{La capacidad del sistema es finita}
+  \item La atención de los clientes de la cola es FIFO
+  \item El sistema se encuentra en condiciones estables.
+  \item La población no presenta el fenómeno de impaciencia.
+\end{itemize}
+
+\vspace{27pt}
+\leftskip=0pt
+\parindent=26pt
+\begin{tabular}{|>{\centering}p{34pt}|>{\centering}p{33pt}|>{\centering}p{33pt}|>{\centering}p{33pt}|>{\centering}p{33pt}|>{\centering}p{33pt}|>{\centering}p{26pt}|>{\centering}p{27pt}|}
+\hline
+$n$ & $P(n)$ & $\lambda$ & $\mu$ & $L$ & $L_c$ & $H$ & $R$\tabularnewline
+\hline
+0 & $P(0)$ & $\lambda_C$ & 0 & 0 & 0 & 0 & 0\tabularnewline
+\hline
+1 & $P(1)$ & $\lambda_C$ & $\mu_C$ & 1 & 0 & 1 & 0\tabularnewline
+\hline
+2 & $P(2)$ & 0 & $\mu_C$ & 2 & 1 & 1 & $\lambda_C$\tabularnewline
+\hline
+\end{tabular}
+
+\vspace{13pt}
+$\lambda_C = 0,6\overline{\mu_C} = 0,6 \times 4,138[clientes/minuto] = 2,4828[clientes/minuto]$
+
+$P(1) = \frac{\lambda_C P(0)}{\mu_C} \implies P(1) = \rho_C P(0) = 0,3281$
+
+$P(2) = \frac{\lambda_C P(1)}{\mu_C} \implies P(2) = \rho_C^2 P(0) = 0,4075$
+
+$\rho_C = \frac{\lambda_C}{\mu_C} = \frac{2,4828[clientes/minuto]}{2[clientes/minuto]} = 1,2414$
+
+$P(0) + P(1) + P(2) = 1 \implies$
+
+$P(0) + \rho_A P(0) +  \rho_C^2 P(0) = 1$
+
+$P(0) = \frac{1}{1 + \rho_C + \rho_C^2} = 0,2644$
+
+$\overline{\mu_C} = \mu_C \times P(1) + \mu_C \times P(2) = 2[clientes/minuto] \times(0,3281 + 0,4075) =$
+
+$= 1,4712[clientes/minuto]$
+
+$L_c = P(2) = 0,4075$
+
+$R_C = \lambda_C \times P(2) = 2,4828[clientes/minuto] \times 0,4075 = 1,012[clientes/minuto]$
+
+$I = 600[\$/cliente] \times \overline{\mu_C} = 600[\$/cliente] \times 1,4712[clientes/minuto] =$
+
+$= 882,72[\$/minuto]$
+
+
+
+\vspace{13pt}
+\subsubsection{Conclusion:}
+
+\leftskip=36pt
+\parindent=-18pt
+\begin{enumerate}[a)]
+  \item La cantidad promedio de clientes esperando en cada sector.
+
+    $L_{c_A} = 1,708$
+
+    $L_{c_B} = 1,2308$
+
+    $L_{c_C} = 1,4075$
+
+  \vspace{13pt}
+  \item El ingreso económico promedio del sistema (\$/minuto).
+
+    $I = I_A + I_B + I_C = 0[\$/minuto] + 8276[\$/minuto] + 882,72[\$/minuto] = 9158,72[\$/minuto]$
+
+  \vspace{13pt}
+  \item La cantidad promedio de clientes que no ingresan al sistema por minuto.
+
+    $R_{sistema} = R_A + R_C = 2,9308[clientes/minuto]  + 1,012[clientes/minuto] = 3,9425[clientes/minuto]$
+
+  \vspace{13pt}
+  \item La probabilidad de que el sistema esté vacío.
+
+    $P(0) = P_A(0) \times P_B(0) \times P_C(0) = 0,1724 \times 0,4483 \times 0,2644 = 0,021$
+
+\end{enumerate}
+
+\vspace{35pt}
+\section{\textbf{Ejercicio 8}}
+
+\vspace{13pt}
+Dado el siguiente sistema con reciclaje:
+
+\includegraphics[width=338pt, height=141pt, keepaspectratio=true]{TP1-Colas-fig007.png}
+
+\vspace{27pt}
+Sabiendo que los clientes arriban a una velocidad promedio de 8 clientes por
+minuto y el canal atiende a una velocidad promedio de 10 clientes por minuto
+(distribución Poisson), se pide calcular:
+\begin{enumerate}[a)]
+  \item La cantidad promedio de clientes en la cola.
+  \item El tiempo promedio de permanencia de un cliente en la cola.
+  \item La probabilidad de que el canal no esté ocioso.
+  \item La cantidad promedio de clientes en el sistema.
+\end{enumerate}
+
+\vspace{13pt}
+\leftskip=0pt
+\parindent=0pt
+\subsection{\textbf{Resolución}}
+
+Se usan fórmulas de P/P/1 pero con $\lambda$ esperado 
+en vez de $\lambda$, por ser con reciclaje.
+
+\vspace{21pt}
+\subsubsection*{Hipótesis}
+
+\leftskip=36pt
+\parindent=-18pt
+\begin{enumerate}[1.]
+  \item El proceso de arribo de los clientes al sistema es Poisson.
+  \item El proceso de servicio del canal es Poisson.
+  \item El sistema se encuentra en régimen permanente.
+  \item Los clientes que llegan al sistema forman una cola simple.
+  \item La disciplina de atención es FIFO.
+  \item Hay un solo canal de atención.
+  \item La capacidad del sistema es infinita.
+  \item Los clientes que llegan al sistema no presentan impaciencia.
+  \item La población de potenciales clientes del sistema es infinita.
+\end{enumerate}
+
+\vspace{13pt}
+\begin{enumerate}[a)]
+  \item Cantidad promedio de clientes en la cola.
+
+    $\overline{\lambda} = \lambda + 0,1\overline{\mu}$
+
+  Y siendo: 
+
+  $\overline{\lambda} = \overline{\mu} \implies \overline{\lambda} = \lambda + 0,1\overline{\lambda}$
+
+  $0,9\overline{\lambda} = \lambda$
+
+  Por lo que  
+
+  $\overline{\lambda} = \frac{\lambda \times 10}{9} = \frac{8[clientes/minuto] \times 10}{9} =  8,88[clientes/minuto]$
+
+  $\overline{\lambda} = \lambda_{esperado} =  8,88[clientes/minuto]$
+
+  Siendo 
+
+  $L_c = \left.\frac{\lambda^2}{\mu(\mu-\lambda)}\right|_{\lambda=\lambda_{esperado}} = \frac{\frac{80}{9}^2}{10 \times (10-\frac{80}{9}} = 7,11$
+
+  \vspace{13pt}
+  \item Tiempo promedio de permanencia de un cliente en la cola.
+
+    $W_c = \left.\frac{L_c}{\lambda}\right|_{\lambda=\lambda_{esperado}} = \frac{\frac{64}{9}}{\frac{80}{9}} = 7,11$
+
+  \vspace{13pt}
+  \item Probabilidad de que el canal no esté ocioso.
+
+  $P(n \geq 1) = 1-P(n=0) = 1-(1-\rho) = \rho = 0,88$
+
+  Dado que:
+
+  $\rho = \left.\frac{\lambda}{\mu}\right|_{\lambda=\lambda_{esperado}} = \frac{\frac{80}{9}}{10} = 0,88$
+
+  \vspace{13pt}
+  \item Cantidad promedio de clientes en el sistema.\label{h.8dp3y8yzivhk}
+
+    $L = L_c + H = \frac{\lambda^2}{\mu(\mu-\lambda)} + \rho = \left.\frac{\lambda}{\mu-\lambda}\right|_{\lambda=\lambda_{esperado}} = \frac{\frac{80}{9}}{10 \times \frac{80}{9}}$
+
+\end{enumerate}
+
+\vspace{35pt}
+\leftskip=0pt
+\parindent=0pt
+\section{\textbf{Ejercicio 9}}
+
+\vspace{13pt}
+Dado el siguiente sistema, los clientes que ingresan al mismo deben pasar por
+dos sectores para realizar su trámite. En el primer sector se realiza la
+primera parte del trámite.  Allí hay dos ventanillas, la 1 y la 2, que brindan
+el mismo servicio, a una velocidad $\mu_1$ y $\mu_2$ respectivamente. La segunda
+parte del trámite se lleva a cabo en el segundo sector, el cual cuenta con
+otras dos ventanillas (la 3 y la 4), que atienden a una velocidad $\mu_3$ y
+$\mu_4$ respectivamente.  Ambas brindan el mismo servicio. Dado que no hay mucho
+espacio, no se admite formación de cola ni antes del primer sector ni antes del
+segundo. Los clientes que ingresan al sistema no pueden retirarse sin haber
+realizado el trámite completo.
+
+\vspace{13pt}
+\includegraphics[width=266pt, height=155pt, keepaspectratio=true]{TP1-Colas-fig008.png}
+
+\vspace{13pt}
+Se pide:
+\begin{enumerate}[a)]
+  \item Definir todos los estados posibles.
+  \item Expresar P(b,0,1,1)
+  \item Expresar P(0,0,1,1)  
+\end{enumerate}
+
+\vspace{13pt}
+\leftskip=0pt
+\parindent=0pt
+\subsection{\textbf{Resolución}}
+
+\vspace{21pt}
+\subsubsection*{Hipótesis}
+
+\leftskip=36pt
+\parindent=-18pt
+\begin{enumerate}[1.]
+  \item El proceso de arribo de los clientes al sistema es Poisson.
+  \item El proceso de servicio del canal es Poisson.
+  \item El sistema se encuentra en régimen permanente. 
+  \item Los clientes que llegan al sistema forman una cola simple. 
+  \item La disciplina de atención es FIFO. 
+  \item La capacidad del sistema es infinita. 
+  \item Los clientes que llegan al sistema no presentan impaciencia.
+  \item La población es infinita.
+  \item En ambas instancias los canales son indistintos para el cliente (no hay
+    preferencia). 
+  \item El cliente no conoce la velocidad de cada canal.
+\end{enumerate}
+
+\vspace{13pt}
+\begin{enumerate}[a)]
+  \item Definir todos los estados posibles
+
+  \begin{tabular}{|>{\centering}p{22pt}|>{\centering}p{16pt}|>{\centering}p{15pt}|>{\centering}p{16pt}|>{\centering}p{15pt}|}
+  \hline
+  \centering n & \centering $C_1$ & \centering $C_2$ & \centering $C_3$ & \centering $C_4$\tabularnewline
+  \hline
+  \centering 0 & \centering 0 & \centering 0 & \centering 0 & \centering 0\tabularnewline
+  \hline
+  \centering 1 & \centering 1\linebreak{}
+  0\linebreak{}
+  0\linebreak{}
+  0 & \centering 0\linebreak{}
+  1\linebreak{}
+  0\linebreak{}
+  0 & \centering 0\linebreak{}
+  0\linebreak{}
+  1\linebreak{}
+  0 & \centering 0\linebreak{}
+  0\linebreak{}
+  0\linebreak{}
+  1\tabularnewline
+  \hline
+  \centering 2 & \centering 1\linebreak{}
+  1\linebreak{}
+  1\linebreak{}
+  0\linebreak{}
+  0\linebreak{}
+  0 & \centering 1\linebreak{}
+  0\linebreak{}
+  0\linebreak{}
+  1\linebreak{}
+  1\linebreak{}
+  0 & \centering 0\linebreak{}
+  1\linebreak{}
+  0\linebreak{}
+  1\linebreak{}
+  0\linebreak{}
+  1 & \centering 0\linebreak{}
+  0\linebreak{}
+  1\linebreak{}
+  0\linebreak{}
+  1\linebreak{}
+  1\tabularnewline
+  \hline
+  \centering 3 & \centering 1\linebreak{}
+  1\linebreak{}
+  1\linebreak{}
+  0\linebreak{}
+  b\linebreak{}
+  0 & \centering 1\linebreak{}
+  1\linebreak{}
+  0\linebreak{}
+  1\linebreak{}
+  0\linebreak{}
+  b & \centering 1\linebreak{}
+  0\linebreak{}
+  1\linebreak{}
+  1\linebreak{}
+  1\linebreak{}
+  1 & \centering 0\linebreak{}
+  1\linebreak{}
+  1\linebreak{}
+  1\linebreak{}
+  1\linebreak{}
+  1\tabularnewline
+  \hline
+  \centering 4 & \centering 1\linebreak{}
+  b\linebreak{}
+  b\linebreak{}
+  1 & \centering 1\linebreak{}
+  b\linebreak{}
+  1\linebreak{}
+  b & \centering 1\linebreak{}
+  1\linebreak{}
+  1\linebreak{}
+  1 & \centering 1\linebreak{}
+  1\linebreak{}
+  1\linebreak{}
+  1\tabularnewline
+  \hline
+  \end{tabular}
+
+
+  \vspace{13pt}
+  \item Expresar P(b,0,1,1)
+
+  \leftskip=6pt
+  \parindent=-18pt
+  $P(b,0,1,1) = P(1,0,1,1) \times P(b,0,1,1) \times (1-\mu_3\Delta t) \times (1-\mu_4\Delta t) \times (1-\lambda\Delta t) +$
+  $ P(b,0,1,1) \times \mu_1\Delta t \times (1-\mu_3\Delta t) \times (1-\mu_4\Delta t) \times (1-\lambda\Delta t) +$
+  $ P(b,b,0,1) \times \mu_3\Delta t \times 0,5 \times (1-\mu_4\Delta t) +$
+  $ P(b,b,0,1) \times \mu_4\Delta t \times 0,5 \times (1-\mu_3\Delta t) +$
+
+  \vspace{13pt}
+  \item Expresar P(0,0,1,1)
+
+  \leftskip=6pt
+  \parindent=-18pt
+  $P(b,0,1,1) = P(1,0,1,1) \times P(b,0,1,1) \times (1-\mu_3\Delta t) \times (1-\mu_4\Delta t) \times (1-\lambda\Delta t) +$
+  $ P(b,0,1,1) \times \mu_1\Delta t \times (1-\mu_3\Delta t) \times (1-\mu_4\Delta t) \times (1-\lambda\Delta t) +$
+  $ P(b,b,0,1) \times \mu_3\Delta t \times 0,5 \times (1-\mu_4\Delta t) +$
+  $ P(b,b,0,1) \times \mu_4\Delta t \times 0,5 \times (1-\mu_3\Delta t) +$
+
+\vspace{13pt}
+\end{enumerate}
 %c) Expresar P(0,0,1,1)
 %
 %\vspace{13pt}
@@ -2145,13 +1649,13 @@ $n$ & $P(n)$ & $\lambda$ & $\mu$ & $L$ & $Lc$ & $H$ & $R$\tabularnewline
 %%%\caption{This should be the caption for \texttt{TP1-Colas-fig248.png}.}
 %%%\end{figure}
 
-\newpage
-
-\part{Apéndice}
-\appendix
-
-\section{Enunciado original}\label{sec:enunciado}
-\includepdf[pages={-}]{enunciado.pdf}
-
-\clearpage
+%\newpage
+%
+%\part{Apéndice}
+%\appendix
+%
+%\section{Enunciado original}\label{sec:enunciado}
+%\includepdf[pages={-}]{enunciado.pdf}
+%
+%\clearpage
 \end{document}
