@@ -26,6 +26,12 @@
 % Soporte para subrayado
 \usepackage{ulem}
 
+% Soporte para enumerados
+\usepackage{enumerate}
+
+% PDFs embebidos para el apendice
+\usepackage{pdfpages}
+
 % Soporte para warnings
 \usepackage{fixltx2e}
 
@@ -78,7 +84,7 @@
 \clearpage
 
 \vspace{8pt}
-\subsubsection*{{\color{color01} \textbf{Ejercicio 1}}}
+\section*{\textbf{Ejercicio 1}}
 
 \baselineskip=13pt
 En una sastrería hay una sección de arreglo y reforma de la ropa vendida a sus 
@@ -91,39 +97,52 @@ los tiempos de servicio. Calcular:
 
 \leftskip=36pt
 \parindent=-18pt
-A.\tab ¿Cual es en promedio, el número de clientes en la sección?
+\begin{enumerate}[a.]
+  \item ¿Cual es en promedio, el número de clientes en la sección?
 
-B.\tab ¿Cuánto tiempo permanece, en promedio, un cliente en la sección?
+  \item ¿Cuánto tiempo permanece, en promedio, un cliente en la sección?
 
-C.\tab ¿Cual es la probabilidad de que el sastre esté desocupado?
+  \item ¿Cual es la probabilidad de que el sastre esté desocupado?
 
-D.\tab ¿Cual es en promedio, el número de clientes que están esperando recibir 
-el servicio?
+  \item ¿Cual es en promedio, el número de clientes que están esperando recibir 
+  el servicio?
+\end{enumerate}
 
 \vspace{13pt}
 \leftskip=0pt
 \parindent=0pt
+\subsection*{\textbf{Resolución}}
+
 Como sistema se entiende toda la sección de arreglo y reforma.\label{h.ucd2riukxd97}
 
 \vspace{8pt}
-{\color{color01} \emph{Hipotesis:}}
+\subsubsection*{Hipotesis:}
 
 Se verifican las hipótesis de un P/P/1. El enunciado dice explícitamente que 
 todos los clientes están dispuestos a esperar el tiempo que sea necesario, lo 
 cual se puede interpretar como una cola con capacidad infinita.
 
+\begin{enumerate}[1.]
+  \item Tipo de proceso de arribo de clientes responde a distribución Poisson.
+  \item Tipo de proceso de servicio a los clientes en el sistema responde a distribución Poisson.
+  \item Hay un único canal de atención.
+  \item El sistema tiene capacidad infinita.
+  \item La disciplina de atención es FIFO.
+  \item La población es infinita.
+  \item Se forma una única cola frente al canal.
+  \item El sistema se encuentra en régimen estacionario.
+  \item La población no presenta fenómeno de impaciencia.
+\end{enumerate}
+
 \vspace{13pt}
-%%\begin{figure}[htbp]
-\includegraphics[width=441pt, height=101pt, keepaspectratio=true]{TP1-Colas-fig001.png}
-%%\caption{This should be the caption for \texttt{TP1-Colas-fig001.png}.}
-%%\end{figure}
+\includegraphics[width=341pt, height=101pt, keepaspectratio=true]{TP1-Colas-fig001.png}
 
 \vspace{27pt}
 Parámetros del modelo:
 
-$\lambda$ = 24 clientes/hora
+$\lambda = 24 [clientes/hora]$
 
-T\textsubscript{s} = 2 minutos = 0.033 horas → $\mu$ = 30 clientes/hora.
+$T_s = 2 [minutos] \frac{1[hora]}{60[minutos]} = 0.033 [horas]$ → $\mu = 30 [clientes/hora]$
 
 \vspace{13pt}
 A  El número de clientes en la sección, es decir el número de clientes en el 
@@ -131,7 +150,6 @@ sistema, es L.
 
 $L = \frac{\lambda}{\mu - \lambda} = \frac{24}{30 - 24} = 4 clientes/hora$
 
-\end{document}
 %\vspace{27pt}
 %B. El tiempo que permanece un cliente en la sección, es decir, en el sistema es 
 %W:
@@ -878,4 +896,11 @@ $L = \frac{\lambda}{\mu - \lambda} = \frac{24}{30 - 24} = 4 clientes/hora$
 %
 %\newpage
 %
-%\end{document}
+\part{Apéndice}
+\appendix
+
+\section{Enunciado original}\label{sec:enunciado}
+\includepdf[pages={-}]{enunciado.pdf}
+
+\clearpage
+\end{document}
