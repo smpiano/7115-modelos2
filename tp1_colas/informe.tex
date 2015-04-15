@@ -1390,272 +1390,146 @@ Se pide:
 
   \leftskip=6pt
   \parindent=-18pt
-  $P(b,0,1,1) = P(1,0,1,1) \times P(b,0,1,1) \times (1-\mu_3\Delta t) \times (1-\mu_4\Delta t) \times (1-\lambda\Delta t) +$
-  $ P(b,0,1,1) \times \mu_1\Delta t \times (1-\mu_3\Delta t) \times (1-\mu_4\Delta t) \times (1-\lambda\Delta t) +$
-  $ P(b,b,0,1) \times \mu_3\Delta t \times 0,5 \times (1-\mu_4\Delta t) +$
-  $ P(b,b,0,1) \times \mu_4\Delta t \times 0,5 \times (1-\mu_3\Delta t) +$
+  $P(0,0,1,1) = P(1,0,1,1) \times (1-\mu_3\Delta t) \times (1-\mu_4\Delta t) \times (1-\lambda\Delta t) +$
+  $ P(1,0,1,0) \times \mu_1\Delta t \times (1-\mu_3\Delta t) \times (1-\lambda\Delta t) +$
+  $ P(1,0,0,1) \times \mu_1\Delta t \times (1-\mu_4\Delta t) \times (1-\lambda\Delta t) +$
+  $ P(0,1,1,0) \times \mu_2\Delta t \times (1-\mu_3\Delta t) \times (1-\lambda\Delta t) +$
+  $ P(0,1,0,1) \times \mu_2\Delta t \times (1-\mu_4\Delta t) \times (1-\lambda\Delta t) +$
+  $ P(b,0,1,1) \times \mu_3\Delta t \times (1-\mu_4\Delta t) \times (1-\lambda\Delta t) +$
+  $ P(b,0,1,1) \times \mu_4\Delta t \times (1-\mu_3\Delta t) \times (1-\lambda\Delta t) +$
+  $ P(0,b,1,1) \times \mu_3\Delta t \times (1-\mu_4\Delta t) \times (1-\lambda\Delta t) +$
+  $ P(0,b,1,1) \times \mu_4\Delta t \times (1-\mu_3\Delta t) \times (1-\lambda\Delta t)$
+
+\end{enumerate}
+
+\vspace{35pt}
+\leftskip=0pt
+\parindent=0pt
+\section{\textbf{Ejercicio 10}}
+
+Dado el siguiente sistema de atención al público:
 
 \vspace{13pt}
-\end{enumerate}
-%c) Expresar P(0,0,1,1)
-%
-%\vspace{13pt}
-%\leftskip=0pt
-%%%\begin{figure}[htbp]
-%\includegraphics[width=329pt, height=18pt, keepaspectratio=true]{TP1-Colas-fig223.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig223.png}.}
-%%%\end{figure}
-%
-%8
-%\includegraphics[width=329pt, height=18pt, keepaspectratio=true]{TP1-Colas-fig224.wmf}
-%
-%\leftskip=55pt
-%%%\begin{figure}[htbp]
-%\includegraphics[width=245pt, height=18pt, keepaspectratio=true]{TP1-Colas-fig225.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig225.png}.}
-%%%\end{figure}
-%
-%\vspace{13pt}
-%%%\begin{figure}[htbp]
-%\includegraphics[width=245pt, height=18pt, keepaspectratio=true]{TP1-Colas-fig226.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig226.png}.}
-%%%\end{figure}
-%
-%\vspace{13pt}
-%%%\begin{figure}[htbp]
-%\includegraphics[width=246pt, height=18pt, keepaspectratio=true]{TP1-Colas-fig227.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig227.png}.}
-%%%\end{figure}
-%
-%\vspace{13pt}
-%%%\begin{figure}[htbp]
-%\includegraphics[width=246pt, height=18pt, keepaspectratio=true]{TP1-Colas-fig228.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig228.png}.}
-%%%\end{figure}
-%
-%\vspace{13pt}
-%%%\begin{figure}[htbp]
-%\includegraphics[width=245pt, height=18pt, keepaspectratio=true]{TP1-Colas-fig229.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig229.png}.}
-%%%\end{figure}
-%
-%\vspace{13pt}
-%%%\begin{figure}[htbp]
-%\includegraphics[width=245pt, height=18pt, keepaspectratio=true]{TP1-Colas-fig230.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig230.png}.}
-%%%\end{figure}
-%
-%\vspace{13pt}
-%%%\begin{figure}[htbp]
-%\includegraphics[width=245pt, height=18pt, keepaspectratio=true]{TP1-Colas-fig231.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig231.png}.}
-%%%\end{figure}
-%
-%\vspace{13pt}
-%%%\begin{figure}[htbp]
-%\includegraphics[width=234pt, height=18pt, keepaspectratio=true]{TP1-Colas-fig232.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig232.png}.}
-%%%\end{figure}
-%
-%\vspace{41pt}
-%\leftskip=-1pt
-%{\color{color01} \textbf{Ejercicio 10}}
-%
-%Dado el siguiente sistema de atención al público:
-%
-%\vspace{13pt}
-%%%\begin{figure}[htbp]
-%\includegraphics[width=269pt, height=94pt, keepaspectratio=true]{TP1-Colas-fig233.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig233.png}.}
-%%%\end{figure}
-%
-%\vspace{13pt}
-%Se sabe que, según el tipo de trámite, el 80\% de los clientes que salen del 
-%canal 1 pasan directamente al canal 2, mientras que el 20\% restante pasa directamente 
-%al canal 3. Las
-%
-%velocidades de atención de cada canal son $\mu$1, $\mu$2 y $\mu$3, respectivamente. 
-%No se admite abandono: el
-%
-%cliente que ingresa al sistema no sale del mismo sin haber recibido el servicio 
-%que allí se brinda.
-%
-%Debido a que el lugar es reducido, no se admite formación de cola frente a ninguno 
-%de los canales.
-%
-%Se pide expresar:
-%
-%\vspace{13pt}
-%a) Todos los posibles estados.
-%
-%b) P(0,1,1).
-%
-%c) P(1,0,1).
-%
-%\vspace{13pt}
-%Resolución
-%
-%\vspace{13pt}
-%Hipótesis:
-%
-%\vspace{13pt}
-%1) El proceso de arribo de los clientes al sistema es Poisson.
-%
-%2) El proceso de servicio del canal es Poisson.
-%
-%3) El sistema se encuentra en régimen permanente.
-%
-%4) Los clientes que llegan al sistema forman una cola simple.
-%
-%5) La disciplina de atención es FIFO.
-%
-%6) La capacidad del sistema es infinita.
-%
-%7) Los clientes que llegan al sistema no presentan impaciencia.
-%
-%8) La población es infinita.\tab 
-%
-%9) Luego del canal 1 existe obligación, es decir los clientes deberán ir al canal 
-%2 o 3 respectivamente (dependiendo del trámite).
-%
-%\vspace{27pt}
-%a) Estados posibles
-%
-%\vspace{13pt}
-%\leftskip=0pt
-%\begin{tabular}{|>{\raggedright}p{22pt}|>{\raggedright}p{16pt}|>{\raggedright}p{15pt}|>{\raggedright}p{16pt}|}
-%\hline
-%\centering n
-%\includegraphics[width=17pt, height=18pt, keepaspectratio=true]{TP1-Colas-fig234.png}
-% & \centering 8
-%\includegraphics[width=17pt, height=18pt, keepaspectratio=true]{TP1-Colas-fig235.wmf}
-%
-%\includegraphics[width=18pt, height=18pt, keepaspectratio=true]{TP1-Colas-fig236.png}
-% & \centering 
-%\includegraphics[width=18pt, height=18pt, keepaspectratio=true]{TP1-Colas-fig237.png}
-% & \centering \tabularnewline
-%\hline
-%\centering 0 & \centering 0 & \centering 0 & \centering 0\tabularnewline
-%\hline
-%\centering 1 & \centering 1\linebreak{}
-%0\linebreak{}
-%0 & \centering 0\linebreak{}
-%1\linebreak{}
-%0 & \centering 0\linebreak{}
-%0\linebreak{}
-%1\tabularnewline
-%\hline
-%\centering 2 & \centering 0\linebreak{}
-%1\linebreak{}
-%1\linebreak{}
-%b\linebreak{}
-%b\linebreak{}
-%0 & \centering 1\linebreak{}
-%0\linebreak{}
-%1\linebreak{}
-%1\linebreak{}
-%0\linebreak{}
-%b & \centering 1\linebreak{}
-%1\linebreak{}
-%0\linebreak{}
-%0\linebreak{}
-%1\linebreak{}
-%1\tabularnewline
-%\hline
-%\centering 3 & \centering 1\linebreak{}
-%b\linebreak{}
-%1\linebreak{}
-%b & \centering 1\linebreak{}
-%1\linebreak{}
-%b\linebreak{}
-%b & \centering 1\linebreak{}
-%1\linebreak{}
-%1\linebreak{}
-%1\tabularnewline
-%\hline
-%\end{tabular}
-%
-%\vspace{13pt}
-%\leftskip=-1pt
-%b) Cálculo de P(0,1,1).
-%
-%\vspace{13pt}
-%\leftskip=0pt
-%%%\begin{figure}[htbp]
-%\includegraphics[width=252pt, height=18pt, keepaspectratio=true]{TP1-Colas-fig238.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig238.png}.}
-%%%\end{figure}
-%
-%\vspace{13pt}
-%\leftskip=41pt
-%%%\begin{figure}[htbp]
-%\includegraphics[width=203pt, height=18pt, keepaspectratio=true]{TP1-Colas-fig239.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig239.png}.}
-%%%\end{figure}
-%
-%\vspace{13pt}
-%%%\begin{figure}[htbp]
-%\includegraphics[width=236pt, height=18pt, keepaspectratio=true]{TP1-Colas-fig240.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig240.png}.}
-%%%\end{figure}
-%
-%\vspace{13pt}
-%%%\begin{figure}[htbp]
-%\includegraphics[width=110pt, height=18pt, keepaspectratio=true]{TP1-Colas-fig241.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig241.png}.}
-%%%\end{figure}
-%
-%\vspace{13pt}
-%%%\begin{figure}[htbp]
-%\includegraphics[width=203pt, height=18pt, keepaspectratio=true]{TP1-Colas-fig242.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig242.png}.}
-%%%\end{figure}
-%
-%\vspace{13pt}
-%%%\begin{figure}[htbp]
-%\includegraphics[width=123pt, height=18pt, keepaspectratio=true]{TP1-Colas-fig243.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig243.png}.}
-%%%\end{figure}
-%
-%\vspace{41pt}
-%\leftskip=-1pt
-%c) Cálculo de P(1,0,1).
-%
-%\vspace{13pt}
-%\leftskip=0pt
-%%%\begin{figure}[htbp]
-%\includegraphics[width=217pt, height=18pt, keepaspectratio=true]{TP1-Colas-fig244.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig244.png}.}
-%%%\end{figure}
-%
-%8
-%\includegraphics[width=217pt, height=18pt, keepaspectratio=true]{TP1-Colas-fig245.wmf}
-%
-%\leftskip=41pt
-%%%\begin{figure}[htbp]
-%\includegraphics[width=178pt, height=18pt, keepaspectratio=true]{TP1-Colas-fig246.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig246.png}.}
-%%%\end{figure}
-%
-%\vspace{13pt}
-%%%\begin{figure}[htbp]
-%\includegraphics[width=202pt, height=18pt, keepaspectratio=true]{TP1-Colas-fig247.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig247.png}.}
-%%%\end{figure}
-%
-%\vspace{13pt}
-%%%\begin{figure}[htbp]
-%\includegraphics[width=164pt, height=18pt, keepaspectratio=true]{TP1-Colas-fig248.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig248.png}.}
-%%%\end{figure}
+\includegraphics[width=269pt, height=94pt, keepaspectratio=true]{TP1-Colas-fig009.png}
 
-%\newpage
-%
-%\part{Apéndice}
-%\appendix
-%
-%\section{Enunciado original}\label{sec:enunciado}
-%\includepdf[pages={-}]{enunciado.pdf}
-%
-%\clearpage
+\vspace{13pt}
+Se sabe que, según el tipo de trámite, el 80\% de los clientes que salen del
+canal 1 pasan directamente al canal 2, mientras que el 20\% restante pasa
+directamente al canal 3. Las velocidades de atención de cada canal son $\mu_1$,
+$\mu_2$ y $\mu_3$, respectivamente.  No se admite abandono: el cliente que
+ingresa al sistema no sale del mismo sin haber recibido el servicio que allí se
+brinda.
+Debido a que el lugar es reducido, no se admite formación de cola
+frente a ninguno de los canales.
+
+Se pide expresar:
+
+\begin{enumerate}[a)]
+  \item Todos los posibles estados.
+  \item Calcular P(0,1,1).
+  \item Calcular P(1,0,1).
+\end{enumerate}
+
+\vspace{13pt}
+\leftskip=0pt
+\parindent=0pt
+\subsection{\textbf{Resolución}}
+
+\vspace{21pt}
+\subsubsection*{Hipótesis}
+
+\leftskip=36pt
+\parindent=-18pt
+\begin{enumerate}[1.]
+  \item El proceso de arribo de los clientes al sistema es Poisson.
+  \item El proceso de servicio del canal es Poisson.
+  \item El sistema se encuentra en régimen permanente.
+  \item Los clientes que llegan al sistema forman una cola simple.
+  \item La disciplina de atención es FIFO.
+  \item La capacidad del sistema es infinita.
+  \item Los clientes que llegan al sistema no presentan impaciencia.
+  \item La población es infinita. 
+  \item Luego del canal 1 existe obligación, es decir los clientes deberán ir al
+     canal 2 o 3 respectivamente (dependiendo del trámite).
+\end{enumerate}
+
+\vspace{13pt}
+\begin{enumerate}[a)]
+  \item Estados posibles
+
+  \vspace{13pt}
+  \leftskip=0pt
+  \begin{tabular}{|>{\raggedright}p{22pt}|>{\raggedright}p{16pt}|>{\raggedright}p{15pt}|>{\raggedright}p{16pt}|}
+  \hline
+  \centering n & \centering $C_1$ & \centering $C_2$ & \centering $C_3$\tabularnewline
+  \hline
+  \centering 0 & \centering 0 & \centering 0 & \centering 0\tabularnewline
+  \hline
+  \centering 1 & \centering 1\linebreak{}
+  0\linebreak{}
+  0 & \centering 0\linebreak{}
+  1\linebreak{}
+  0 & \centering 0\linebreak{}
+  0\linebreak{}
+  1\tabularnewline
+  \hline
+  \centering 2 & \centering 0\linebreak{}
+  1\linebreak{}
+  1\linebreak{}
+  b\linebreak{}
+  b\linebreak{}
+  0 & \centering 1\linebreak{}
+  0\linebreak{}
+  1\linebreak{}
+  1\linebreak{}
+  0\linebreak{}
+  b & \centering 1\linebreak{}
+  1\linebreak{}
+  0\linebreak{}
+  0\linebreak{}
+  1\linebreak{}
+  1\tabularnewline
+  \hline
+  \centering 3 & \centering 1\linebreak{}
+  b\linebreak{}
+  1\linebreak{}
+  b & \centering 1\linebreak{}
+  1\linebreak{}
+  b\linebreak{}
+  b & \centering 1\linebreak{}
+  1\linebreak{}
+  1\linebreak{}
+  1\tabularnewline
+  \hline
+  \end{tabular}
+
+  \vspace{13pt}
+  \item Cálculo de P(0,1,1).
+
+  $P(0,0,1) = P(1,1,0) \times \mu_1\Delta t \times 0,2 \times (1-\mu_2\Delta t) +$
+  $P(1,0,1) \times \mu_1\Delta t \times 0,8 \times (1-\mu_3\Delta t) +$
+  $P(0,1,1) \times \mu_2\Delta t \times (1-\lambda\Delta t) \times (1-\mu_3\Delta t) +$
+  $P(b,1,0) \times \mu_2\Delta t +$
+  $P(b,1,1) \times \mu_3\Delta t \times 0,2 \times (1-\mu_2\Delta t) +$
+  $P(b,b,1) \times \mu_3\Delta t \times 0,8$
+
+  \vspace{13pt}
+  \item Cálculo de P(1,0,1).
+
+  $P(1,0,1) = P(0,0,1) \times \lambda\Delta t \times (1-\mu_3\Delta t) +$
+  $P(1,1,0) \times \mu_2\Delta t \times (1-\mu_1\Delta t) +$
+  $P(1,0,1) \times (1-\mu_1\Delta t) \times (1-\mu_3\Delta t) +$
+  $P(1,b,1) \times \mu_3\Delta t \times (1-\mu_1\Delta t)$
+
+\end{enumerate}
+
+\newpage
+
+\part{Apéndice}
+\appendix
+
+\section{Enunciado original}\label{sec:enunciado}
+\includepdf[pages={-}]{enunciado.pdf}
+
+\clearpage
 \end{document}
