@@ -67,7 +67,6 @@
   \texttt{smpiano@gmail.com}                                       \\ [2.5ex]
   Florencia Tristant, \textit{P. ??.???}                           \\
   \texttt{flotristant@gmail.com}                                   \\ [2.5ex]
-                                                                   \\
   \normalsize{1er. Cuatrimestre de 2015}                           \\
   \normalsize{71.15 Modelos y Optimización 2}                      \\
   \normalsize{Facultad de Ingeniería, Universidad de Buenos Aires} \\
@@ -83,29 +82,28 @@
 
 \clearpage
 
-\vspace{8pt}
 \section*{\textbf{Ejercicio 1}}
 
 \baselineskip=13pt
-En una sastrería hay una sección de arreglo y reforma de la ropa vendida a sus 
-clientes, que es atendida por un sastre. El número de clientes que requieren arreglos 
-arriban a dicha sección con una distribución de Poisson con una media de 24 clientes 
-por hora. Debido a que el servicio es gratuito, todos los clientes están dispuestos 
-a esperar el tiempo que sea necesario para poder utilizarlo. El tiempo de atención 
-es en promedio de 2 minutos por cliente, siendo exponencial la distribución de 
-los tiempos de servicio. Calcular:
+En una sastrería hay una sección de arreglo y reforma de la ropa vendida a sus
+clientes, que es atendida por un sastre. El número de clientes que requieren
+arreglos arriban a dicha sección con una distribución de Poisson con una media
+de 24 clientes por hora. Debido a que el servicio es gratuito, todos los
+clientes están dispuestos a esperar el tiempo que sea necesario para poder
+utilizarlo. El tiempo de atención es en promedio de 2 minutos por cliente,
+siendo exponencial la distribución de los tiempos de servicio. Calcular:
 
 \leftskip=36pt
 \parindent=-18pt
-\begin{enumerate}[a.]
+\begin{enumerate}[a)]
   \item ¿Cual es en promedio, el número de clientes en la sección?
 
   \item ¿Cuánto tiempo permanece, en promedio, un cliente en la sección?
 
   \item ¿Cual es la probabilidad de que el sastre esté desocupado?
 
-  \item ¿Cual es en promedio, el número de clientes que están esperando recibir 
-  el servicio?
+  \item ¿Cual es en promedio, el número de clientes que están esperando recibir
+    el servicio?
 \end{enumerate}
 
 \vspace{13pt}
@@ -113,18 +111,20 @@ los tiempos de servicio. Calcular:
 \parindent=0pt
 \subsection*{\textbf{Resolución}}
 
-Como sistema se entiende toda la sección de arreglo y reforma.\label{h.ucd2riukxd97}
+Como sistema se entiende toda la sección de arreglo y
+reforma.
 
-\vspace{8pt}
+\vspace{5pt}
 \subsubsection*{Hipotesis:}
 
-Se verifican las hipótesis de un P/P/1. El enunciado dice explícitamente que 
-todos los clientes están dispuestos a esperar el tiempo que sea necesario, lo 
+Se verifican las hipótesis de un P/P/1. El enunciado dice explícitamente que
+todos los clientes están dispuestos a esperar el tiempo que sea necesario, lo
 cual se puede interpretar como una cola con capacidad infinita.
 
 \begin{enumerate}[1.]
   \item Tipo de proceso de arribo de clientes responde a distribución Poisson.
-  \item Tipo de proceso de servicio a los clientes en el sistema responde a distribución Poisson.
+  \item Tipo de proceso de servicio a los clientes en el sistema responde a
+    distribución Poisson.
   \item Hay un único canal de atención.
   \item El sistema tiene capacidad infinita.
   \item La disciplina de atención es FIFO.
@@ -142,423 +142,372 @@ Parámetros del modelo:
 
 $\lambda = 24 [clientes/hora]$
 
-$T_s = 2 [minutos] \frac{1[hora]}{60[minutos]} = 0.033 [horas]$ → $\mu = 30 [clientes/hora]$
+$T_s = 2 [minutos/cliente] \times \frac{1[hora]}{60[minutos]} = 0.033
+[horas/cliente]$ → $\mu = 30 [clientes/hora]$
+
+\begin{enumerate}[a)]
+  \vspace{13pt}
+  \item El número de clientes en la sección, es decir el número de clientes en
+    el sistema, es L.
+
+  $L = \frac{\lambda}{\mu - \lambda} = \frac{24}{30 - 24} = 4 [clientes/hora]$
+
+  \vspace{13pt}
+  \item El tiempo que permanece un cliente en la sección, es decir, en el
+    sistema es W:
+
+  $W = \frac{1}{\mu-\lambda} = \frac{1}{30-24} = 0,1667[horas] \times \frac{60[minutos]}{1[hora]} = 10[minutos]$
+
+  \vspace{13pt}
+  \item La probabilidad de que el sastre esté desocupado es la probabilidad de
+    que en la sección no haya nadie, es decir P(0)
+
+  $P(0) = 1-\rho = 1-\frac{24}{30} = 0,2$
+
+  \vspace{13pt}
+  \item El número de clientes esperando recibir el servicio son los clientes
+    que están en la cola, es decir $L_c$.
+
+  $L_c = \frac{\rho^2}{1-\rho} = \frac{0,64}{1-0,8} = 3,2$
+
+\end{enumerate}
+\vspace{35pt}
+\section*{\textbf{Ejercicio 2}}
+
+Un establecimiento de reparaciones, atendido por un solo operario, recibe un
+promedio de cuatro clientes por hora, los cuales traen pequeños aparatos para
+reparar.  El mecanico los inspecciona para encontrar defectos y muy a menudo
+puede arreglarlos de inmediato, o de otro modo emitir un diagnostico. En
+promedio, todo le toma 6 minutos por aparato. Los arribos tienen una
+distribución de de Poisson y el tiempo de servicio tiene una distribución
+exponencial. Calcular:
+
+\leftskip=36pt
+\parindent=-18pt
+\begin{enumerate}[a)]
+  \item La probabilidad de que el taller esté vacío.
+  \item La probabilidad de que tres clientes estén en el taller.
+  \item La probabilidad de encontrar por lo menos un cliente en el taller.
+  \item El número promedio de clientes en el taller.
+  \item El tiempo promedio que un cliente debe permanecer en el taller.
+  \item El número promedio de clientes que esperan ser atendidos.
+  \item El tiempo promedio que un cliente debe esperar para ser atendido.
+\end{enumerate}
 
 \vspace{13pt}
-A. El número de clientes en la sección, es decir el número de clientes en el 
-sistema, es L.
+\leftskip=0pt
+\parindent=0pt
+\subsection*{\textbf{Resolución}}
 
-$L = \frac{\lambda}{\mu - \lambda} = \frac{24}{30 - 24} = 4 [clientes/hora]$
+Consideramos el sistema como el taller, con el operario incluido. El enunciado
+no dice nada con respecto a la capacidad de la cola, por lo que entendemos que
+hay suficiente lugar como para albergar a toda la gente que arribe. Responde al
+modelo P/P/1
+
+\vspace{5pt}
+\subsubsection*{Hipotesis:}
+
+\begin{enumerate}[1.]
+  \item Tipo de proceso de arribo de clientes responde a distribución Poisson.
+  \item Tipo de proceso de servicio a los clientes en el sistema responde a
+    distribución Poisson.
+  \item Hay un único canal de atención.
+  \item El sistema tiene capacidad infinita.
+  \item La disciplina de atención es FIFO.
+  \item La población es infinita.
+  \item Se forma una única cola frente al canal.
+  \item El sistema se encuentra en régimen estacionario.
+  \item La población no presenta fenómeno de impaciencia.
+\end{enumerate}
+
+\vspace{13pt}
+Parámetros del modelo:
+
+$\lambda = 4 [clientes/hora]$
+
+$T_s = 6 [minutos/cliente] \times \frac{1[hora]}{60[minutos]} = 0,1
+[horas/cliente]$ → $\mu = 10 [clientes/hora]$.
+
+\begin{enumerate}[a)]
+  \vspace{13pt}
+  \item La probabilidad de que el taller esté vacío es la probabilidad de que
+    no haya ningún cliente en el sistema, es decir $P(0)$.
+
+  $P(0) = 1-\rho = 1-\frac{4}{10} = 0,6$
+
+  \vspace{13pt}
+  \item La probabilidad de que tres cliente estén en el sistema es
+
+  $P(3) = \rho^3 (1-\rho) = 0,4^3 \times 0,6 = 0,0384$
+
+  \item La probabilidad de encontrar por lo menos a un cliente es
+
+  $P(n > 0) = 1 - P(0) = 1 - 0.6 = 0.4.$
+
+  \vspace{13pt}
+  \item El número promedio de clientes en el taller es el número promedio de
+    clientes en el sistema, es decir L.
+
+  $L = \frac{\rho}{1-\rho} = \frac{0,4}{1-0,4} = 0,667$
+
+  \vspace{13pt}
+  \item El tiempo promedio que un cliente debe permanecer en el taller es el
+    tiempo que un cliente debe permanecer en el sistema, es decir W.
+
+  $W = \frac{1}{\mu-\lambda} = \frac{1}{10-4} = 0,1667[horas/cliente] \times
+  \frac{60[minutos]}{1[hora]} = 10[minutos/cliente] $
+
+  \vspace{13pt}
+  \item El número de clientes que esperan ser atendidos son los clientes
+    esperando en la cola, es decir $L_c$.
+
+  $L_c = \frac{\rho^2}{1-\rho} = \frac{0,16}{1-0,4} = 0,2667$
+
+  \vspace{13pt}
+  \item El tiempo promedio que un cliente tiene que esperar para ser atendido
+    es el tiempo que pasa en la cola, es decir $W_c$.
+
+    $W_c = \frac{\lambda}{\mu(\mu-\lambda)} = \frac{4}{10\times(10-4)} =
+    0,0667[horas/cliente] \times \frac{60[minutos]}{1[hora]} =
+    4[minutos/cliente]$
+
+\end{enumerate}
+
+\vspace{35pt}
+\section*{\textbf{Ejercicio 3}}
+
+Un banco está desarrollando la prestación de un nuevo servicio, para lo cual ha
+habilitado una ventanilla. Como el desarrollo del mismo está basado en una
+campaña publicitaria que hace mención al mínimo tiempo de espera que se
+requiere, el gerente de la sucursal ha decidido encarar el estudio científico
+del problema a fin de no exponerse a un fracaso. Hasta ahora se cuenta con los
+siguientes datos:
+
+\leftskip=36pt
+\parindent=-18pt
+\begin{itemize}
+  \item Lapso medio entre arribo de usuarios: 8 minutos (distribución
+    exponencial)
+  \item Tiempo medio de atención en ventanilla: 2 minutos (distribución
+    exponencial).
+\end{itemize}
+
+\leftskip=0pt
+\parindent=0pt
+Determinar:
+
+\leftskip=36pt
+\parindent=-18pt
+\begin{enumerate}[a)]
+  \item La probabilidad de esperar.
+  \item La longitud promedio de la cola.
+  \item La velocidad promedio de arribos que haría que el tiempo de espera en
+    la cola supere los 4 minutos.
+\end{enumerate}
+
+\vspace{13pt}
+\leftskip=0pt
+\parindent=0pt
+\subsection*{\textbf{Resolución}}
+
+Consideramos el sistema como la ventanilla más la cola. El enunciado no dice
+nada con respecto a la capacidad de la cola, por lo que entendemos que hay
+suficiente lugar como para albergar a toda la gente que arribe.
+
+\vspace{5pt}
+\subsubsection*{Hipotesis:}
+
+Se verifican las hipótesis de un P/P/1.
+
+\begin{enumerate}[1.]
+  \item Tipo de proceso de arribo de clientes responde a distribución Poisson.
+  \item Tipo de proceso de servicio a los clientes en el sistema responde a
+    distribución Poisson.
+  \item Hay un único canal de atención.
+  \item El sistema tiene capacidad infinita.
+  \item La disciplina de atención es FIFO.
+  \item La población es infinita.
+  \item Se forma una única cola frente al canal.
+  \item El sistema se encuentra en régimen estacionario.
+  \item La población no presenta fenómeno de impaciencia.
+\end{enumerate}
+
+\vspace{13pt}
+Parámetros del modelo:
+
+$T = 8 [minutos/cliente]$ →  $\lambda = 0,125 [clientes/minuto]$.
+
+$Ts = 2 [minutos/cliente]$ → $\mu = 0,5 [clientes/minuto]$.
+
+\begin{enumerate}[a)]
+  \vspace{13pt}
+  \item La probabilidad de esperar es la probabilidad de que en el sistema haya
+    algún cliente, es decir $P(n>0) = 1 - P(0)$.
+
+  $P(n>0) = 1 - P(0) = 1-1+\rho = \frac{\lambda}{\mu} = \frac{0,125}{0,5} =
+  0,25$
+
+  \vspace{13pt}
+  \item La longitud promedio de la cola es la cantidad de clientes en promedio
+    esperando para ser atendidos, es decir $L_c$.
+
+  $L_c = \frac{\lambda^2}{\mu(\mu-\lambda)} = \frac{0,125^2}{0,5 \times
+  (0,5-0,125)} = 0,0833$
+
+  \vspace{13pt}
+  \item El tiempo de espera en la cola es $W_c$, es decir:
+
+  $W_c = \frac{\lambda}{\mu(\mu-\lambda)} < 4 \implies \lambda < 4
+  \mu(\mu-\lambda) \implies \lambda < 4 \mu^2-4\mu\lambda \implies \lambda +
+  4\mu\lambda < 4 \mu^2 \implies \lambda(1 + 4\mu) < 4\mu^2 \implies \lambda <
+  \frac{4\mu^2}{1+4\mu}$
+
+  $\lambda < \frac{4\mu^2}{1+4\mu} = \frac{4\times0,5^2}{1+4\times0,5} =
+  0,333[clientes/minuto]$
+\end{enumerate}
+
+\vspace{35pt}
+\section*{\textbf{Ejercicio 4}}
+
+Teniendo en cuenta el ejercicio 2, considerar todas las suposiciones
+anteriores, excepto que si hay tres clientes en el taller, cualquier otro
+cliente que llegue se retirará.
+
+Determinar entonces:
+
+\leftskip=36pt
+\parindent=-18pt
+\begin{enumerate}[a)]
+  \item La probabilidad de que el taller esté vacío.
+  \item La probabilidad de que tres clientes estén en el taller.
+  \item La probabilidad de encontrar por lo menos un cliente en el taller.
+  \item El número promedio de clientes en el taller.
+  \item El tiempo promedio que un cliente debe permanecer en el taller.
+  \item El número promedio de clientes que esperan ser atendidos.
+  \item El tiempo promedio que un cliente debe esperar para ser atendido.
+  \item La cantidad promedio de clientes que se retiran sin ser atendidos.
+\end{enumerate}
+
+\vspace{13pt}
+\leftskip=0pt
+\parindent=0pt
+\subsection*{\textbf{Resolución}}
+
+\vspace{5pt}
+\leftskip=0pt
+\parindent=0pt
+\subsubsection*{Hipótesis:}
+
+\leftskip=36pt
+\parindent=-18pt
+\begin{itemize}
+  \item El proceso de llegada de los clientes responde a un proceso Poisson.
+  \item El proceso de atención de los clientes responde a un proceso Poisson.
+  \item La población es infinita
+  \item Se forma una única cola frente al canal de atención.
+  \item Existe un único canal de atención.
+  \item La capacidad del sistema es infinita
+  \item La atención de los clientes de la cola es FIFO
+  \item El sistema se encuentra en condiciones estables.
+  \item \textit{La población presenta el fenómeno de impaciencia.}
+\end{itemize}
+
+\vspace{21pt}
+\leftskip=0pt
+\parindent=0pt
+\textit{Sistema}
+
+El sistema se modela como un sistema PP1 con impaciencia:
+
+\vspace{13pt}
+\includegraphics[width=359pt, height=99pt, keepaspectratio=true]{TP1-Colas-fig002.png}
+
+$\lambda = 7,5[clientes/hora]$
+
+$\mu = 30[clientes/hora]$
+
 
 \vspace{27pt}
-B. El tiempo que permanece un cliente en la sección, es decir, en el sistema es 
-W:
+\begin{tabular}{|>{\centering}p{33pt}|>{\centering}p{31pt}|>{\centering}p{31pt}|>{\centering}p{31pt}|>{\centering}p{31pt}|>{\centering}p{31pt}|>{\centering}p{31pt}|>{\centering}p{31pt}|}
+\hline
+$n$ & $P(n)$ & $\lambda$ & $\mu$ & $L$ & $Lc$ & $H$ & $R$\tabularnewline
+\hline
+0 & $P(0)$ & $\lambda$ & 0 & 0 & 0 & 0 & 0\tabularnewline
+\hline
+1 & $P(1)$ & $\lambda$ & $\mu$ & 1 & 0 & 1 & 0\tabularnewline
+\hline
+2 & $P(2)$ & $\lambda$ & $\mu$ & 2 & 1 & 1 & 0\tabularnewline
+\hline
+3 & $P(3)$ & 0 & $\mu$ & 3 & 2 & 1 & $\lambda$\tabularnewline
+\hline
+4 & $P(4)$ & 0 & $\mu$ & 3 & 2 & 1 & $\lambda$\tabularnewline
+\hline
+5 & 0 & 0 & $\mu$ & 3 & 2 & 1 & $\lambda$\tabularnewline
+\hline
+.. & .. & ... & ... & ... & ... & ... & ...\tabularnewline
+\hline
+\end{tabular}
 
-%%%\begin{figure}[htbp]
-%\includegraphics[width=281pt, height=27pt, keepaspectratio=true]{TP1-Colas-fig003.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig003.png}.}
-%%%\end{figure}
-%
-%\vspace{27pt}
-%C. La probabilidad de que el sastre esté desocupado es la probabilidad de que 
-%en la sección no haya nadie, es decir P(0)
-%
-%%%\begin{figure}[htbp]
-%\includegraphics[width=152pt, height=25pt, keepaspectratio=true]{TP1-Colas-fig004.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig004.png}.}
-%%%\end{figure}
-%
-%\vspace{13pt}
-%D. El número de clientes esperando recibir el servicio son los clientes que están 
-%en la cola, es decir L\textsubscript{c}.
-%
-%%%\begin{figure}[htbp]
-%\includegraphics[width=170pt, height=29pt, keepaspectratio=true]{TP1-Colas-fig005.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig005.png}.}
-%%%\end{figure}
-%
-%\label{h.k0o10jsxzae}
-%
-%\vspace{35pt}
-%\subsubsection*{{\color{color01} \textbf{Ejercicio 2}}}
-%
-%Un establecimiento de reparaciones, atendido por un solo operario, recibe un promedio 
-%de cuatro clientes por hora, los cuales traen pequeños aparatos para reparar. 
-%El mecanico los inspecciona para encontrar defectos y muy a menudo puede arreglarlos 
-%de inmediato, o de otro modo emitir un diagnostico. En promedio, todo le toma 6 
-%minutos por aparato. Los arribos tienen una distribución de de Poisson y el tiempo 
-%de servicio tiene una distribución exponencial. Calcular:
-%
-%\leftskip=36pt
-%\parindent=-18pt
-%A.\tab La probabilidad de que el taller esté vacío.
-%
-%B.\tab La probabilidad de que tres clientes estén en el taller.
-%
-%C.\tab La probabilidad de encontrar por lo menos un cliente en el taller.
-%
-%D.\tab El número promedio de clientes en el taller.
-%
-%E.\tab El tiempo promedio que un cliente debe permanecer en el taller.
-%
-%F.\tab El número promedio de clientes que esperan ser atendidos.
-%
-%G.\tab El tiempo promedio que un cliente debe esperar para ser atendido.
-%
-%\vspace{13pt}
-%\leftskip=0pt
-%\parindent=0pt
-%Consideramos el sistema como el taller, con el operario incluido. El enunciado 
-%no dice nada con respecto a la capacidad de la cola, por lo que entendemos que 
-%hay suficiente lugar como para albergar a toda la gente que arribe.
-%
-%\vspace{13pt}
-%Parámetros del modelo:
-%
-%$\lambda$ = 4 clientes/hora
-%
-%T\textsubscript{s} = 6 minutos = 0.1 horas → $\mu$ = 10 clientes/hora.
-%
-%\vspace{13pt}
-%A La probabilidad de que el taller esté vacío es la probabilidad de que no haya 
-%ningún cliente en el sistema, es decir P(0).
-%
-%%%\begin{figure}[htbp]
-%\includegraphics[width=0pt, height=0pt, keepaspectratio=true]{TP1-Colas-fig006.???}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig006.???}.}
-%%%\end{figure}
-%
-%\includegraphics[width=156pt, height=25pt, keepaspectratio=true]{TP1-Colas-fig007.wmf}
-%
-%\vspace{13pt}
-%B. La probabilidad de que tres cliente estén en el sistema es
-%
-%%%\begin{figure}[htbp]
-%\includegraphics[width=211pt, height=17pt, keepaspectratio=true]{TP1-Colas-fig008.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig008.png}.}
-%%%\end{figure}
-%
-%\vspace{27pt}
-%C. La probabilidad de encontrar por lo menos a un cliente es P(n \texttt{>} 0) 
-%= 1 - P(0) = 1 - 0.6 = 0.4.
-%
-%\vspace{13pt}
-%D. El número promedio de clientes en el taller es el número promedio de clientes 
-%en el sistema, es decir L.
-%
-%%%\begin{figure}[htbp]
-%\includegraphics[width=333pt, height=27pt, keepaspectratio=true]{TP1-Colas-fig009.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig009.png}.}
-%%%\end{figure}
-%
-%\vspace{27pt}
-%E. El tiempo promedio que un cliente debe permanecer en el taller es el tiempo 
-%que un cliente debe permanecer en el sistema, es decir W.
-%
-%%%\begin{figure}[htbp]
-%\includegraphics[width=252pt, height=27pt, keepaspectratio=true]{TP1-Colas-fig010.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig010.png}.}
-%%%\end{figure}
-%
-%\vspace{27pt}
-%F. El número de clientes que esperan ser atendidos son los clientes esperando 
-%en la cola, es decir L\textsubscript{c}.
-%
-%%%\begin{figure}[htbp]
-%\includegraphics[width=332pt, height=29pt, keepaspectratio=true]{TP1-Colas-fig011.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig011.png}.}
-%%%\end{figure}
-%
-%\vspace{27pt}
-%G. El tiempo promedio que un cliente tiene que esperar para ser atendido es el 
-%tiempo que pasa en la cola, es decir W\textsubscript{c}.
-%
-%%%\begin{figure}[htbp]
-%\includegraphics[width=300pt, height=29pt, keepaspectratio=true]{TP1-Colas-fig012.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig012.png}.}
-%%%\end{figure}
-%
-%\label{h.c9kpqzkqh5j9}
-%
-%\vspace{49pt}
-%\subsubsection*{{\color{color01} \textbf{Ejercicio 3}}}
-%
-%Un banco está desarrollando la prestación de un nuevo servicio, para lo cual 
-%ha habilitado una ventanilla. Como el desarrollo del mismo está basado en una 
-%campaña publicitaria que hace mención al mínimo tiempo de espera que se requiere, 
-%el gerente de la sucursal ha decidido encarar el estudio científico del problema 
-%a fin de no exponerse a un fracaso. Hasta ahora se cuenta con los siguientes datos:
-%
-%\leftskip=36pt
-%\parindent=-18pt
-%●\tab Lapso medio entre arribo de usuarios: 8 minutos (distribución exponencial)
-%
-%●\tab Tiempo medio de atención en ventanilla: 2 minutos (distribución exponencial).
-%
-%\leftskip=0pt
-%\parindent=0pt
-%Determinar:
-%
-%\leftskip=36pt
-%\parindent=-18pt
-%A.\tab La probabilidad de esperar.
-%
-%B.\tab La longitud promedio de la cola.
-%
-%C.\tab La velocidad promedio de arribos que haría que el tiempo de espera en la 
-%cola supere los 4 minutos.
-%
-%\vspace{13pt}
-%\leftskip=0pt
-%\parindent=0pt
-%Consideramos el sistema como la ventanilla más la cola. El enunciado no dice nada 
-%con respecto a la capacidad de la cola, por lo que entendemos que hay suficiente 
-%lugar como para albergar a toda la gente que arribe.\label{h.eoq63ml893zx}
-%
-%\vspace{8pt}
-%{\color{color01} \emph{Hipotesis:}}
-%
-%Se verifican las hipótesis de un P/P/1.
-%
-%\vspace{13pt}
-%Parámetros del modelo:
-%
-%T = 8 minutos → $\lambda$ = 0.125 clientes/minuto.
-%
-%Ts = 2 minutos → $\mu$ = 0.5 clientes/minuto.
-%
-%\vspace{13pt}
-%A. La probabilidad de esperar es la probabilidad de que en el sistema haya algún 
-%cliente, es decir P(n \texttt{>} 0) = 1 - P(0).
-%
-%%%\begin{figure}[htbp]
-%\includegraphics[width=275pt, height=25pt, keepaspectratio=true]{TP1-Colas-fig013.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig013.png}.}
-%%%\end{figure}
-%
-%\vspace{27pt}
-%B. La longitud promedio de la cola es la cantidad de clientes en promedio esperando 
-%para ser atendidos, es decir L\textsubscript{c}.
-%
-%%%\begin{figure}[htbp]
-%\includegraphics[width=428pt, height=31pt, keepaspectratio=true]{TP1-Colas-fig014.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig014.png}.}
-%%%\end{figure}
-%
-%\vspace{27pt}
-%C. El tiempo de espera en la cola es W\textsubscript{c}, es decir:
-%
-%\vspace{13pt}
-%%%\begin{figure}[htbp]
-%\includegraphics[width=321pt, height=30pt, keepaspectratio=true]{TP1-Colas-fig015.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig015.png}.}
-%%%\end{figure}
-%
-%\label{h.6r62cgyud887}
-%
-%\vspace{35pt}
-%\subsubsection*{{\color{color01} \textbf{Ejercicio 4}}}
-%
-%Teniendo en cuenta el ejercicio 2, considerar todas las suposiciones anteriores, 
-%excepto que si hay tres clientes en el taller, cualquier otro cliente que llegue 
-%se retirará.
-%
-%Determinar entonces:
-%
-%\leftskip=36pt
-%\parindent=-18pt
-%1.\tab La probabilidad de que el taller esté vacío.
-%
-%2.\tab La probabilidad de que tres clientes estén en el taller.
-%
-%3.\tab La probabilidad de encontrar por lo menos un cliente en el taller.
-%
-%4.\tab El número promedio de clientes en el taller.
-%
-%5.\tab El tiempo promedio que un cliente debe permanecer en el taller.
-%
-%6.\tab El número promedio de clientes que esperan ser atendidos.
-%
-%7.\tab El tiempo promedio que un cliente debe esperar para ser atendido.
-%
-%8.\tab La cantidad promedio de clientes que se retiran sin ser atendidos.\label{h.fut7k3oybvll}
-%
-%\vspace{21pt}
-%\leftskip=0pt
-%\parindent=0pt
-%{\color{color01} \emph{Hipótesis}}
-%
-%\leftskip=36pt
-%\parindent=-18pt
-%●\tab El proceso de llegada de los clientes responde a un proceso Poisson.
-%
-%●\tab El proceso de atención de los clientes responde a un proceso Poisson.
-%
-%●\tab La población es infinita
-%
-%●\tab Se forma una única cola frente al canal de atención.
-%
-%●\tab Existe un único canal de atención.
-%
-%●\tab La capacidad del sistema es infinita
-%
-%●\tab La atención de los clientes de la cola es FIFO
-%
-%●\tab El sistema se encuentra en condiciones estables.
-%
-%●\tab \emph{La población presenta el fenómeno de impaciencia.\label{h.opqdcj4n3uxj}}
-%
-%\vspace{21pt}
-%\leftskip=0pt
-%\parindent=0pt
-%{\color{color01} \emph{Sistema}}
-%
-%El sistema se modela como un sistema PP1 con impaciencia:
-%
-%\vspace{13pt}
-%%%\begin{figure}[htbp]
-%\includegraphics[width=359pt, height=99pt, keepaspectratio=true]{TP1-Colas-fig016.wmf}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig016.wmf}.}
-%%%\end{figure}
-%
-%\vspace{124pt}
-%%%\begin{figure}[htbp]
-%\includegraphics[width=71pt, height=15pt, keepaspectratio=true]{TP1-Colas-fig017.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig017.png}.}
-%%%\end{figure}
-%
-%\vspace{13pt}
-%%%\begin{figure}[htbp]
-%\includegraphics[width=65pt, height=15pt, keepaspectratio=true]{TP1-Colas-fig018.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig018.png}.}
-%%%\end{figure}
-%
-%\vspace{27pt}
-%\begin{tabular}{|>{\raggedright}p{33pt}|>{\raggedright}p{31pt}|>{\raggedright}p{31pt}|>{\raggedright}p{31pt}|>{\raggedright}p{31pt}|>{\raggedright}p{31pt}|>{\raggedright}p{31pt}|>{\raggedright}p{31pt}|}
-%\hline
-%n & P(n)
-%\includegraphics[width=8pt, height=11pt, keepaspectratio=true]{TP1-Colas-fig019.png}
-% & 
-%\includegraphics[width=8pt, height=11pt, keepaspectratio=true]{TP1-Colas-fig020.png}
-% &  & L & Lc & H & R\tabularnewline
-%\hline
-%0 & P(0)
-%\includegraphics[width=8pt, height=11pt, keepaspectratio=true]{TP1-Colas-fig021.png}
-% &  & 0 & 0 & 0 & 0 & 0\tabularnewline
-%\hline
-%1 & P(1)
-%\includegraphics[width=8pt, height=11pt, keepaspectratio=true]{TP1-Colas-fig022.png}
-% & 
-%\includegraphics[width=8pt, height=11pt, keepaspectratio=true]{TP1-Colas-fig023.png}
-% &  & 1 & 0 & 1 & 0\tabularnewline
-%\hline
-%2 & P(2)
-%\includegraphics[width=8pt, height=11pt, keepaspectratio=true]{TP1-Colas-fig024.png}
-% & 
-%\includegraphics[width=8pt, height=11pt, keepaspectratio=true]{TP1-Colas-fig025.png}
-% &  & 2 & 1 & 1 & 0\tabularnewline
-%\hline
-%3 & P(3) & 0
-%\includegraphics[width=8pt, height=11pt, keepaspectratio=true]{TP1-Colas-fig026.png}
-% &  & 3 & 2 & 1
-%\includegraphics[width=8pt, height=11pt, keepaspectratio=true]{TP1-Colas-fig027.png}
-% & \tabularnewline
-%\hline
-%4 & P(4) & 0
-%\includegraphics[width=8pt, height=11pt, keepaspectratio=true]{TP1-Colas-fig028.png}
-% &  & 3 & 2 & 1
-%\includegraphics[width=8pt, height=11pt, keepaspectratio=true]{TP1-Colas-fig029.png}
-% & \tabularnewline
-%\hline
-%5 & 0 & 0
-%\includegraphics[width=8pt, height=11pt, keepaspectratio=true]{TP1-Colas-fig030.png}
-% &  & 3 & 2 & 1
-%\includegraphics[width=8pt, height=11pt, keepaspectratio=true]{TP1-Colas-fig031.png}
-% & \tabularnewline
-%\hline
-%.. & .. & ... & ... & ... & ... & ... & ...\tabularnewline
-%\hline
-%\end{tabular}
-%
-%\vspace{13pt}
-%\leftskip=36pt
-%\parindent=-18pt
-%1)\tab 
-%\includegraphics[width=128pt, height=29pt, keepaspectratio=true]{TP1-Colas-fig032.png}
-% 
-%
-%%%\begin{figure}[htbp]
-%\includegraphics[width=136pt, height=29pt, keepaspectratio=true]{TP1-Colas-fig033.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig033.png}.}
-%%%\end{figure}
-%
-% 
-%
-%\vspace{13pt}
-%%%\begin{figure}[htbp]
-%\includegraphics[width=138pt, height=29pt, keepaspectratio=true]{TP1-Colas-fig034.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig034.png}.}
-%%%\end{figure}
-%
-%\vspace{13pt}
-%%%\begin{figure}[htbp]
-%\includegraphics[width=128pt, height=32pt, keepaspectratio=true]{TP1-Colas-fig035.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig035.png}.}
-%%%\end{figure}
-%
-%\vspace{13pt}
-%%%\begin{figure}[htbp]
-%\includegraphics[width=366pt, height=27pt, keepaspectratio=true]{TP1-Colas-fig036.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig036.png}.}
-%%%\end{figure}
-%
-%\vspace{13pt}
-%2)\tab 
-%\includegraphics[width=134pt, height=17pt, keepaspectratio=true]{TP1-Colas-fig037.png}
-%
-%3)\tab 
-%\includegraphics[width=144pt, height=14pt, keepaspectratio=true]{TP1-Colas-fig038.png}
-%
-%4)\tab 
-%\includegraphics[width=317pt, height=14pt, keepaspectratio=true]{TP1-Colas-fig039.png}
-%
-%5)\tab 
-%\includegraphics[width=242pt, height=14pt, keepaspectratio=true]{TP1-Colas-fig040.png}
-%
-%%%\begin{figure}[htbp]
-%\includegraphics[width=245pt, height=14pt, keepaspectratio=true]{TP1-Colas-fig041.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig041.png}.}
-%%%\end{figure}
-%
-%\vspace{13pt}
-%%%\begin{figure}[htbp]
-%\includegraphics[width=383pt, height=18pt, keepaspectratio=true]{TP1-Colas-fig042.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig042.png}.}
-%%%\end{figure}
-%
-%\vspace{13pt}
-%%%\begin{figure}[htbp]
-%\includegraphics[width=377pt, height=29pt, keepaspectratio=true]{TP1-Colas-fig043.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig043.png}.}
-%%%\end{figure}
-%
-%\vspace{13pt}
-%6)\tab 
-%\includegraphics[width=103pt, height=11pt, keepaspectratio=true]{TP1-Colas-fig044.png}
-%
-%7)\tab 
-%\includegraphics[width=383pt, height=18pt, keepaspectratio=true]{TP1-Colas-fig045.png}
-%
-%%%\begin{figure}[htbp]
-%\includegraphics[width=313pt, height=29pt, keepaspectratio=true]{TP1-Colas-fig046.png}
-%%%\caption{This should be the caption for \texttt{TP1-Colas-fig046.png}.}
-%%%\end{figure}
-%
-%\vspace{13pt}
-%8)\tab 
-%\includegraphics[width=131pt, height=15pt, keepaspectratio=true]{TP1-Colas-fig047.png}
-%\label{h.7rdr9r6l8evn}
-%
+\vspace{13pt}
+\leftskip=36pt
+\parindent=-18pt
+\begin{enumerate}[a)]
+  \item 
+    $P(1) = \frac{\lambda P(0)}{\mu} = \rho P(0)$ 
+
+    $P(2) = \frac{\lambda P(1)}{\mu} = \rho^2P(0)$ 
+
+    $P(3) = \frac{\lambda P(2)}{\mu} = \rho^3P(0)$ 
+
+    $\rho = \frac{\lambda}{\mu} = \frac{7,5[clientes/hora]}{30[clientes/hora]}
+    = 0,25$
+
+    $P(0) + P(1) + P(2) +P(3) = 1 \implies P(0) =
+    \frac{1}{1+\rho+\rho^2+\rho^3} = 0,75$
+   
+
+  \vspace{13pt}
+  \item
+    $P(3) = \rho^3P(0) = 0,012$ 
+
+  \vspace{13pt}
+  \item
+    $1-P(0) = 1-0,75 = 0,25$ 
+
+  \vspace{13pt}
+  \item
+    $L = 1 \times P(1) + 2 \times P(2) + 3 \times P(3) = 0,75
+    \times(\rho+2\rho^2+3\rho^3) = 0,32$ 
+
+  \vspace{13pt}
+  \item
+    $H = P(1) + P(2) + P(3) = 1 - P(0) = 0,25$ 
+
+    $L_c = L - H = 0,52 - 0,25 = 0,27$ 
+
+    $\lambda = \lambda(P(0) + P(1) + P(2)) = \lambda(1-P(3)) = \lambda(1-0,012)
+    = 7,41 [clientes/hora]$ 
+
+    $W = W_c + T_s = \frac{L_c}{\lambda} + \frac{1}{\mu} =
+    \frac{0,27}{7,41[clientes/hora]} + \frac{1}{30[clientes/hora]} =
+    0,069[horas/cliente] \times \frac{60[minutos]}{1[hora]} =
+    4,18[minutos/cliente]$
+
+  \item
+    $L_c = 0,27$
+
+  \item
+    $\overline{\lambda} = \lambda(P(0) + P(1) + P(2)) = \lambda(1-P(3)) =
+    \lambda(1-0,012) = 7,41[clientes/hora]$
+
+    $W_c = \frac{L_c}{\lambda} = \frac{0,27}{7,41[clientes/hora]} =
+    0,036[horas/cliente] \times \frac{60[minutos]}{1[hora]} =
+    2,18[minutos/cliente]$
+
+  \item
+    $R = \lambda P(3) = 0,09[clientes/hora]$
+\end{enumerate}
+
 %\vspace{21pt}
 %\subsubsection*{{\color{color01} \textbf{Ejercicio 5}}}
 %
@@ -1085,7 +1034,6 @@ W:
 %%%\caption{This should be the caption for \texttt{TP1-Colas-fig115.???}.}
 %%%\end{figure}
 %
-%89504e470d0a1a0a0000000d494844520000012f0000002e080600000079f59fc900000006624b474400ff00ff00ffa0bda7930000107649444154789ced9d799414c51dc73fbbb0b2a0c829a70605449153c483008280073162f0c03b221e286abcf509923ca38946311a15158911a2893746821a11f13ec0239e48bca3415057bc115981fcf1ad7addd3533dd3b333b3b3477ddedb373bdd553dd5dd55bfb3baba098d8f0af3b9b1a4adf0783c79d1a4d40da865ca809b80d5c07f4bdc168fc79307e5a56e402df34b60008defbc3d9e0647631ac45d8181c8faf2783cf59cc622bcca81b3813bccf70d256c8bc7e329004d4bdd805ae264e06fc01af3bdb1086d8fa7c1d21806717fe42abe50ea86783c9ec2d1d08557393001b8da7cb7f12e3f4dc2e3a9e734f4e0f504603cf099f9de1cd81978c56c3bbb44edf2783c9eac9485fefa002f03a34ada228fc793378d2160bfd1f1bf771b3d9e7a4e639a613f09381a680df4003a034b4bda228fc7e3f1783c8d0b1bb0df0cb8a740c77c0338b340c7ca851640873cea7f0e7c53a0b6d48476a60d996809fc00ac2b7e733c9e3492f4d15ac3956d2c07ba39b67f0fac2a6e73f2625fe06234b03f4c50be0bb00941dcef0de0c83cdbb04d867d5f025fc4ecdb05180d5c92e5f83d8089c045d44d01b615e971d4f524bb1f9e8026c016147fbcb50636055624283b02980c1c5ed416e5802b605f8906f1cea833be02bc0b7c04cca9b596e5ce43c0c1e8c1eba7803f25a8d30138043800e805b407aa6af8fb65e8ba0d04ba032f12ac5cb139b08339f614e0bb50bdfec069c01131c7bd0e595b67a0fbf0283013383e546667e03224d05e02ce37db3b218bf4ebd0795d6fdad70c9dfb17c042f31b1f03c798726d51e75e6bb603fc1a188a9615fa2df058a4ad070283807e4860bd608e7b59ccb9d53576054e418aa615f030704b827a934dddef90303887540b65108ab96e44f7e455600632085c4c04c601fb87b66d86fa40276481972125f65682f6b9b80a8d958d24cbbeff0278ae86bf95843d800bd0e209498469466e44d30adae47ba05aa433b0080d9a5d72a8d71cb80d759a7cf933ba6e512bac0bb00409234b13e4ae0fc870bc2b91500e73158190011846ea206b865cf7d168505d095c4e6a82663e7a58bd19125e96322460c79aba5381bf2021689905fc2ca6bd67a1f38fdb5f57e9053c4330903b028b51922713d380bb90150f1a840b908b05d013984bb08e5c7be009740d5d7435edb82fb27d16ba1f962b9130e998a57d997804b83941b90aa4343be5f15bd9d807b816f5c744c4cdb02f472eca4ae25d9dbac84aa48dd6a3c15a99b0def7c0e9c06e79fe7e19b26a3e27dd555a85626a61977c3fd4d657321cf30c3438c2dc0c1c4a3060a21c07ec8584f812738c51c8b58eb6371a3a180e1c86acbc25c0ef91057e6a967a9681c8027c2c667f5d650aea3f8bcdf74f9090c9144ae8872c9259046efca348499c61be4f44d6b5553655c0326030a90ac172916947783a4f0f537e6a68dbdd68a0d7d48ddb1219262f26287b20f2228ae9c6fe0b59bd3f24ad1027bcba21cdb1bc008daa6d1e07ee4466ff1539d4fb040dd47ce88edcad7791500ad31569dd70526002d27eb9f20a504daa300a77f60fd01304f6fe3647c2266c79c5099f2ae426da9042b9a917ed2baeb97215c8e25c41f0107c7d61208a7b867902ddb37e3175c6a1738e2e6cb91c091b8079c8b50bbb5c5ba2fb175ddd643f24d83e27f5fe7c043c89c221967ea64c3804910b7ba17bfa7882b263914753a7889ba4ba27ea9c49e641f5445a6573240066527a6bed6ae436fe1499fd7313d6cb37b06caf9b4b9b4d4602ed26f3bd0dd2a8d3638e351e75b03b705b31cb8031c0bd8e7df79b3fcb74d4f91784b6b926efdae31e12fa7e2cd2b83363ca87e987623eaef64669039c8806f257e8babc9ba05e31d812b53baaf5ad00de1178cd51af19ba16d1ebb10e9d5f1b14830c5fcf76e6ef41144fb4b447f7fc58e086c831d721cf204c3f24e432c5e42a8183509cf207d457acb01a8cae7b3603a51df01364e9b91882accbd790dbb7bb398f4a149a78d09419678eb51485562c5b234fa11a25acd699ba17a36b3003f81159feed9062bd16f8264e7859adf16096131b85829337201ffd0864f69ee2287b3032b193f2ac69644da84637fb4ed39667a97960331776329f0f87b67540c1daa148a8da7ded91dbf781e338939122580e5c88323d51aa706785a31c8d3ac4d40c65e2acb02148091c41ea608a2b3fda7c3e9da54dddd1bdbd0ff823b27a2e253db6978416c0ec1ccaaf4741e1306dc9fcb449dc149cb869036dd0bddd9440916f6dfe4e039e47e324cc74d43f3612ef96b746b1d323518cee44e283fe954821ac4071b93214bb7c0bb9a5bd90b2a88ea96f390a2518d63af63531fbaf4142b40b122e17204fe356a4185aa1185d7b64482c47566407e024e03748a8be8396ae9a6cbe4f04fe8094a76dfb1d282135d575c39a208b6015cabac4b107928ea7135868c722cdede25172132035cdfa5956a2f65d82328f07107fa30b4119b242d7a160b91dec2d9025368e549771a86963d4bdac40319293d1c08e6bf312826c54a6c79d86a1788e8b6c8f491d099ceb28e7b2364089871fc96c796d8384cded0442e764e4dad684b5e496cd74b5db0a0c1799162f988d2c9b3168e081eef7b6a65ef8b746a084d267e89eb744960fc85d5c83121db63dae766e03ec8dfac80a2420de7694ab4483fd6b74ff4089948ee6b85b21813d3fc3b9598620e3c4450ff43e880d04d7c91a1cefa3b1b02bb2ac40f2a41ad81e09af89c81adc1a290f2b6f764063f638d3d6d308aed54748f03ab54d3773624fc434b80bba01e722291b762d27029fc6d4ab227f81942b0fa18bbf3f8a679d91b9785e74479af105dc96a78ba8e00275fedb50071d44bc20f881d4811537c836e2d6ae495614a9c01d02705906e178974be05aad3c0db95b7f0ded3b0b09bd9ab081cc098fa4c409f24c027e0db296262105b51609a965286411c6862eca9195720b52a815e6f357a1b27196d7bfcd1f28887e19b242a271d3e391803821b4ed7a64b5ac42e3b4cc512fca0ec8558bb3a49b2217705f74ff7e17dad71f599e7342db0623256585f46b2816380df5191b57bbcf94eb6aea7f153a466fe03d7007ecc798cf671cfb3a2313af3f4a9bbe14d9ff216ef3b2945c8b06facbd90ae6c99ee63349f606d235b3e52ba495c623ed1ce712257db83cce2d48523f9b4b11a63f12bcd1a0b7e5326411f445167838bef419a58d9356136f9141e60cd85dc825df0305b6ef32e5bf4482a21312dc960d28a3b915127a67230b650a709ef9eb8ceefd7928fb5b81ae5b987f128447a28c44567e7801ce35c0ffccffbb20abec3f19ce0b24209f247e42f43214f6188c9216e1e4c108741dc2498671e83edb76d9b0d468f33bf63a3f60b695931abbed86aee542705b5e8322070e73348a1f0d31df7379b0d9aead959467091611ac29152896b288e441fb9a62e35d0b33960a58896200e5b8d7d43f10098215a8b345af751f92659acecf5ea42075479a4f97d2db179dc7006475c585162cc391e532d77c56a2c1ec9a1bd58220099284f5a44f7f588e9446bbc8f6ad9000cb96910b5b44a0f0c10ba6eedde81eef4d1036b00a7e3b34a527fabb7d4c9d0528f67991a97f03c135b002650b477be2dc494b2fe4d6fd88dcba258e3265689c67eb034d91c5fd5864fb40f31b617642d7a919b2a05e465e514b6489f742ded96a1456f922728c8390107e14d8352abc9a207f7d1592cc6146a200fdfec8d79de438916e48ba5ee3d8b70878ddb13d8ed539948de334e4ca1d97ad609ed878d717247f1fe4eb045318a274451de21ae4c21f46baf06a4fe0a2c7b980bd91c0b83d43bbe3688f02e8d1cc575cdd0148302c8e6cdf06b94467238beb7b47dd16c8a5b76ec776287b7d29b23e3e4583633e12fa61d6921efcce449cc5f91ae90990be2828ffaaf93edefc4d43b11790b2fa1a0d2cd0f96e4190452e4302286cbdd889a54bd0588bce9f5a8b048bb5622bd0a00df7adf64870440504b8934098765f89120af351ac693c6ee1d5dbb4dd95650dd31305e4c361a64dccb1c306d0ce4848cf471398db20e135168513de44f1e9ebd0d8df817401bc3b1a37df0193c273790612ccef7a9ec002db04f9e4bb2337f17b7380a5c8555a64ea1c886ef6393127b99ac208a4a41c822e52746266a11984cebf0dbad103904f9e29d9011a845548213c1cd967859a8d9fddeaa8df87546def1a94d350ece36982c1e6c255f72cd4b1de71b46f43a84e1fa420acd2eb1d2ab70f9aeef12dc1209887ae5933a42cf741f7c90ef65ee6f766a001f18929d70af7124e1bc86ec92561260a72ef8f622e3d90c29e132a73103adfb308dcb54a02e1b69969f75c8238dc3c24d46d4caf2d1a371f9a7d615a13cc15dc0c5da78f4ddbda927abf4f447de446c7b9dc8862d2dd90c01b812635df8684e07aa4482600ff705e0dc5cd1e26fb9bb64613b8c2967ec89a0a0bb4d6c82d5c8232883691d01cf5b11d4dbb3e42caac0ba9537b407d66294a0c2eb01a70139205991710640c2b9056ec882ec8232477998acd4894ae9d426e19ce3351862f175c2b68dc4ff67802288950815be09f88e24877926e9257a26b7d0c4a770f43c1d9e814806d914271cd059b8fae4f95f97fafc8fe36686acb1cd285db2c34c01f401da995e3f86196921afb3816b910eb5078601ee9f1b5e75198629969c7c948d0b9921c8562081a07abd1607b8454e1d5ddb4612041307c0fa4dc4196d062529f88284302714f34c83b23e57f39e96e7f6fa430c23c875cf1ee48a0b444566953944d8f13dcbb2381b51e09879b09bca9514870dd8f6267519a20c17514d99f333c12c5f56684b6ed62ea9e1a297b019a1e71058115d90d29d9f7cd31aa91e0ba108d8bb01130ccfcde53b8157abda73332570fc85630c2a1645fd5a1d07446fe7bae4c2255e30e27357b9784f9680e8e1584b9308be25ab42391c0b696d66ce452ee86844a29e98b92560d99b1146e89aca2d1d0de1ed414cd0f798e74933c135350cc25ce842e162bd1335db904c69ba3b86238ce93699e521c36db599325b1e332a5856224d2c4d6caea8b846d1fd263b1b5cd313450ad1f6202b98d9f92d0d0d6b0bf160daa87c8fe90755f3418062017a90a77e0b2d8cc4066747f82d84926ce4541cd680cab038a1bbd49fca31ca0c1b725723f2ccd4ddd4f895fed0034997220a9a9ff62d09ad409948b514ce4694afbb6f331c8dd29d5634cb541050ab64757b5a8733424e1358c204392ebfa51dfa07926a5603d0a009f4076e165d72a8b4e2e7c9b603e4cb6e913dfa06901f3506ca79a2046936d25d935a6eec2046dcd87e8dca56945fcad5c58441d7c40b9c00c4771b46f4bdd108fc7e3f1d441da92ece1648fc7d3c0a8ef6fccbe079d43ae99c54c6c8f26857e80e66f7d879e0bf3783c9e82311af3847981d81405fbb70d6d9b4dea7af11e8fc753e79840fa9ca7e3a90799178fa7b1515fe779754633788716f8b843485fd2e72df37bd187673d1e4f09a98f53252a9185f47714f31a45ea5a503b113c249b8d85a4ce70ef44fa3ca232f4f85447ead00b373d9ec64e7d145e27a1c77f06a339525161f325c1aa96d948b238a24d6a147346b9c7e3c991fa28bc9e42339ca723cb292abcdea5e633a04b397bdbe3f1e4407d145ecfa3475b7ae27e40b69cf8f71946a926759582d5a4bf6477035afdc0bb8c1e4f1da23e0a2fd07231ef21f7702aa9ef5bfc397afb4812ee26f58dc14b497d1335e859be4f895f9bdfe3f17812732f8a7df540eb3c158ad604eb8b5baea7b82feef0783c35c0b532657da0037a34a8255ab5b250b1aab5685586c3d132bb63d0c3c8b9bc79dbe3f17832d292e209df7273fcca221ddfe3f1e4c9ff01a18b8cb35a97a95b0000000049454e44ae426082
 %\includegraphics[width=227pt, height=35pt, keepaspectratio=true]{TP1-Colas-fig116.wmf}
 %
 %\vspace{13pt}
@@ -1596,7 +1544,6 @@ W:
 %%%\caption{This should be the caption for \texttt{TP1-Colas-fig196.???}.}
 %%%\end{figure}
 %
-%89504e470d0a1a0a0000000d4948445200000263000000140806000000c1703a2d00000006624b474400ff00ff00ffa0bda7930000159f49444154789ced9d799816c59dc73ff22a2f99d131241a8f08cb985112e3b12aec886e1614572ec52b8878e0b1461144e381ebb9a841242e1e201e0471658382d16c565c7537aeba6ea21145a3bbc678203164e311d718661dcc4447f68f6fd5d3f5765775f73bf3beef0cf87e9f679e77bababbbaba7e67fdea57d550471d9f0d14ab746d1db545c1fce5459d969b06caa163b93c52c7a6814d4ec76fe5f9ebe986f7c636a5a181647b1b62d76c45ef50181b5bdf968b02301ef83ef0951cd70f059655b5457574150dc0d5e66fab1cd74f03aeaa6a8beaa8050621f91d4f3eddb418185dcd06d5d1eb3014b8c7fc66d9d522f030d058ed469583cd63c7456026f0256077e0f7c00bc0cf801fd6b669bdba4d59980a7c19180e7c0c3c09bc05cc052601a3803d81bfa7670dffc6d4b703800b10cff6031e03eecab8a719380f780de8039c0c340133803f05ee391af8afee37378881c04dc02ce0d92a3ea7ab381e3810e840bc7b1df01be7fc21c008607be0536021d17b5c647ed778eafd0078c4391e0a9cee3c673ef0ab94768d4106f623737c15f00ef0dd947b4621c7ad5a18034c018e41efd19bd0173817186c8e5f056ea094ef5d1a1481ef51ca93cdc0a9c01780cf030f912e738dc0edc00aa0d373fea7480f9653ef5988d7fa007f8664e747c898fad004b4008fa7b4b3bbb808d81138bb8acfe82e0600e7035b20dade07fc6bec9a16e03bc06940bb29b334fc39f0a629fb73d4ff56bef3f0561c7975c3e9a65d3b01bf066ea154ffc4d117b8c2d4d107f82be00c24f7217d7208b08ee89d2b8d0292a555c0adddad6c3232cad3ba5b510551ab3615a84c64a83f6aef62cfb9a9e6dc2edd7c4691ca44d77a23bd5d3420e76bba391e8094f1f4e01dea97bbcdbd4dc03c533e9c4831f8ee798ceed3250d4381fb9153564dc423b179301d29557bef61a89f6d5bc7200364a7812e43c67b8c39bf1c78cef3f73c51ff83faff7614f1280077225a85d04c2447c79b3f804b810302f7b4205a5633fa3cd5b4ab9acfe8aa3e5a0c9c4429adee266aeb306029a201286afc30112d9b91417379e119e0929467b6225afb78e01960e732eb3d01f85bf3ff3c24c70564a043fc3d055894d2c64a60017071959fd11d0c44bc7fb8396e400eec38737c347a876548ef3739f736211a3e8f1cb2e7803b90ceb5c8e22d1ff2e886b39d363698f63d46baaebc01d8dffc6fe9de8478248445c09929e7bb8b22d2f163b22ecc837954c659a8246ad5a649c0f515a8e704c20eceedc07fd07d257e3d6a6f77d11be9ede22292fd350d451c43866a2c8ab640e48c15d1e8f05f02f71c8694c6c68e26146d280745d49ffd63e58b81d9a8efef05f671ce15105d56009ba1a9a4cf533ae5fd35347d608de730e0092205db08ac04fe39a56db3913c41e48c0d35f5dc18b8670ee98ec3c682aee8a356e0c7b1324babb1e6f86ea23eb598868c08c8601d193bbf188df69bf063328a64c5d31e66120d9ccaa9f77e227eb4ced899c0d384f5de0a22e3fc59c51d24f598ab2fed20fe78fcced802245fa348a603e4e12d1fb274430be249d7e9dbc5b46f4ea0ce464a75b975c61610e6d326a437ba3258ad2afa04ca07037fc01f52ec29d4aa4d7da8cc4877a8f9f5316e0bf006fe507e392810a66139e88df476318c647ffd1809e3c8c03d5b03db79ca3b88c2ef718c4782ba29209e82908522eacfdd62e51bcc5f23528e0b89722d3ad154e140346df30bc447ffe7fcd968db7a73cf746035b0d61cb7a369d189296dfb1ca54adae22334051d4701f80be43c6eece88a3e6a01b624dde06c43b24f3720a71a342538935203bb1af1d538fcd81ef8474ae9bf3b92c39bba506f3f92fcb819e2b1d59ee7dbf75e1968df67018d2805e6dd58b9ab2f3b48b73d9d28e2fd6f88862ef2f096af4d59baa115d1fa26e7beb5e6dc5e817a0bc859f7b5e5b7f853078e433a63bde75c8fc267c8fb23a1aa84b35029e469d33ec095680ebc48cf7bbe2107a7198d105e4273fad711396e3d813c7d3b08e559d99cb75a2e3c2802db021fc6caadb2d93370df83a8af67138d903a50e8fe2ccff50dc0ae8473579a5184c24e910d42fc761db09f29b3791ad739d759d83c8b19e67f8b29886707a07e9d84fa7906b5e5e176e06dd3166b149b91f25d6cceff044525fe18bbf763c4ebf111ec64e07fcd3d20a5bc2b9a9a188072ad8e31e7d272ae1e058e32f56d61ca9e453964bee988fd10bfbc1ea86f34a2e550e7fab9e8dd079932ab4f6e20299f039043e1d2b8afb9dfd2b701f1c25c735d2d65e667c8b9b90bd10fe4fc7c840c2cc02f519f4e376deb0b1c0cfcc09cbfdf5cf39253ef06f3bb2ef0dc6b8136e7b8afa9dfe58b72ea7d0ef5e97e44b6ea16443f5fbee504c46b213d9647d6c69ab259249dd57d49eaeb3c7aa19628e01f8865e9cb381a906c8ea29477f3f0561ced64eb869f20be7884243e0ed4db06bc8f669adcc55967213defd3290712457fe3c823c37d515edb5ce0424a753968506979cc228fbef112cd2ae2e7030df6611f941c9d176f03d794717d569b2e4123b02b90e1becffc8ea47a497a69b00ece732415c321e6774f1465588798e902c4e8b54656df8e4321eea5c06dc039885943a163a82c3f6439d63b04cadb90d01d0dfc3532ce17a210b66f5434198d98da3ce740427927a2d59751e4ed0e248c4b9021da1b4db77d68cada800790105f09fc83797e01f5df014868b746c2b91a19a92b9113b988a453572d74a21ca83b504ecf89c8e99a4334a088e7e835a0a8d86a9272361029e9c94ed970a4733e071c8a14e93668b1c854c209b70fa311edb9c027c0ff98f2e5f80defc98413bc1b806f22237023d1f4e82ca4c09722433a184579fe12390023113d0722a3be10f1d76a1489390f4d8d4c4391a03ec8b17905e5be0c205d662a8935888766a2a99f5f2087672a517fcd40fcfc3748c6df42f9394bcdf99bcd9f8bbd91ec3c9ab31d33111dd63a65e5d47b1b325cb721badf8812a39f26890292f333026dc9236b2b5112fa2c64281710e55d8d4191e1974c3b0e42c63e4b2f4c273b5257497dd989df79f992f90de94b173ba3777c1c25ef4f45efb1967cbc95059f6e584b72ea790892d72753eabad5b4e75e44bb6b906cbee9b9b605f90521dd9025c3cd48773d69ca97a3c08a4d87381b0535faa38545c7914fdf8c043a7cce58687a2d0defa0953279f14119d7427a9b26034700c72246790d780f09434f386290eee0ec8314cf3422a7a01d79d43de18ca5f5ed38c4682721e5d588a6f2b278a3dafc901757a324d409c8593f16ad043c82e4ca9f114486288efe48c1bd618ebf069ce29c5f879c97094ebdebd054d90348f1ac45ab83b6249a0a9a8014c9954801de4064689e4546bf1fc94854b5f02b94e87b148a607d44a4c47db8d4fcfa72b32e005ea4b49f6dfe4f2ba28555de7b238318ca03ea44fd7b061accec64ea6f25b9a2ad68da7e7ea0aea390d3b139e2e73f124d8dac400edf7e4489e3bf3765fba37cc329c8a9de3e56ef5790b375168aa08c2392efd79151ab251e417cbe8b79f6bbc8f1b50eef9f90b3310bad6afc2292dbbef857c58d43fdfa77e45b39da8c1cd9acad45d2ea5d8b9cf6cb50ffef8e1cb3eb91a3ec6208e9d1d02c593b1b19e9a54e592be29176d4975391136be5378f5e38886c67ac92fab21dd991e658f9f89c757702bf437c6cf96011ea37fb6e59bc95059f6e88a38064780da255080f239b7f2ee28151c8b9398ee454b6758a424e63960c5b07d2d6fb1aa23944ab78e7235d659147dfec0d3ced73c6ba923ff4165178bb1a08b5a90129e81763e7764421cf3414d1d612716c8b846cbee7dc0cf229a2ac7cb15f521a9dd98c48c07d088d9c7645c6b235565e4ee431ad6f2f015e2662be76e072b2978d579b1fcac14348d15d8d42eb739090bbfdd38c8cab2f440eca73b91b09e706e43858f4473c732d9172b1652f9be37e68947c081a59dd67ca7f8e14ebae2851d51df1ef8bf22ab21cb18b498e760bc8e9f3f1f09d84a3a09799f61d6cda7a011a2d42d2f80d4306d2b784bcd99c0b3957cf53aa109f2072ae4286ab1345a8d6a1a9ca4e345a3f80d291f304c47fa10867079ac2be06f5bd3bcd69e93bc753f694397e1529e639e6fe5548973c4a44f78594caf7aed4561ff5450ee30fd0bb4e4146e4164493d5e6bd2621676707142d1a83f826eee036a0bebe170d2ef2e05cf39c347d99a7def5480fcd336d3c13e9fcfb28ede3e3498fa064c9dafb940ec6f635d7b723da3c8e786e7f140dea4086384b2fbc99d2268b4aebcbb988fe872347603ba2e9fd2cb4a368a90b2b9f2dc841cee2ad3464e9068ba9883fce24dd690339c367a1e8e43544914df719051499bf2250471e197e86d2f773e57a67b448c13a6576f5771e7df33224a729d3a6d77a0a696d3a0a799b8f7bae8f1b8f383ec13f1ad90bcde3face7d92dd5c20ece034a1b0e62aa7cc12ffd394fa4223a72f22617f31569e37d2546edf42382fa09ad890722ed46f03d1686e1952bc9f9adfdb91e2769db189c8d8860cc70be6f704346a7447df56a0dcd0f74434627ed01cdb44f24944c61ce4a0f9f8b500ec817f3a268e55245740f603be8e9f67de09d473181ac58f467cfe105a21b5180d04ee22e2916664444fc53f1a9e88fae4ad58b9e5cbb5b1724bdf16fcced821a8ef669ae38f4d7b8622e7cb35c287128e7042448bc1486e5cbe1f8ae8ebcacf70b4cf9175ee9620c5fd0d44df4ef3b71cf1c7064a57b2b520fa2e48691354561f5d81a29a36376601e2cfc528e2773eeacb1391c17903450d2e36bf2d4446a72f72046f22e2e72c145194226dd096a7de69c057816f9be3756830f8207234ec1e8d45d44f97a53c2f246b205e709de5b8fc75209ab622bd629df534bd10d701b5c45a24b3a7233e7d054d9d4ec2bfe0c5c550f3e73a0d563e5b91cca7f1d6b732ea0fe90617e3501acf78b2a36737a2f7bbd9d4fb068ad82f47f6d6caed10448fd060cfd2d827c33ebe89cbb5e5858b4c9b9798e3347d53a25be2ce5857f2c5a0ba3963696d1a627e5d43e81ac766c2a1d34efca3912dd0e8b0ab23953407c7ee0aed12da3267dacaafd0c8e900e45577b5ade5f66d5e54921fda90a28bef966ca7cf421ba77e0385d07f4ba953b382d2303244119e2cc49536f80df808a414da8878b0198da46e4486681b44579f3337044d1ddd8ff25cde223c38f245f39a905229872f46a27c1857f9ad47d347f7a2fe6f336dbf0c293c2b5bc7a2e94debcc0e238a2ab8f8297ad750327bc8b11e878cedeeb1f295447c0a7aef1d0847382df21ae522726a1fa0946613ccf1724ae9e3e3856fa27e7c84dae9a3bd492e447903d1f170d49f7f400303f7f9d7a0a8682b91337605a2ad752aecd626693662248a6abc9c724d9e7ac7235af58bb5d36d37c8597f9b7034d4c2276b3e5e08c9dff16830b392525afaf4c208923a20846ad8cfdf20c7d562127246b2f4f955a83f9692eccf4fc9e6ad2c847483450b9a029d46a48b4e22726e5c34a2a9f00194e621ae21199038927c69403e19f6f18d4fae0b88eeabcc395beee3b1846e89afa6ec4abe1844919bbc7fabfcd57891d626bb42c435542350ced8078437f7ac26d21c1c1b2973db7b20f2aa9f4a5e5e75a4f5ad55787127a00519df34549a1f9e4353852ef647ca25b467d833c8099b192bdf23f63cbb543bab0d56a09e8995c715b10d533f617e4f35e5139172b9d794d91c229ff01f49340536835263542dbc8b3f3f6c03522c1d4869cc44d300ae713988284a6357bffad08646b1fbc6cab7467d138a22bc82a60de27ba70da034e9db2e5bcf4a254833ca2e7ddd69659766872203b48652faf88cb29dd6fa042d20a905d6a1bcba3836a0e9b83588e7437bf45947ec6cb4cacda5cb3144db1d8c465373f11565592bf6b2ea75db712a49c3bd75ecdebc5bd2e435b43ef9b3d13efb1c4b4b1fdf8474400895d69767a2fc4677d5e73034d8ca4a3ffa1dd1e2238b014807dc4f366f81f86136c94f52a5e90690f3720aa58e5813e1dd06da91bc1d172b6f40faccbe83ddeae63eb29177c0ed93eb218817ec4a534b771f8f25748b8d8cd9ef24ee81464cefa18ecbfb898f6ae408e569d33d4870764084998a3ae16dd4a9ef55b84d696820f28c4153270d94ce3bbf8008ba1772be2e46ef39a366ad14f2f4ed12a4208723efbd88220243c8362a95e687dbd188fd30a291c411a80f43a3e1d79123398e688a673012f4d39ceb4e03fe9dec69f9bca3eac1a86fef41fdf43d53be1d1aadda7e5fe45c1f17fe9d80ff46caa99dda2c44b90bd17a1c91a12b20c3b90cf1c66ca4845c67aa8f699fed3fbbfa35be1589c53ca2ed466ca4ed60946f11a2e512a28d923733cf1c8ffac9cdef1a4bbe158b798df257916cfc9a529af507fe13d1ced22734fafd02928549a4e73455124bd0aae77b889ce6066400e62063fe26d23bb39cfb4e44c67a2592b589c8413ac7b9662b948f03e28d1d11dddc7e4f5bb197a75e8befa329ca73cd7111e58fad22e2952614713e876ce435b43ef96b42c6f3094af3d37c7c13d20121545a5fee44e986a77691c4e9e6b888e46e9039de0bd9a6f5a61deea6b94d28297e99399fc55b209b3c16e993c789ec4a9a6ee88b56316f89662fdcf25044ab13d9806f9b7b417c7403a5d3ac63494e23fb504ec4dc27d73ba329dc975054d2d2ddc76309ddb239d1f70931957c8aa6217af2fb8479dbb4064da35c8818e529e4595f8e1cb35a7eb2622a22e48748519f80463c739d6b3a90177c8969e7abf857f6551379fb763d6aeba548183f414afa7c6a9f4f68e97c068a246e8ba61fb39cd8f3506ed368e4a49f81f21aac836c474ca1e5f02e1a91d0b902b533122677f7f86751a4f16aa454ec48743e724266239ee844b4f888e46ed9f3103f9d4232b2572dac4523ea4bd174431b523876bb03ab487ddfed74a3ba9d480642798b4f23c5792b1a34ed689e919653b51ed1ed74a4188bc8c13ecfb9a6dc0d3f57c48e7df4bd1925695f474433102d4f40c6d9d2c7c70b1d68f5df4814ddcdca1bab141e460ec2e548b7ac47d1a4ab89a6f54f460b0616a377de02453da698f3bb9936c7f10ed1e0603e7ab7b8f3f52e7af7f749224fbd1676e5db9588eed722d95ae65c937713cf90ac4192177cf2d786a2dadf423c769b29f7f14d4807d40a0b11bd27993ffbe5029bab79288a946d8e6cd55144db2c3c889c9279a8ef0721bb6079370f6ffd0839785fa774909fa61b7623dab2268e343f648179c7ef9ab6cea5f47bb9903f72ea93611fdf84e4fa87a6ec5a144574e91ee7b1906ea9c3c1687a667ab32bb8886428785346018d7ccadd0cb5887f6af5009242b229a011ad9aec2a1a88a2a75d81fddc4a1a2c2d43536521ec43e927992c2ea67435dba682eeea23fbe999108a748d0e16adf807bd95deb0f858fc6dbc0739177524d1155d6961f9224d8eb378eb169234cba31bba8a933c650dc8110b7dc2ab8e3aeae805a8f60763eba80d6af181f73afcb81645147a02b5f8187c1d5d430bb5dbe4380db5f8707c455089ef1ad651c7c608bb3968e8f347756c3cc8daf0b38eea6012da14b7a7be699bb589671d3d83cd512a8eef5365b5c608c29f3faaa38e3a7a0146a30d1bebd8f8f11da21df3eba81d7a3a22f54f2437bcaea377c0b7a17cadd18822a75d9d82afa38e3a6a80027521dd5450cd3c943a7a2f2a9d9756c7a6878d8647fe1f8e37355beb35b7e50000000049454e44ae426082
 %\includegraphics[width=458pt, height=15pt, keepaspectratio=true]{TP1-Colas-fig197.wmf}
 %
 %\leftskip=36pt
@@ -1724,7 +1671,6 @@ W:
 %%%\caption{This should be the caption for \texttt{TP1-Colas-fig209.???}.}
 %%%\end{figure}
 %
-%89504e470d0a1a0a0000000d49484452000001110000003e08060000000c192fd900000006624b474400ff00ff00ffa0bda7930000103149444154789ced9d799814c51987df5d4eb9598405415840e4944b41b91114451489a2402011e50c1a158f2078211a13e3195148d4a80111344654e28528781043140da289b7444e15109170c3e68f5ff5d3353d3dcb2c3bc7ce6cbdcf33cfce5657cfd4cc747df55df535381ca9a71c503edd8370248672e91e8023ebe80c5c0d0c029a03ff0ce9330d280056a56e580e872313381ef8337024d00878136819e8d30e580e5c98daa139928553291d892217b8097808d80ce400d7029f587d2a0027005b80c2540fd0911c72d33d0047d6d01ba80fac034602bf003e0df419063c6b9ebb6b2f4b703fa42351b446da450b601ef034301b091680bec076e0fb740cce913c9c1071248a1cf378cbfcbf09d8095c0354043a00cf9963853873266b703e1147a2d80c1c04d65a6d39401e301e6803dc6bdaf380d381ddc0fc148ed1e17094621a02ff40668dc793c08c90becfe2a233598333671c89623df00a72aa5606ba003580fb02fd5aa1fca43c203f95037424879c740fc0915554042e003a21536526f055a0cf55f8498eef038b53363a87c3e170381c0e4796e1cc194722e888f6ca1c0e2b8197123816478a71215e4722d80bfc7898e7ee4ae4401ca9c7692225a32370115017254f6d067e00ae4fe7a01c0e47e6f1227077ba07e170a40367ce949c9a687fc89c740fa4147226da3353019505782aada371384a29c350be43ad740fa4943102781e259e9547e9ede7a775448ea4e0349192d315d8086c2ba24f0e3004688cfc26ffc5dfa896ad8c42dac76ef3ff33c87ff464da46e4480a2eedbde4b421b2f04e901ce00e54e16b26b015b8193963b399dac001ebff2da8e2d951e9198e2359384da464d440fb3f1e29a2cf6454127020dae57a02f025d248b2992fd0f7e3710c4a77af9c9ee1389285d3444ac619e66fd8fe8f9bd0f73b08152b3e68da6f06c690fdf5342e4102b623aa25d2c4b467fbe72e7394472bc36f812aa66d37da8db908e8050c058e403ffe2e64db2e432bcba5e6fc83c0d7c0ada91b7aa9a02bf02dd1fe90064055a02ddaadfa4a8ac7551af8019808f441a6cceb400f60431ac6520f180cec079e20fe04b73ea852dbe7e89a4f366dd17c5a9982f74a389580d7803790adee25a1e52061b112f82b5247ed04b53c6029f053caa656f3227057a02d17553c3f19f94bde03da07fa9c97fca1a59dfa44a6c2df0ddc9986715c00bc009c8b34c017807e8738a712300b2d8aa700bf01e6927c536c31f06092df0354246a64325e78310ac905a98d8acdcc0b39d609a9e7658dba480b791f15246e641e03d1c5f6aad5770eba8041f912e381cb5236d2f47111f017f37c10bab66aa7780cf9e8dab585c6446009fa2d62f12b746f1c9b3bf12bb3258b9640f524bf07e8fabc25512f663b56d7a04232e588f4aa8f25f64dae26a1fa10658dd1c8fc7b06a9ca63ac639f23adcd633cfa9e86a37a1b2bc95075b5982c4037a8ba17f81faa6496ea22cd3f4766f86b56dbcbe8f71a847ebf307a208dc56635fe62902c8a8af2258a63518264c2520c6c21b23be4787354f66e4fc8b173cd407e28e2f5ab22b5762bd955e5fbf662f4dd4db4c95316d809dc90e631b4403e2b9bafd0f5dc8ed842e44794d7f31cca01023988df8bd1bf0632edd798ff2b21cd743bf09dd5afb979ef7581f3cb21c7f397565b45e068e46bdc67da9a99e76b892417688afc4d87f2f7f4454a42d89d0941ee8a66e8ba5d1fa34f13d36f0d1c3ac43b164d98fb51a2944765a0273025c679b9a8b6664b74abc49ae6ef63817eb5d04a1e2f5bccc391182aa08b2f5e76a38b3a15e4a3eb265e36003b026d05c49e54ad63b483aef959c81c5b8816ca86c0f490be15807b9020d88c349d81e6797b24789e45d1aa6f91b6bf1adf5caa6b8e354682f762d33e0399368dd06d4927a1c5b8219ab7e39130c841e657be798da1f811b089680e4e46d9c23dcde7de657d96e9e67541d9d7435178fe0894d733ce8c0b1430b8055f88d504a6d842649f79f38e48ddee63de6c3d92a8f6641f8ba2377b892617d98f15cdc00b914a3b9868213200f849c86bc46209f0a762f477144d7d148a8e974de8824c05a3504e4dbc3c44a42f0a0effd614abd0c49e8d1c905b81cb09cf4a1e8a04c7d168126ec5ff8e862073bfba397f3ff2158d43daca1eb4e37b1a9a53c3cd7905683ece43356aaf4102612f500d0540ba207fcf7833deef8007d0fcf3dc1167019f99e74f9ac7abc882b82ef0394698cf3a1a3f87e97114b9bdd4fc7f37d2ce1e47f2601ed0de1622ab9003aaa1797e1e927010f943d447d2315880d7631a7012da7ce59db703dfc966e37db0923098e8fbbd3ac2b98b487fd75a74f19484b6f8f93287cb4a22fd169098488e772f9ce2520dadfc33917038072d5eb7a19b72d93437c7ae451acb1dd6312f3766261220a08cdded4820d440826907d01df8d0f4e904bc8ba27b0780dfe12fd8c798cfe469e40528d971ba69f3f2911a222dc70e8878fe90e581cfd00bb8120549ec24c8efadcf00d244da0275cc189e0756db42c4feb2879a0fb1d36acb4566cc4462676856420eabff106976043ddd89a425d29e1c87c65ea51245034afefd6f235a88a493b948d3f626e04b68824d467e9483565f2fcad112cd19db7fd811f93fbeb1da8e43da7d211226372093b209beef6ca1f93bdbf4fdd83abf1f72547bfe8aa968def504fe86bf707743bff732ebdcde4898ad087cde09c8ea08264d3608fcff095a30fa235fd115c09e302152c5741a671dfb37b2ef869b01c7f2229f8804cdfb318e07a987247dbc6c243a59a9384e4e472415d1451d2f3bd10261b3c43c124d136493c7cb17449b1bdf21ad228c584ec3ce68055f60b5fd0b990d0b51de4870b235c34f85b0698e4c1d8f7ca449dc16e8370af99b9e08b41f0bbc1d68eb832c057b81ef8d4c26db517c12d22aecf9723c3249b7124933e4d4b5fd47359136633b602f460195ee28c5e11660a42d443620293611d960369ebf642052f36271c0f40b7ac4419231f885f404ce2ee2f582bc8612b91c89a11ebebd1b0fdfe09bb8c9e66c74d1c7cb23446795ae427e0a9b7668a1b4afc5e39129b1074d9ebd44fbfb3622cd214c93eb61da6d33a1038a4ebe61b50d33efb108f9246e475acdc9f89ad80ca49db43063b1055313e44a78d0bc67232478da23a16247775aa1c5be005907f79bd7f4b4906a285fe9d7660cc128eb85f8fecd13cd582f41c27501b22e4e84c8e8cc07f8619ba044c51c5b41d1d111eff811565b05a472bd1bd2ff69a26d4c47ea5887323a4b238948ec9a8bfc197df1054c7764eb7b8995e350c2e05b48a02e45fe857e446a1c5d91a00833bbba22016b8773fb20edc2d6cabba0895d8804f81e1451a96d5e77007e48b917323d6c61773ad216960237e2fb5fb6e02ff4204ba20eca75e9698dab0ab22a007e8932ae4173d3dbf68219db9948635a63def76b222d90024c91a96088773fe1b1fd5d66a033438e05cfbf1ca5093735af5f1d3955df3cc4b9256118bee45d10a3cf6948c5fb16ad0e434dfb0cc23df8f591ad0892e2d9beeb36517442ceee4f9027df56bb07a28b7b9739b62feaecc4b211addad721ad200f39926fc5d7343e4366500bebbcb16882764093b8155a752f27fc5a6906bc13686b8334033becbc044dce19c8df019a576b512467277e06f871a6dd5eb417a1eb761ad2b23c8dff69e4abb80f09c84d4811e866cef7b4c70f815391c9b60c3fefe51a14ddba07cde1ba282ae399a94f9973ae47bfd9d1c8193e37f8455446523b8c3c8a176eab8c54ad54d5cc98837e98d3cdffa7a170d555c88eab88bed0cb90f41d8984cd24a4611d8704d16864e7354417fb24d33fb8f7c511ce852864dc08eda77ad43a7633baf8cba130e71f5238aefae8b79c406c1fc9ecc0ff95d0849b8434844a45bc7e1ed169f4d5895cdd3dea119dff52055d733655cd234875c26f3f9a4bf49cab1f32aea362bc2ef8db376245b4bcc86c515b06329639c84604ad34760c7c117e74a82a72748dc257056b2089eafdb0571399f2fc04c5733e966582bb95e7a3084563e42ff0728d7291f9d02d75432b9226487b761c06d9b8f3760791111fafdc0144261f155ac773f157824a4873c1eae76ead111f7b8087918d5f0309ed35c87178005ffd3e88d4eebe291f6134d591f6342bdd03c954b2b1b2d922f300a9af1b884c00f2f004c356fc6dd1adcd637aa0af2ba4131f3702bf4769de2b5002d6362213966c4a43a9c49dc84712dc8fe288936c1222c1899e871c626303c772027f6dc6a084a2b010b5e3d0ec43c587aa22eda32ec50b21a78303c0a7e91e4426932d42244c207446fe8ca070099a33361b7102e4706980728c2e41e6ca00e4f59f406c4d2ed1d9b38e34904d3e91e0857a90f0b06c519bb282997c8ef8198204b09712be189991edf16b57d8d75b2eb1b7d63b32886c11220789d64696a20241418ada9415960debfc21f1b11cf9936cedb60d4a9b5e8612afbc085a23140db38b373932946c32678293fd36942d383fd02f162350a25430addb4566e2e303b49bf58f688358214ab6f21214a7a04a634d5112d74da69f23c3c916211246677421cf0f3916a65d7434e7c4d3b7347224ca667c8ce8e23ca96231e1b7cf0009f47837663a32886c1622a784b4d95a455038c4aad29629d44359b70fa77b208eb24536099178cc0ecfa95a5c1325134c9ada68935458b5b964538df054ec78d8862b7999d1648b1029441b9beae0279a05e98536e079fe93262827e41ec24d96ba283dbe76c8f12a684fc506546bc2db19792eca91f81839142ba03c894f51266c3eda10e64df4b1e6f93ab48b7308723aae46456e3e469b05cba350e916e447588c5ffc668479cf66662cf6f80722e7f93bc04731be9744d00bed3b3a1c5ec7658b3a4a01e7a072034595f4ef67fa8c41496853cd239696916ff5a963b557417b6d7a9a73c79af6fee67935fc42493f43fb4316a1f20853515627282bf64af37c1c4ab51f8df6edf4479b07272301320b4536bc9b8579a516bcda9ca0aded5e85b1d6f875301ba1ba9ad9b260381c19cf64b4f57a38d202da99f661a88cde14546b01736c22bee0988ac2c86d51eec448f31aa7a264adc668d7b01d7a3f0b6d9b0769275eaddae6a8bc82b7bbf465fcdd958fe1fb786a218766ac9d9b0e478970ab53f1e98e5676bb6e490d24140ad1a6b2c9a8ecc087e6ef53a65f2b64729c89ee7f12bcabe0601416b56b780ec02f06d31b994eb550b5aaf5c8ace98e6a4854453e8656f8fb7fce4066975dd723551c893e6b4db4d33a9bee3de430644bb2592af1262ec85f3218a5779f8f2ad7df876e7ee45180fc23de7d54e6a24238b603d4db00d88de82cce1d56df1ea848ce5054ceceab207e2acad3f00a2ded41c95d394808cd21f5a16aaf0afa06b419ef51220bff38b28458b7c774c4e62354faee28e46f5884264a5594acd61edd9f633fd208fa9af3faa29a159b50b1e32e48b07440a6c84e24886613a935ac42e5f71aa2bd262d91bf63053297f2d162d0046586ae43da4857e42359815f3d3c95dc8f32861f3063aa834a31ba2c5587a3184c20fcae696581e544dea7b93ff0778a77573b4706e0cc99e45180b4815dc8ec296b04b366aba3a8529d90be0e87c311451f647679dc89a244cdd2331c47b270d11947b2781d399827a124b9b79163787b3a07e5703832871c221df757107d873787c3e188c918fc2d08755012dd49e91b8e235964c2c6324766d214156ade8ac2d30bf193ee1c0e87232e2aa0bd44cef796c5fc1ffbf151f4d9c5c26b0000000049454e44ae426082
 %\includegraphics[width=205pt, height=47pt, keepaspectratio=true]{TP1-Colas-fig210.wmf}
 %
 %\vspace{13pt}
@@ -2192,13 +2138,13 @@ W:
 %%%\caption{This should be the caption for \texttt{TP1-Colas-fig248.png}.}
 %%%\end{figure}
 %
-\newpage
-
-\part{Apéndice}
-\appendix
-
-\section{Enunciado original}\label{sec:enunciado}
-\includepdf[pages={-}]{enunciado.pdf}
-
-\clearpage
+%\newpage
+%
+%\part{Apéndice}
+%\appendix
+%
+%\section{Enunciado original}\label{sec:enunciado}
+%\includepdf[pages={-}]{enunciado.pdf}
+%
+%\clearpage
 \end{document}
