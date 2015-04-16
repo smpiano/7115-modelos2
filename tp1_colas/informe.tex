@@ -37,10 +37,15 @@
 
 % Soporte para headers y footers
 \usepackage{fancyhdr}
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
-\usepackage{color}
+\setlength{\headheight}{15.2pt}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{(71.15) Modelos y Optimización II} 
+\rhead{TP1 Teoría de Colas}
+\cfoot{\thepage}
 
+% Soporte para colores
+\usepackage{color}
 \definecolor{color01}{rgb}{0.40,0.40,0.40}
 
 \newcommand{\tab}{\hspace{5mm}}
@@ -51,36 +56,73 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Titulo
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% Titulo principal del documento.
-\title{\textbf{Trabajo Práctico 1: Colas}}
-
-% Informacion sobre los autores.
-\author{\\
-  Cesar Buffevant, \textit{P. ??.???}                              \\
-  \texttt{buffevant@gmail.com}                                     \\ [2.5ex]
-  Juan Pecora, \textit{P. ??.???}                                  \\
-  \texttt{jlopezpecora@gmail.com}                                  \\ [2.5ex]
-  Flavio Olivieri, \textit{P. ??.???}                              \\
-  \texttt{flavio.olivieri@gmail.com}                               \\ [2.5ex]
-  Sergio Matias Piano, \textit{P. 85.191}                          \\
-  \texttt{smpiano@gmail.com}                                       \\ [2.5ex]
-  Florencia Tristant, \textit{P. ??.???}                           \\
-  \texttt{flotristant@gmail.com}                                   \\ [2.5ex]
-  \normalsize{1er. Cuatrimestre de 2015}                           \\
-  \normalsize{71.15 Modelos y Optimización 2}                      \\
-  \normalsize{Facultad de Ingeniería, Universidad de Buenos Aires} \\
-}
-\date{}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Documento
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%% Titulo principal del documento.
+%\title{\textbf{Trabajo Práctico 1: Colas}}
+%
+%% Informacion sobre los autores.
+%\author{\\
+%  Cesar Buffevant, \textit{P. ??.???}                              \\
+%  \texttt{buffevant@gmail.com}                                     \\ [2.5ex]
+%  Juan Pecora, \textit{P. ??.???}                                  \\
+%  \texttt{jlopezpecora@gmail.com}                                  \\ [2.5ex]
+%  Flavio Olivieri, \textit{P. ??.???}                              \\
+%  \texttt{flavio.olivieri@gmail.com}                               \\ [2.5ex]
+%  Sergio Matias Piano, \textit{P. 85.191}                          \\
+%  \texttt{smpiano@gmail.com}                                       \\ [2.5ex]
+%  Florencia Tristant, \textit{P. ??.???}                           \\
+%  \texttt{flotristant@gmail.com}                                   \\ [2.5ex]
+%  \normalsize{1er. Cuatrimestre de 2015}                           \\
+%  \normalsize{71.15 Modelos y Optimización 2}                      \\
+%  \normalsize{Facultad de Ingeniería, Universidad de Buenos Aires} \\
+%}
+%\date{}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Documento
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{document}
+%\thispagestyle{empty}
+%\maketitle
+%
+%\clearpage
 \begin{document}
 \thispagestyle{empty}
-\maketitle
 
-\clearpage
+\begin{titlepage}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+\newenvironment{bottompar}{\par\vspace*{\fill}}{\clearpage}
+
+\center
+
+\textsc{\LARGE Universidad de Buenos Aires}\\[0.5cm]
+\textsc{\Large Facultad de Ingeniería}\\[1.5cm]
+
+\includegraphics[scale=0.5]{../logo.png}\\[1cm]
+
+
+\textsc{\large (71.15) Modelos y Optimización II}\\[0.25cm]
+\HRule \\[0.4cm]
+{\huge \bfseries Teoría de Colas}\\[0.4cm]
+\HRule \\[0.5cm]
+
+{\large \today}
+
+\begin{bottompar}
+\flushleft
+Buffevant, Cesar \textit{(buffevant@gmail.com)}         - P. ??.???
+
+Pecora, Juan \textit{(jlopezpecora@gmail.com)}          - P. ??.???
+
+Olivieri, Flavio \textit{(flavio.olivieri@gmail.com)}   - P. ??.???
+
+Piano, Sergio \textit{(smpiano@gmail.com)}              - P. 85.191
+
+Tristant, Florencia \textit{(flotristant@gmail.com)}    - P. ??.???
+\end{bottompar}
+
+\end{titlepage}
 
 % ----------------------------------------------------------------------
 % Tabla de contenidos
@@ -857,6 +899,8 @@ $P(0) = \frac{1}{1 + \rho + \rho^2 + \frac{1}{4}\rho^3 + \frac{1}{16}\rho^4 } = 
 \end{enumerate}
 
 \vspace{35pt}
+\leftskip=0pt
+\parindent=0pt
 \section{\textbf{Ejercicio 7}}
 
 Dado el siguiente sistema:
@@ -1152,6 +1196,8 @@ $= 882,72[\$/minuto]$
 \end{enumerate}
 
 \vspace{35pt}
+\leftskip=0pt
+\parindent=0pt
 \section{\textbf{Ejercicio 8}}
 
 \vspace{13pt}
