@@ -471,9 +471,9 @@ El sistema se modela como un sistema $P/P/1$ con impaciencia:
 \vspace{13pt}
 \includegraphics[width=359pt, height=99pt, keepaspectratio=true]{TP1-Colas-fig002.png}
 
-$\lambda = 7,5[clientes/hora]$
+$\lambda = 4[clientes/hora]$
 
-$\mu = 30[clientes/hora]$
+$\mu = 10[clientes/hora]$
 
 
 \vspace{27pt}
@@ -508,56 +508,55 @@ $n$ & $P(n)$ & $\lambda$ & $\mu$ & $L$ & $Lc$ & $H$ & $R$\tabularnewline
 
     $P(3) = \frac{\lambda P(2)}{\mu} = \rho^3P(0)$ 
 
-    $\rho = \frac{\lambda}{\mu} = \frac{7,5[clientes/hora]}{30[clientes/hora]}
-    = 0,25$
+    $\rho = \frac{\lambda}{\mu} = \frac{4[clientes/hora]}{10[clientes/hora]}
+    = 0,4$
 
     $P(0) + P(1) + P(2) +P(3) = 1 \implies P(0) =
-    \frac{1}{1+\rho+\rho^2+\rho^3} = 0,75$
+    \frac{1}{1+\rho+\rho^2+\rho^3} = \frac{125}{203} \approx 0,6158$
    
 
   \vspace{13pt}
   \item
-    $P(3) = \rho^3P(0) = 0,012$ 
+    $P(3) = \rho^3P(0) = \frac{8}{203} \approx 0,0394$ 
 
   \vspace{13pt}
   \item
-    $1-P(0) = 1-0,75 = 0,25$ 
+    $1-P(0) = 1-0,6158 = 0,3842$ 
 
   \vspace{13pt}
   \item
-    $L = 1 \times P(1) + 2 \times P(2) + 3 \times P(3) = 0,75
-    \times(\rho+2\rho^2+3\rho^3) = 0,32$ 
+    $L = 1 \times P(1) + 2 \times P(2) + 3 \times P(3) = 0,6158
+    \times(\rho+2\rho^2+3\rho^3) = 0,5616$ 
 
   \vspace{13pt}
   \item
-    $H = P(1) + P(2) + P(3) = 1 - P(0) = 0,25$ 
+    $H = P(1) + P(2) + P(3) = 1 - P(0) = 0,3842$ 
 
-    $L_c = L - H = 0,52 - 0,25 = 0,27$ 
+    $L_c = L - H = 0,6158 - 0,3842 = 0,1774$ 
 
-    $\lambda = \lambda(P(0) + P(1) + P(2)) = \lambda(1-P(3)) = \lambda(1-0,012)
-    = 7,41 [clientes/hora]$ 
+    $\overline{\lambda} = \lambda(P(0) + P(1) + P(2)) = \lambda(1-P(3)) = \lambda(1-0,03941)
+    = 3,8423 [clientes/hora]$ 
 
     $W = W_c + T_s = \frac{L_c}{\lambda} + \frac{1}{\mu} =
-    \frac{0,27}{7,41[clientes/hora]} + \frac{1}{30[clientes/hora]} =
-    0,069[horas/cliente] \times \frac{60[minutos]}{1[hora]} =
-    4,18[minutos/cliente]$
+    \frac{0,1774}{3,8423[clientes/hora]} + \frac{1}{10[clientes/hora]} =
+    0,1462[horas/cliente] \times \frac{60[minutos]}{1[hora]} =
+    8,772[minutos/cliente]$
 
   \vspace{13pt}
   \item
-    $L_c = 0,27$
+    $L_c = 0,1774$
 
   \vspace{13pt}
   \item
-    $\overline{\lambda} = \lambda(P(0) + P(1) + P(2)) = \lambda(1-P(3)) =
-    \lambda(1-0,012) = 7,41[clientes/hora]$
+    $\overline{\lambda} = 3,8423[clientes/hora]$
 
-    $W_c = \frac{L_c}{\lambda} = \frac{0,27}{7,41[clientes/hora]} =
-    0,036[horas/cliente] \times \frac{60[minutos]}{1[hora]} =
-    2,18[minutos/cliente]$
+    $W_c = \frac{L_c}{\overline{\lambda}} = \frac{0,1774}{3,8423[clientes/hora]} =
+    0,04617[horas/cliente] \times \frac{60[minutos]}{1[hora]} =
+    2,7697[minutos/cliente]$
 
   \vspace{13pt}
   \item
-    $R = \lambda P(3) = 0,09[clientes/hora]$
+    $R = \lambda P(3) = 0,1576[clientes/hora]$
 \end{enumerate}
 
 \vspace{35pt}
@@ -1426,10 +1425,10 @@ Se pide:
 
   \leftskip=6pt
   \parindent=-18pt
-  $P(b,0,1,1) = P(1,0,1,1) \times P(b,0,1,1) \times (1-\mu_3\Delta t) \times (1-\mu_4\Delta t) \times (1-\lambda\Delta t) +$
-  $ P(b,0,1,1) \times \mu_1\Delta t \times (1-\mu_3\Delta t) \times (1-\mu_4\Delta t) \times (1-\lambda\Delta t) +$
-  $ P(b,b,0,1) \times \mu_3\Delta t \times 0,5 \times (1-\mu_4\Delta t) +$
-  $ P(b,b,0,1) \times \mu_4\Delta t \times 0,5 \times (1-\mu_3\Delta t) +$
+  $P(b,0,1,1) = P(b,0,1,1) \times (1-\mu_3\Delta t) \times (1-\mu_4\Delta t) \times (1-\lambda\Delta t) +$
+  $ P(1,0,1,1) \times \mu_1\Delta t \times (1-\mu_3\Delta t) \times (1-\mu_4\Delta t) \times (1-\lambda\Delta t) +$
+  $ P(b,b,1,1) \times \mu_3\Delta t \times (1-\mu_4\Delta t) \times 0,5 +$
+  $ P(b,b,1,1) \times \mu_4\Delta t \times (1-\mu_3\Delta t) \times 0,5$
 
   \vspace{13pt}
   \item Expresar P(0,0,1,1)
